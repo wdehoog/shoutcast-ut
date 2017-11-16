@@ -53,7 +53,7 @@ MainView {
             }
 
             Column {
-                spacing: units.gu(1)
+                spacing: units.gu(5)
                 width: parent.width
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -89,7 +89,10 @@ MainView {
 
             Row {
                 id: playerUI
-                anchors.bottom: parent.bottom
+                anchors {
+                    bottom: parent.bottom
+                    bottomMargin: units.gu(1)
+                }
 
                 //height: Math.max(imageItem.height, meta.height, playerButtons.height)
                 width: parent.width - 2*units.gu(1)
@@ -139,7 +142,7 @@ MainView {
                     color: UbuntuColors.porcelain
 
                     action: Action {
-                          iconName: "media-playback-start"
+                          iconName: audio.playbackState == Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
                           //text: i18n.tr("Pause")
                           onTriggered: pause()
                     }
