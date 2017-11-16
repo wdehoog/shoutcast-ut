@@ -14,6 +14,12 @@ QML_COMPONENT_FILES = \
     components/JSONListModel.qml \
     components/Util.js
 
+QML_PAGE_FILES = \
+    pages/GenrePage.qml \
+    pages/SubGenrePage.qml \
+    pages/Top500Page.qml \
+    pages/StationsPage.qml
+
 CONF_FILES +=  shoutcast-ubports.apparmor \
                shoutcast-ubports.png
 
@@ -33,6 +39,10 @@ qml_files.files += $${QML_FILES}
 qml_component_files.path += /shoutcast-ubports/components
 qml_component_files.files += $${QML_COMPONENT_FILES}
 
+#specify where the qml/js files are installed to
+qml_page_files.path += /shoutcast-ubports/pages
+qml_page_files.files += $${QML_PAGE_FILES}
+
 #specify where the config files are installed to
 config_files.path = /shoutcast-ubports
 config_files.files += $${CONF_FILES}
@@ -43,7 +53,7 @@ desktop_file.path = /shoutcast-ubports
 desktop_file.files = $$OUT_PWD/shoutcast-ubports.desktop
 desktop_file.CONFIG += no_check_exist
 
-INSTALLS+=config_files qml_files qml_component_files desktop_file
+INSTALLS+=config_files qml_files qml_component_files qml_page_files desktop_file
 
 DISTFILES += \
     components/JSONListModel.qml \

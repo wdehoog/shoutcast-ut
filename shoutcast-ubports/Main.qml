@@ -20,7 +20,7 @@ MainView {
     applicationName: "shoutcast-ubports.wdehoog"
 
     property string defaultImageSource: "image://theme/icon-m-music"
-    property string logoURL: ""
+    property string logoURL: Qt.resolvedUrl("shoutcast-ubports.png")
     property string streamMetaText1: ""
     property string streamMetaText2: ""
 
@@ -85,15 +85,16 @@ MainView {
                     id: playerUI
 
                     //height: Math.max(imageItem.height, meta.height, playerButtons.height)
-                    width: parent.width
+                    width: parent.width - 2 * units.gu(1)
+                    x: units.gu(1)
 
-                    Image {
+                    Icon {
                         id: imageItem
                         source: logoURL.length > 0 ? logoURL : defaultImageSource
-                        width: units.gu(5)
+                        width: units.gu(10)
                         height: width
                         anchors.verticalCenter: parent.verticalCenter
-                        fillMode: Image.PreserveAspectFit
+                        //fillMode: Image.PreserveAspectFit
                     }
 
                     Column {
@@ -103,8 +104,8 @@ MainView {
 
                         Text {
                             id: m1
-                            //x: Theme.paddingSmall
-                            width: parent.width - Theme.paddingSmall
+                            x: units.gu(1)
+                            width: parent.width - units.gu(1)
                             color: UbuntuColors.orange
                             textFormat: Text.StyledText
                             //font.pixelSize: Theme.fontSizeSmall
@@ -113,7 +114,8 @@ MainView {
                         }
                         Text {
                             id: m2
-                            //1dth: parent.width- Theme.paddingSmall
+                            x: units.gu(1)
+                            width: parent.width - units.gu(1)
                             anchors.right: parent.right
                             color: UbuntuColors.darkGrey
                             //font.pixelSize: Theme.fontSizeSmall
@@ -177,6 +179,12 @@ MainView {
     onStationChanged: {
         currentStationInfo = stationInfo
         console.log("set stream:" + stationInfo.stream)
+        //app.stationId = stationInfo.id
+
+        streamMetaText1 = stationInfo.name + " - " + stationInfo.lc + " " + Shoutcast.getAudioType(stationInfo.mt) + " " + stationInfo.br
+        streamMetaText2 = (stationInfo.genre ? (stationInfo.genre + " - ") : "") + stationInfo.ct
+        logoURL = stationInfo.logo ? stationInfo.logo : ""
+
         audio.source = stationInfo.stream
         play()
     }
