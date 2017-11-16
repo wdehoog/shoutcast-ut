@@ -1,4 +1,4 @@
-## shoutcast-sailfish
+## shoutcast-ubports
 
 A Shoutcast player for UBPorts. This project is for me to see how 'portable' QML is and how hard/easy it is to create an app for UBPorts.
 
