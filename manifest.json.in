@@ -1,0 +1,15 @@
+{
+    "name": "shoutcast-ubports.wdehoog",
+    "description": "description of shoutcast-ubports",
+    "architecture": "@CLICK_ARCH@",
+    "title": "shoutcast-ubports",
+    "hooks": {
+        "shoutcast-ubports": {
+            "apparmor": "shoutcast-ubports/shoutcast-ubports.apparmor",
+            "desktop": "shoutcast-ubports/shoutcast-ubports.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Willem-Jan de Hoog <wdehoog@exalondelft.nl>",
+    "framework": "ubuntu-sdk-15.04.6-qml"
+}

@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-16 15:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:43
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:47
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:82
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:72
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:88
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:64
+msgid "SHOUTcast"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:62
+msgid "Genre"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:70
+msgid "Top 500"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:79
+msgid "Search"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:31
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:49
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:34
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:41
+msgid "Back"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:23
+msgid "Stations for: "
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:15
+msgid "Top 500 Stations"
+msgstr ""
+
+#: /home/ubucon/build-shoutcast-ubports-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/shoutcast-ubports/shoutcast-ubports.desktop.h:1
+msgid "shoutcast-ubports"
+msgstr ""
