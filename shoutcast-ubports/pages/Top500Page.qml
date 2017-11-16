@@ -18,23 +18,7 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
-        /*Rectangle {
-            anchors.fill: parent
-            color: UbuntuColors.porcelain
-            Label {
-                anchors.centerIn: parent
-                text: pageHeader.title
-                color: UbuntuColors.orange
-            }
-            Button {
-                anchors.right: parent.right
-                //anchors.verticalCenter: parent // not working
-                text: "play/pause"
-                color: "white"
-                onClicked: pause()
-            }
 
-        }*/
         leadingActionBar.actions: [
             Action {
                 iconName: "back"
@@ -42,36 +26,26 @@ Page {
                 onTriggered: pageStack.pop();
             }
         ]
+        flickable: stationsListView
     }
 
     Column {
-       spacing: units.gu(1)
-       id: pageLayout
-       anchors {
-           margins: units.gu(2)
-           fill: parent
-       }
-
-        Label {
-            id: label
-            objectName: "label"
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                //top: pageHeader.bottom
-                topMargin: units.gu(2)
-            }
-
-            text: i18n.tr("SHOUTcast")
+        spacing: units.gu(1)
+        id: pageLayout
+        anchors {
+            top: top500Page.header.bottom
+            leftMargin: units.gu(1)
+            rightMargin: units.gu(1)
+            fill: parent
         }
 
         ListView {
             id: stationsListView
-            width: parent.width
-            height: parent.height - label.height
+            width: parent.width - scrollBar.width
+            height: parent.height
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
-                //top: label.bottom
                 topMargin: units.gu(2)
             }
             delegate: ListItem {
@@ -93,8 +67,9 @@ Page {
         }
 
         Scrollbar {
+            id: scrollBar
             flickableItem: stationsListView
-            align: Qt.AlignTrailing
+            anchors.right: parent.right
         }
 
         XmlListModel {

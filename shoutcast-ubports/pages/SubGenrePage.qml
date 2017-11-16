@@ -32,9 +32,22 @@ Page {
             Action {
                 iconName: "back"
                 text: i18n.tr("Back")
-                onTriggered: pageStack.pop();
+                onTriggered: pageStack.pop()
             }
         ]
+
+        trailingActionBar.actions: [
+            Action {
+                iconName: "home"
+                text: i18n.tr("Home")
+                onTriggered: {
+                    pageStack.pop()
+                    pageStack.pop()
+                }
+            }
+        ]
+
+        flickable: subGenresListView
     }
 
     JSONListModel {
@@ -76,26 +89,13 @@ Page {
            fill: parent
        }
 
-        Label {
-            id: label
-            objectName: "label"
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                //top: pageHeader.bottom
-                topMargin: units.gu(2)
-            }
-
-            text: i18n.tr("SHOUTcast")
-        }
-
         ListView {
-            id: stationsListView
-            width: parent.width
-            height: parent.height - label.height
+            id: subGenresListView
+            width: parent.width - scrollBar.width
+            height: parent.height
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
-                //top: label.bottom
                 topMargin: units.gu(2)
             }
             delegate: ListItem {
@@ -118,7 +118,7 @@ Page {
                             textFormat: Text.StyledText
                             //truncationMode: TruncationMode.Fade
                             width: parent.width - countLabel.width
-                            text: name ? name : qsTr("No Station Name")
+                            text: name ? name : qsTr("No Genre Name")
                         }
                         Label {
                             id: countLabel
@@ -143,8 +143,9 @@ Page {
         }
 
         Scrollbar {
-            flickableItem: stationsListView
-            align: Qt.AlignTrailing
+            id: scrollBar
+            flickableItem: subGenresListView
+            anchors.right: parent.right
         }
 
 

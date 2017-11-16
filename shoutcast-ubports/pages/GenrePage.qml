@@ -29,9 +29,18 @@ Page {
             Action {
                 iconName: "back"
                 text: i18n.tr("Back")
-                onTriggered: pageStack.pop();
+                onTriggered: pageStack.pop()
             }
         ]
+
+        /*trailingActionBar.actions: [
+            Action {
+                iconName: "home"
+                text: i18n.tr("Home")
+                onTriggered: pageStack.pop()
+            }
+        ]*/
+        flickable: genresListView
     }
 
     JSONListModel {
@@ -63,35 +72,23 @@ Page {
     }
 
     Column {
-       spacing: units.gu(1)
-       id: pageLayout
-       anchors {
-           margins: units.gu(2)
-           fill: parent
-       }
-
-        Label {
-            id: label
-            objectName: "label"
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                //top: pageHeader.bottom
-                topMargin: units.gu(2)
-            }
-
-            text: i18n.tr("SHOUTcast")
+        spacing: units.gu(1)
+        id: pageLayout
+        anchors {
+            margins: units.gu(1)
+            fill: parent
         }
 
         ListView {
-            id: stationsListView
-            width: parent.width
-            height: parent.height - label.height
+            id: genresListView
+            width: parent.width - scrollBar.width
+            height: parent.height
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
-                //top: label.bottom
                 topMargin: units.gu(2)
             }
+
             delegate: ListItem {
                 id: delegate
                 width: parent.width //- 2*Theme.paddingMedium
@@ -112,7 +109,7 @@ Page {
                             textFormat: Text.StyledText
                             //truncationMode: TruncationMode.Fade
                             width: parent.width - countLabel.width
-                            text: name ? name : qsTr("No Station Name")
+                            text: name ? name : qsTr("No Genre Name")
                         }
                         Label {
                             id: countLabel
@@ -145,8 +142,10 @@ Page {
         }
 
         Scrollbar {
-            flickableItem: stationsListView
-            align: Qt.AlignTrailing
+            id: scrollBar
+            flickableItem: genresListView
+            //align: Qt.AlignTrailing
+            anchors.right: parent.right
         }
 
 

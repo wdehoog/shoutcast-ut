@@ -21,8 +21,8 @@ MainView {
 
     property string defaultImageSource: "image://theme/icon-m-music"
     property string logoURL: Qt.resolvedUrl("shoutcast-ubports.png")
-    property string streamMetaText1: ""
-    property string streamMetaText2: ""
+    property string streamMetaText1: i18n.tr("No station Info")
+    property string streamMetaText2: i18n.tr("No Track Info")
 
     width: units.gu(100)
     height: units.gu(75)
@@ -59,7 +59,9 @@ MainView {
 
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
+                    width: units.gu(30)
                     text: i18n.tr("Genre")
+                    font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml") )
@@ -67,74 +69,86 @@ MainView {
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
+                    width: units.gu(30)
                     text: i18n.tr("Top 500")
                     color: "white"
+                    font.pixelSize: FontUtils.sizeToPixels("large")
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
-                        top500Page.reload()
                     }
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
+                    width: units.gu(30)
                     text: i18n.tr("Search")
+                    font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
                     //onClicked: pause()
                 }
+            }
 
-                Row {
-                    id: playerUI
+            Row {
+                id: playerUI
+                anchors.bottom: parent.bottom
 
-                    //height: Math.max(imageItem.height, meta.height, playerButtons.height)
-                    width: parent.width - 2 * units.gu(1)
-                    x: units.gu(1)
+                //height: Math.max(imageItem.height, meta.height, playerButtons.height)
+                width: parent.width - 2*units.gu(1)
+                x: units.gu(1)
 
-                    Icon {
-                        id: imageItem
-                        source: logoURL.length > 0 ? logoURL : defaultImageSource
-                        width: units.gu(10)
-                        height: width
-                        anchors.verticalCenter: parent.verticalCenter
-                        //fillMode: Image.PreserveAspectFit
+                Icon {
+                    id: imageItem
+                    source: logoURL.length > 0 ? logoURL : defaultImageSource
+                    width: units.gu(10)
+                    height: width
+                    anchors.verticalCenter: parent.verticalCenter
+                    //fillMode: Image.PreserveAspectFit
+                }
+
+                Column {
+                    id: meta
+                    width: parent.width - imageItem.width - playerButton.width
+                    anchors.verticalCenter: parent.verticalCenter
+
+                    Text {
+                        id: m1
+                        x: units.gu(1)
+                        width: parent.width - units.gu(1)
+                        color: UbuntuColors.orange
+                        textFormat: Text.StyledText
+                        //font.pixelSize: Theme.fontSizeSmall
+                        wrapMode: Text.Wrap
+                        text: streamMetaText1
                     }
-
-                    Column {
-                        id: meta
-                        width: parent.width - imageItem.width - playerButton.width
-                        anchors.verticalCenter: parent.verticalCenter
-
-                        Text {
-                            id: m1
-                            x: units.gu(1)
-                            width: parent.width - units.gu(1)
-                            color: UbuntuColors.orange
-                            textFormat: Text.StyledText
-                            //font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.Wrap
-                            text: streamMetaText1
-                        }
-                        Text {
-                            id: m2
-                            x: units.gu(1)
-                            width: parent.width - units.gu(1)
-                            anchors.right: parent.right
-                            color: UbuntuColors.darkGrey
-                            //font.pixelSize: Theme.fontSizeSmall
-                            wrapMode: Text.Wrap
-                            text: streamMetaText2
-                        }
-
-                    }
-
-                    Action {
-                          id: playerButton
-                          name: "media-playback-start"
-                          onTriggered: pause()
+                    Text {
+                        id: m2
+                        x: units.gu(1)
+                        width: parent.width - units.gu(1)
+                        anchors.right: parent.right
+                        color: UbuntuColors.darkGrey
+                        //font.pixelSize: Theme.fontSizeSmall
+                        wrapMode: Text.Wrap
+                        text: streamMetaText2
                     }
 
                 }
+
+                Button {
+                    id: playerButton
+                    width: units.gu(4)
+                    anchors.verticalCenter: parent.verticalCenter
+                    color: UbuntuColors.porcelain
+
+                    action: Action {
+                          iconName: "media-playback-start"
+                          //text: i18n.tr("Pause")
+                          onTriggered: pause()
+                    }
+                }
+
             }
 
         }
+
     }
 
     signal audioBufferFull()

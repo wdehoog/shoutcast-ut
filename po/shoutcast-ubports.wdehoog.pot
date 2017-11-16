@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-16 18:30+0000\n"
+"POT-Creation-Date: 2017-11-16 22:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:24
+msgid "No station Info"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:25
+msgid "No Track Info"
+msgstr ""
+
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:43
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:47
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:82
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:72
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:88
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:64
 msgid "SHOUTcast"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:62
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:63
 msgid "Genre"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:70
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:73
 msgid "Top 500"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:79
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:83
 msgid "Search"
 msgstr ""
 
@@ -43,14 +47,19 @@ msgid "Genres"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:31
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:49
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:33
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:34
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:41
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:25
 msgid "Back"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:23
 msgid "Stations for: "
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:41
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:42
+msgid "Home"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:24
