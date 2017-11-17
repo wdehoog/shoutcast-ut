@@ -20,6 +20,7 @@ QML_PAGE_FILES = \
     pages/SubGenrePage.qml \
     pages/Top500Page.qml \
     pages/SettingsPage.qml \
+    pages/SearchPage.qml \
     pages/StationsPage.qml
 
 CONF_FILES +=  shoutcast-ubports.apparmor \
