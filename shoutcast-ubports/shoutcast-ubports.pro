@@ -64,4 +64,6 @@ DISTFILES += \
     pages/Top500Page.qml \
     pages/GenrePage.qml \
     pages/SubGenrePage.qml \
-    pages/StationsPage.qml
+    pages/StationsPage.qml \
+    pages/AboutPage.qml \
+    pages/SettingsPage.qml

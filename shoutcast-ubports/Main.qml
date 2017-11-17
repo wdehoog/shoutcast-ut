@@ -2,6 +2,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtQuick.XmlListModel 2.0
 import QtMultimedia 5.6
+import Qt.labs.settings 1.0
 
 /*!
     \brief MainView with a Label and Button elements.
@@ -13,6 +14,7 @@ import "components/Util.js" as Util
 import "components"
 
 MainView {
+    id: app
     // objectName for functional testing purposes (autopilot-qt5)
     objectName: "mainView"
 
@@ -29,6 +31,7 @@ MainView {
 
     property int currentItem: -1
     property var tuneinBase: {}
+
 
     PageStack {
         id: pageStack
@@ -50,26 +53,41 @@ MainView {
                     backgroundColor: UbuntuColors.porcelain
                     dividerColor: UbuntuColors.slate
                 }
+
+                trailingActionBar.actions: [
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("About")
+                        onTriggered: pageStack.push(Qt.resolvedUrl("pages/AboutPage.qml") )
+                    },
+                    Action {
+                        iconName: "settings"
+                        text: i18n.tr("Settings")
+                        onTriggered: pageStack.push(Qt.resolvedUrl("pages/SettingsPage.qml") )
+                    }
+                ]
             }
 
             Column {
-                spacing: units.gu(5)
-                width: parent.width
+                spacing: units.gu(1)
+                width: parent.width - 2*units.gu(1)
+                x: units.gu(1)
                 anchors.verticalCenter: parent.verticalCenter
 
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    width: units.gu(30)
+                    width: parent.width
+                    //height:
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
                     onClicked: {
-                        pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml") )
+                        pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
                     }
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    width: units.gu(30)
+                    width: parent.width
                     text: i18n.tr("Top 500")
                     color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
@@ -79,7 +97,7 @@ MainView {
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
-                    width: units.gu(30)
+                    width: parent.width
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
@@ -242,6 +260,35 @@ MainView {
         xhr.send();
     }
 
+    function loadTop500(onDone, onTimeout) {
+        var xhr = new XMLHttpRequest
+        var uri = Shoutcast.Top500Base
+                + "?" + Shoutcast.DevKeyPart
+                + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
+                + "&" + Shoutcast.QueryFormat
+        /*if(mimeTypeFilter.value === 1)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
+        else if(mimeTypeFilter.value === 2)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")*/
+        xhr.open("GET", uri)
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === XMLHttpRequest.DONE) {
+                timer.destroy()
+                onDone(xhr.responseText)
+            }
+        }
+        var timer = createTimer(app, settings.server_timeout*1000)
+        timer.triggered.connect(function() {
+            if(xhr.readyState === XMLHttpRequest.DONE)
+                return
+            xhr.abort()
+            onTimeout()
+            timer.destroy()
+        });
+        xhr.send();
+    }
+
+
     function createTimer(root, interval) {
         return Qt.createQmlObject("import QtQuick 2.0; Timer {interval: " + interval + "; repeat: false; running: true;}", root, "TimeoutTimer");
     }
@@ -252,7 +299,7 @@ MainView {
         var uri = Shoutcast.NowPlayingSearchBase
                   + "?" + Shoutcast.DevKeyPart
                   + "&" + Shoutcast.QueryFormat
-                  + "&" + Shoutcast.getLimitPart(500)
+                  + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
         //if(mimeTypeFilter.value === 1)
         //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
         //else if(mimeTypeFilter.value === 2)
@@ -265,7 +312,7 @@ MainView {
       var uri = Shoutcast.StationSearchBase
                     + "?" + Shoutcast.getGenrePart(genreId)
                     + "&" + Shoutcast.DevKeyPart
-                    + "&" + Shoutcast.getLimitPart(500)
+                    + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
                     + "&" + Shoutcast.QueryFormat
         //if(mimeTypeFilter.value === 1)
         //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
@@ -274,4 +321,9 @@ MainView {
         return uri
     }
 
+    Settings {
+        id: settings
+        property int max_number_of_results : 500
+        property int server_timeout : 5
+    }
 }

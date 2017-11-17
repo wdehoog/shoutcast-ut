@@ -50,6 +50,15 @@ Page {
         flickable: stationsListView
     }
 
+    ActivityIndicator {
+        id: activity
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        running: showBusy
+        visible: running
+        z: 1
+    }
+
     Column {
         spacing: units.gu(1)
         id: pageLayout

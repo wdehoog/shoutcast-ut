@@ -14,7 +14,7 @@ Page {
     id: genrePage
     objectName: "GenrePage"
 
-    property bool showBusy: true
+    property bool showBusy: false
 
     header: PageHeader {
         id: pageHeader
@@ -69,6 +69,15 @@ Page {
             //app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
             console.log("SHOUTcast server did not respond")
         }
+    }
+
+    ActivityIndicator {
+        id: activity
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        running: showBusy
+        visible: running
+        z: 1
     }
 
     Column {

@@ -10,6 +10,9 @@ import "../components/Util.js" as Util
 Page {
     id: top500Page
 
+    property int currentItem: -1
+    property bool showBusy: false
+
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Top 500 Stations")
@@ -27,6 +30,15 @@ Page {
             }
         ]
         flickable: stationsListView
+    }
+
+    ActivityIndicator {
+        id: activity
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        running: showBusy
+        visible: running
+        z: 1
     }
 
     Column {
@@ -90,7 +102,7 @@ Page {
             onStatusChanged: {
                 if(status === XmlListModel.Ready) {
                     console.log("XmlListModel.Ready")
-                    //showBusy = false
+                    showBusy = false
                     /*if(top500Model.count === 0)
                         app.showErrorDialog(qsTr("SHOUTcast server returned no Stations"))
                     else
@@ -125,27 +137,8 @@ Page {
         }
     }
 
-    function loadTop500(onDone) {
-        var xhr = new XMLHttpRequest
-        var uri = Shoutcast.Top500Base
-                + "?" + Shoutcast.DevKeyPart
-                //+ "&" + Shoutcast.getLimitPart(app.maxNumberOfResults.value)
-                + "&" + Shoutcast.QueryFormat
-        /*if(mimeTypeFilter.value === 1)
-            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
-        else if(mimeTypeFilter.value === 2)
-            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")*/
-        xhr.open("GET", uri)
-        xhr.onreadystatechange = function() {
-            if(xhr.readyState === XMLHttpRequest.DONE) {
-                onDone(xhr.responseText)
-            }
-        }
-        xhr.send();
-    }
-
     function reload() {
-        //showBusy = true
+        showBusy = true
         currentItem = -1
         loadTop500(function(xml) {
             //console.log(xml)
@@ -153,6 +146,11 @@ Page {
             top500Model.reload()
             tuneinModel.xml = xml
             tuneinModel.reload()
+        }, function() {
+            // timeout
+            showBusy = false
+            //app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
+            console.log("SHOUTcast server did not respond")
         })
     }
 
