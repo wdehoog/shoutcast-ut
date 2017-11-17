@@ -15,9 +15,11 @@ QML_COMPONENT_FILES = \
     components/Util.js
 
 QML_PAGE_FILES = \
+    pages/AboutPage.qml \
     pages/GenrePage.qml \
     pages/SubGenrePage.qml \
     pages/Top500Page.qml \
+    pages/SettingsPage.qml \
     pages/StationsPage.qml
 
 CONF_FILES +=  shoutcast-ubports.apparmor \

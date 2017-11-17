@@ -77,6 +77,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
+                    height: mainPage.height / 10
                     //height:
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
@@ -88,6 +89,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
+                    height: mainPage.height / 10
                     text: i18n.tr("Top 500")
                     color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
@@ -98,6 +100,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
+                    height: mainPage.height / 10
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"

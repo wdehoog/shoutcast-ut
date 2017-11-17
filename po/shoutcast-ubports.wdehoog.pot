@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-17 19:10+0000\n"
+"POT-Creation-Date: 2017-11-17 20:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,15 +39,15 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:81
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:82
 msgid "Genre"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:91
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:93
 msgid "Top 500"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:101
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:104
 msgid "Search"
 msgstr ""
 
@@ -64,6 +64,14 @@ msgstr ""
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:34
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:28
 msgid "Back"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:38
+msgid "Maximum number of results to ask the server (per query)"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:51
+msgid "Time to wait for response from server (seconds)"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:23
