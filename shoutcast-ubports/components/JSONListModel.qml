@@ -38,7 +38,7 @@ Item {
                 requestDone(xhr.responseText)
             }
         }
-        var timer = createTimer(jsonListModel, 10*1000)
+        var timer = createTimer(jsonListModel, settings.server_timeout*1000)
         timer.triggered.connect(function() {
             if(xhr.readyState === XMLHttpRequest.DONE)
                 return

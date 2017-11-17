@@ -82,9 +82,7 @@ MainView {
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
-                    onClicked: {
-                        pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
-                    }
+                    onClicked: pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -93,9 +91,7 @@ MainView {
                     text: i18n.tr("Top 500")
                     color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
-                    onClicked: {
-                        pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
-                    }
+                    onClicked: pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
                 }
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -104,7 +100,7 @@ MainView {
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
-                    //onClicked: pause()
+                    onClicked: pageStack.push(Qt.resolvedUrl("pages/SearchPage.qml"))
                 }
             }
 

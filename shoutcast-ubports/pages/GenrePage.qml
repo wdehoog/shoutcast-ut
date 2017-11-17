@@ -24,22 +24,6 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
-
-        leadingActionBar.actions: [
-            Action {
-                iconName: "back"
-                text: i18n.tr("Back")
-                onTriggered: pageStack.pop()
-            }
-        ]
-
-        /*trailingActionBar.actions: [
-            Action {
-                iconName: "home"
-                text: i18n.tr("Home")
-                onTriggered: pageStack.pop()
-            }
-        ]*/
         flickable: genresListView
     }
 

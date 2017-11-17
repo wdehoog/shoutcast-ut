@@ -68,4 +68,5 @@ DISTFILES += \
     pages/SubGenrePage.qml \
     pages/StationsPage.qml \
     pages/AboutPage.qml \
-    pages/SettingsPage.qml
+    pages/SettingsPage.qml \
+    pages/SearchPage.qml
