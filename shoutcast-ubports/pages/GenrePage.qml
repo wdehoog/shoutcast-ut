@@ -50,7 +50,7 @@ Page {
         }
         onTimeout: {
             showBusy = false
-            //app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
+            app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
             console.log("SHOUTcast server did not respond")
         }
     }

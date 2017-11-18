@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import QtQuick.XmlListModel 2.0
 import QtMultimedia 5.6
 import Qt.labs.settings 1.0
@@ -192,7 +193,7 @@ MainView {
         onError: {
             console.log("Audio Player error:" + errorString)
             console.log("source: " + source)
-            //showErrorDialog(qsTr("Audio Player:") + "\n\n" + errorString)
+            showErrorDialog(qsTr("Audio Player:") + "\n\n" + errorString)
         }
     }
 
@@ -231,7 +232,7 @@ MainView {
         var m3uBase = tuneinBase["base-m3u"]
 
         if(!m3uBase) {
-            //showErrorDialog(qsTr("Don't know how to retrieve playlist."))
+            showErrorDialog(qsTr("Don't know how to retrieve playlist."))
             console.log("Don't know how to retrieve playlist.: \n" + JSON.stringify(tuneinBase))
         }
 
@@ -251,7 +252,7 @@ MainView {
                     info.stream = streamURL
                     stationChanged(info)
                 } else {
-                    //showErrorDialog(qsTr("Failed to retrieve stream URL."))
+                    showErrorDialog(qsTr("Failed to retrieve stream URL."))
                     console.log("Error could not find stream URL: \n" + playlistUri + "\n" + playlist + "\n")
                     stationChangeFailed(info)
                 }
@@ -343,10 +344,10 @@ MainView {
                     + "&" + Shoutcast.DevKeyPart
                     + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
                     + "&" + Shoutcast.QueryFormat
-        //if(mimeTypeFilter.value === 1)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
-        //else if(mimeTypeFilter.value === 2)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
+        if(settings.mime_type_filter === 1)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
+        else if(settings.mime_type_filter === 2)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
         return uri
     }
 
@@ -356,6 +357,29 @@ MainView {
                 return i
         }
         return -1
+    }
+
+    Component {
+        id: dialog
+        Dialog {
+            id: dialogue
+            property string messageTitle: "SHOUTcast"
+            property string messageText: "no text"
+            title: messageTitle
+            text: messageText
+            Button {
+                text: i18n.tr("Ok")
+                onClicked: PopupUtils.close(dialogue)
+            }
+        }
+    }
+
+    function showMessageDialog(title, text) {
+        PopupUtils.open(dialog, app, {messageTitle: title, messageText: text})
+    }
+
+    function showErrorDialog(text) {
+        PopupUtils.open(dialog, app, {messageTitle: i18n.tr("Error"), messageText: text})
     }
 
     Settings {

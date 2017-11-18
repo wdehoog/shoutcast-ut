@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-18 16:07+0000\n"
+"POT-Creation-Date: 2017-11-18 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,47 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:26
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:27
 msgid "No station Info"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:27
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:28
 msgid "No Track Info"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:47
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:51
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:48
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:52
 msgid "SHOUTcast"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:61
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:62
 msgid "About"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:66
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:67
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:22
 msgid "Settings"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:83
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:84
 msgid "Genre"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:92
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:93
 msgid "Top 500"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:101
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:102
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:24
 msgid "Search"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:371
+msgid "Ok"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:382
+msgid "Error"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:16
