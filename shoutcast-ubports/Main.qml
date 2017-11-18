@@ -363,6 +363,6 @@ MainView {
         property int max_number_of_results : 500
         property int server_timeout : 5
         property int mime_type_filter: 0
-        property bool show_station_logo_in_lists: true
+        property bool show_station_logo_in_lists: false
     }
 }

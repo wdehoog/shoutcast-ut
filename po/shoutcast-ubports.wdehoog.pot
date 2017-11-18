@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-18 15:53+0000\n"
+"POT-Creation-Date: 2017-11-18 16:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgid "Keywords"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:46
-msgid "Show Station Logos in lists"
+msgid "Show Station Logos in lists (crashes with large lists)"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:59

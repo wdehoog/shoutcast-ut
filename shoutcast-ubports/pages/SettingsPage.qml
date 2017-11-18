@@ -43,7 +43,7 @@ Page {
                 width: parent.width
                 height: childrenRect.height
                 Label {
-                    text: i18n.tr("Show Station Logos in lists")
+                    text: i18n.tr("Show Station Logos in lists (crashes with large lists)")
                 }
                 Switch {
                     id: showStationLogos
