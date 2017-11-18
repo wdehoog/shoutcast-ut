@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-17 21:55+0000\n"
+"POT-Creation-Date: 2017-11-18 12:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,12 +60,20 @@ msgstr ""
 msgid "Genres"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:58
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:60
 msgid "Search for"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:77
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:80
 msgid "Search In: "
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:268
+msgid "Now Playing"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:269
+msgid "Keywords"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:38

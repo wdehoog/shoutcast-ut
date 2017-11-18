@@ -1,6 +1,6 @@
 {
     "name": "shoutcast-ubports.wdehoog",
-    "description": "description of shoutcast-ubports",
+    "description": "A SHOUTcast browser and player",
     "architecture": "@CLICK_ARCH@",
     "title": "shoutcast-ubports",
     "hooks": {

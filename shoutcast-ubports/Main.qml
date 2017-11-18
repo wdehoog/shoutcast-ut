@@ -259,6 +259,35 @@ MainView {
         xhr.send();
     }
 
+    function loadKeywordSearch(keywordQuery, onDone, onTimeout) {
+        var xhr = new XMLHttpRequest
+        var uri = Shoutcast.KeywordSearchBase
+            + "?" + Shoutcast.DevKeyPart
+            + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
+        //if(mimeTypeFilter.value === 1)
+        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
+        //else if(mimeTypeFilter.value === 2)
+        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
+        uri += "&" + Shoutcast.getSearchPart(keywordQuery)
+        //console.log("loadKeywordSearch: " + uri)
+        xhr.open("GET", uri)
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === XMLHttpRequest.DONE) {
+                timer.destroy()
+                onDone(xhr.responseText)
+            }
+        }
+        var timer = createTimer(app, settings.server_timeout*1000)
+        timer.triggered.connect(function() {
+            if(xhr.readyState === XMLHttpRequest.DONE)
+                return
+            xhr.abort()
+            onTimeout()
+            timer.destroy()
+        });
+        xhr.send();
+    }
+
     function loadTop500(onDone, onTimeout) {
         var xhr = new XMLHttpRequest
         var uri = Shoutcast.Top500Base

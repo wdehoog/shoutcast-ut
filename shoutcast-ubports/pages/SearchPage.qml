@@ -46,15 +46,17 @@ Page {
             rightMargin: units.gu(1)
             fill: parent
         }
-       ListView {
+        ListView {
             id: stationsListView
             width: parent.width - scrollBar.width
             height: childrenRect.height
-            //anchors.fill: parent
+
             header: Column {
                 spacing: units.gu(1)
+                width: parent.width
                 TextField {
                     id: searchField
+                    width: parent.width
                     placeholderText: i18n.tr("Search for")
                     inputMethodHints: Qt.ImhNoPredictiveText
                     primaryItem: Icon {
@@ -69,19 +71,21 @@ Page {
                     }
                     Keys.onReturnPressed: refresh()
                 }
-
                 Row {
                     id: typeRow
+                    width: parent.width
                     Label {
+                        id: silabel
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18n.tr("Search In: ")
                     }
                     Button {
                         id: popoverButton
+                        width: parent.width - silabel.width
                         anchors.verticalCenter: parent.verticalCenter
                         color: "white"
-                        text: searchInTypeModel.get(searchInType).label
-                        onClicked: PopupUtils.open(popoverComponent, popoverButton)
+                        text: searchInTypeLabels[searchInType]
+                        onClicked: PopupUtils.open(pocSearchType, popoverButton)
                     }
                 }
             }
@@ -114,6 +118,8 @@ Page {
             anchors.right: parent.right
         }
     }
+
+    onSearchInTypeChanged: refresh()
 
     function refresh() {
         if(searchString.length >= 1) {
@@ -257,42 +263,34 @@ Page {
         id: searchModel
     }
 
-    ListModel {
-        id: searchInTypeModel
 
-        ListElement {
-            label: "Now Playing"
-            type: 0
+    property var searchInTypeLabels: [
+        i18n.tr("Now Playing"),
+        i18n.tr("Keywords")
+    ]
+
+    ActionList {
+        id: searchInTypeActions
+        Action {
+            text: searchInTypeLabels[0]
+            onTriggered: searchInType = 0
         }
-        ListElement {
-            label: "Keywords"
-            type: 1
+        Action {
+            text: searchInTypeLabels[1]
+            onTriggered: searchInType = 1
         }
     }
 
     Component {
-        id: popoverComponent
-
-        Popover {
-            id: popover
-
-            ListView {
-                clip: true
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    top: parent.top
-                }
-                model: searchInTypeModel
-                height: units.gu(20)
-                delegate: Old_ListItem.Standard {
-                    text: label
-                    onClicked: {
-                        searchInType = type
-                        PopupUtils.close(popover)
-                    }
-                }
+        id: pocSearchType
+        ActionSelectionPopover {
+            id: asp
+            actions: searchInTypeActions
+            delegate: Old_ListItem.Standard {
+                text: action.text
+                onClicked: PopupUtils.close(asp)
             }
         }
     }
+
 }
