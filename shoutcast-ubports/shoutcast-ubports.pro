@@ -9,6 +9,7 @@ QML_FILES += \
 QML_COMPONENT_FILES = \
     components/JSONListModel.qml \
     components/StationListItemView.qml \
+    components/StationListItemViewWithImage.qml \
     components/jsonpath.js \
     components/shoutcast.js \
     components/JSONListModel.qml \
@@ -70,4 +71,5 @@ DISTFILES += \
     pages/StationsPage.qml \
     pages/AboutPage.qml \
     pages/SettingsPage.qml \
-    pages/SearchPage.qml
+    pages/SearchPage.qml \
+    components/StationListItemViewWithImage.qml

@@ -54,13 +54,17 @@ Page {
             }
             delegate: ListItem {
                 id: delegate
-                width: parent.width //- 2*Theme.paddingMedium
+                width: parent.width
                 height: stationListItemView.height
-                //x: Theme.paddingMedium
-                //contentHeight: childrenRect.height
 
                 StationListItemView {
-                    id: stationListItemView
+                    id: withoutImage
+                    visible: !app.settings.show_station_logo_in_lists
+                }
+
+                StationListItemViewWithImage {
+                    id: withImage
+                    visible: app.settings.show_station_logo_in_lists
                 }
 
                 onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)

@@ -3,10 +3,10 @@ import Ubuntu.Components 1.3
 
 import "shoutcast.js" as Shoutcast
 
-
 Column {
     id: stationListItemViewColumn
     width: parent.width
+    anchors.verticalCenter: parent.verticalCenter
 
     // name
     // lc, genre, mt/br
@@ -80,4 +80,3 @@ Column {
         return str
     }
 }
-

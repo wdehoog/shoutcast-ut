@@ -39,6 +39,20 @@ Page {
             x: units.gu(2)
             spacing: units.gu(2)
 
+            Row {
+                width: parent.width
+                height: childrenRect.height
+                Label {
+                    text: i18n.tr("Show Station Logos in lists")
+                }
+                Switch {
+                    id: showStationLogos
+                    anchors.right: parent.right
+                    checked: settings.show_station_logo_in_lists
+                    onCheckedChanged: settings.show_station_logo_in_lists = checked
+                }
+            }
+
             Column {
                 width: parent.width
                 Label {
