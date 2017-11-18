@@ -15,8 +15,9 @@ Column {
     Label {
         id: nameLabel
         width: parent.width
-        color:  UbuntuColors.orange //currentItem === index ? Theme.highlightColor : Theme.primaryColor
+        color:  UbuntuColors.orange
         textFormat: Text.StyledText
+        font.weight: currentItem === index ? Font.Bold : Font.Normal
         //truncationMode: TruncationMode.Fade
         text: name
     }
@@ -24,7 +25,8 @@ Column {
     Label {
         id: metaLabel
         width: parent.width
-        color: UbuntuColors.coolGrey //currentItem === index ? Theme.highlightColor : Theme.primaryColor
+        color: UbuntuColors.coolGrey
+        font.weight: currentItem === index ? Font.Bold : Font.Normal
         //font.pixelSize: Theme.fontSizeExtraSmall
         //truncationMode: TruncationMode.Fade
         text: getMetaString(model)
@@ -34,7 +36,8 @@ Column {
     Label {
         id: trackLabel
         width: parent.width
-        color: UbuntuColors.darkGrey // currentItem === index ? Theme.secondaryHighlightColor : Theme.secondaryColor
+        color: UbuntuColors.darkGrey
+        font.weight: currentItem === index ? Font.Bold : Font.Normal
         //font.pixelSize: Theme.fontSizeExtraSmall
         textFormat: Text.StyledText
         //truncationMode: TruncationMode.Fade

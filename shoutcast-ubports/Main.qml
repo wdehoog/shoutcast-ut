@@ -350,6 +350,14 @@ MainView {
         return uri
     }
 
+    function findStation(id, model) {
+        for(var i=0;i<model.count;i++) {
+            if(model.get(i).id === id)
+                return i
+        }
+        return -1
+    }
+
     Settings {
         id: settings
         property int max_number_of_results : 500

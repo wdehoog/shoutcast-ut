@@ -55,7 +55,6 @@ Page {
             delegate: ListItem {
                 id: delegate
                 width: parent.width
-                height: stationListItemView.height
 
                 StationListItemView {
                     id: withoutImage
@@ -97,13 +96,13 @@ Page {
             XmlRole { name: "genre5"; query: "string(@genre5)" }
             onStatusChanged: {
                 if(status === XmlListModel.Ready) {
-                    console.log("XmlListModel.Ready")
+                    //console.log("XmlListModel.Ready")
                     showBusy = false
-                    /*if(top500Model.count === 0)
-                        app.showErrorDialog(qsTr("SHOUTcast server returned no Stations"))
-                    else
-                        currentItem = app.findStation(app.stationId, top500Model)
-                    */
+                    if(top500Model.count === 0) {
+                        //app.showErrorDialog(qsTr("SHOUTcast server returned no Stations"))
+                        console.log("SHOUTcast server returned no Stations")
+                    } else
+                        currentItem = app.findStation(app.stationId, top500Model)                    
                 }
             }
         }
@@ -152,6 +151,19 @@ Page {
 
     Component.onCompleted: {
         reload()
+    }
+
+    Connections {
+        target: app
+        onStationChanged: {
+            //navDirection = 0
+            // station has changed look for the new current one
+            currentItem = app.findStation(stationInfo.id, top500Model)
+        }
+        onStationChangeFailed: {
+            //if(navDirection !== 0)
+            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
     }
 
 }

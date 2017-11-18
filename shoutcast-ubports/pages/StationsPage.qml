@@ -69,7 +69,6 @@ Page {
             delegate: ListItem {
                 id: delegate
                 width: parent.width
-                height: stationListItemView.height
 
                 StationListItemView {
                     id: withoutImage
@@ -115,6 +114,14 @@ Page {
         stationsModel.refresh()
     }
 
+    function loadingDone() {
+        if(stationsModel.model.count === 0) {
+            //app.showErrorDialog(qsTr("SHOUTcast server returned no Stations"))
+            console.log("SHOUTcast server returned no Stations")
+        } else
+            currentItem = app.findStation(app.stationId, stationsModel.model)
+    }
+
     Connections {
         target: stationsModel
         onLoaded: {
@@ -137,6 +144,20 @@ Page {
             console.log("SHOUTcast server did not respond")
         }
     }
+
+    Connections {
+        target: app
+        onStationChanged: {
+            //navDirection = 0
+            // station has changed look for the new current one
+            currentItem = app.findStation(stationInfo.id, stationsModel.model)
+        }
+        onStationChangeFailed: {
+            //if(navDirection !== 0)
+            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
+    }
+
 }
 
 

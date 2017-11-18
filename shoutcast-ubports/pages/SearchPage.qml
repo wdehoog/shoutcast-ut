@@ -97,7 +97,6 @@ Page {
             delegate: ListItem {
                 id: delegate
                 width: parent.width
-                height: stationListItemView.height
 
                 StationListItemView {
                     id: withoutImage
@@ -176,8 +175,8 @@ Page {
                     tuneinBase["base-xspf"] = b
             }
             showBusy = false
-            //if(searchModel.count > 0)
-            //    currentItem = app.findStation(app.stationId, searchModel)
+            if(searchModel.count > 0)
+                currentItem = app.findStation(app.stationId, searchModel)
         }
         onTimeout: {
             showBusy = false
@@ -206,7 +205,7 @@ Page {
         }, function() {
             // timeout
             showBusy = false
-            app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
+            //app.showErrorDialog(qsTr("SHOUTcast server did not respond"))
             console.log("SHOUTcast server did not respond")
         })
     }
@@ -234,8 +233,8 @@ Page {
             for(i=0;i<count;i++)
                 searchModel.append(get(i))
             showBusy = false
-            //if(searchModel.count > 0)
-            //    currentItem = app.findStation(app.stationId, searchModel)
+            if(searchModel.count > 0)
+                currentItem = app.findStation(app.stationId, searchModel)
         }
     }
 
@@ -267,6 +266,18 @@ Page {
         id: searchModel
     }
 
+    Connections {
+        target: app
+        onStationChanged: {
+            //navDirection = 0
+            // station has changed look for the new current one
+            currentItem = app.findStation(stationInfo.id, searchModel)
+        }
+        onStationChangeFailed: {
+            //if(navDirection !== 0)
+            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
+    }
 
     property var searchInTypeLabels: [
         i18n.tr("Now Playing"),
