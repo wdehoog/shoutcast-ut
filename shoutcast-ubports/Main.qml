@@ -32,6 +32,7 @@ MainView {
     property int currentItem: -1
     property var tuneinBase: {}
 
+    property alias settings: settings
 
     PageStack {
         id: pageStack
@@ -264,10 +265,10 @@ MainView {
         var uri = Shoutcast.KeywordSearchBase
             + "?" + Shoutcast.DevKeyPart
             + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
-        //if(mimeTypeFilter.value === 1)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
-        //else if(mimeTypeFilter.value === 2)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
+        if(settings.mime_type_filter === 1)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
+        else if(settings.mime_type_filter === 2)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
         uri += "&" + Shoutcast.getSearchPart(keywordQuery)
         //console.log("loadKeywordSearch: " + uri)
         xhr.open("GET", uri)
@@ -294,10 +295,10 @@ MainView {
                 + "?" + Shoutcast.DevKeyPart
                 + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
                 + "&" + Shoutcast.QueryFormat
-        /*if(mimeTypeFilter.value === 1)
+        if(settings.mime_type_filter === 1)
             uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
-        else if(mimeTypeFilter.value === 2)
-            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")*/
+        else if(settings.mime_type_filter === 2)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
         xhr.open("GET", uri)
         xhr.onreadystatechange = function() {
             if(xhr.readyState === XMLHttpRequest.DONE) {
@@ -328,10 +329,10 @@ MainView {
                   + "?" + Shoutcast.DevKeyPart
                   + "&" + Shoutcast.QueryFormat
                   + "&" + Shoutcast.getLimitPart(settings.max_number_of_results)
-        //if(mimeTypeFilter.value === 1)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
-        //else if(mimeTypeFilter.value === 2)
-        //    uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
+        if(settings.mime_type_filter === 1)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/mpeg")
+        else if(settings.mime_type_filter === 2)
+            uri += "&" + Shoutcast.getAudioTypeFilterPart("audio/aacp")
         uri += "&" + Shoutcast.getPlayingPart(nowPlayingQuery)
         return uri
     }
@@ -353,5 +354,6 @@ MainView {
         id: settings
         property int max_number_of_results : 500
         property int server_timeout : 5
+        property int mime_type_filter: 0
     }
 }
