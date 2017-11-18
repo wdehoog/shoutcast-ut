@@ -107,7 +107,8 @@ UBPorts Team: UBPorts
 walidham: UBPorts port for titan
 Romain Pokrzywka: JSONListModel
 Stefan Goessner: JSONPath
-igh0zt: app icon"
+igh0zt: app icon
+https://feathericons.com/: some icons"
             }
         }
     }

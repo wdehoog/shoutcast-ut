@@ -84,6 +84,7 @@ MainView {
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
+                    iconSource: Qt.resolvedUrl("resources/folder.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
                 }
                 Button {
@@ -93,6 +94,7 @@ MainView {
                     text: i18n.tr("Top 500")
                     color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
+                    iconSource: Qt.resolvedUrl("resources/chevrons-up.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
                 }
                 Button {
@@ -102,10 +104,12 @@ MainView {
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     color: "white"
+                    iconSource: Qt.resolvedUrl("resources/search.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/SearchPage.qml"))
                 }
             }
 
+            // player area
             Row {
                 id: playerUI
                 anchors {
