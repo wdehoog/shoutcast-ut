@@ -66,11 +66,7 @@ Page {
 
     Item {
         id: pageLayout
-        anchors {
-            leftMargin: units.gu(1)
-            rightMargin: units.gu(1)
-            fill: parent
-        }
+        anchors.fill: parent
         ListView {
             id: stationsListView
             width: parent.width - scrollBar.width

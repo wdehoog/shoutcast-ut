@@ -59,13 +59,12 @@ Page {
     }
 
     Column {
-        spacing: units.gu(1)
         id: pageLayout
+        spacing: units.gu(1)
+        anchors.fill: parent
 
         anchors {
             top: top500Page.header.bottom
-            leftMargin: units.gu(1)
-            rightMargin: units.gu(1)
             fill: parent
         }
 

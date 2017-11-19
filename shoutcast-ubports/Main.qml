@@ -338,7 +338,6 @@ MainView {
         xhr.send();
     }
 
-
     function createTimer(root, interval) {
         return Qt.createQmlObject("import QtQuick 2.0; Timer {interval: " + interval + "; repeat: false; running: true;}", root, "TimeoutTimer");
     }
@@ -377,6 +376,28 @@ MainView {
                 return i
         }
         return -1
+    }
+
+    // when loading prev/next failed try the following one in the same direction
+    function navToPrevNext(currentItem, navDirection, model, tuneinBase) {
+        var item
+        if(navDirection === -1 || navDirection === 1) {
+            if(navDirection > 0 // next?
+               && (currentItem + navDirection) < (model.count-1))
+                navDirection++
+            else if(navDirection < 0 // prev?
+                      && (currentItem - navDirection) > 0)
+                navDirection--
+            else // reached the end
+                navDirection = 0
+
+            if(navDirection !== 0) {
+                item = model.get(currentItem + navDirection)
+                if(item)
+                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
+        }
+        return navDirection
     }
 
     Component {

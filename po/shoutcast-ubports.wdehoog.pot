@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-19 16:59+0000\n"
+"POT-Creation-Date: 2017-11-19 21:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,11 +56,11 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:391
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:412
 msgid "Ok"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:402
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:423
 msgid "Error"
 msgstr ""
 
@@ -92,19 +92,19 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:85
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:81
 msgid "Search for"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:105
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:101
 msgid "Search In: "
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:327
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:323
 msgid "Now Playing"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:328
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:324
 msgid "Keywords"
 msgstr ""
 

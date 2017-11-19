@@ -82,12 +82,9 @@ Page {
     }
 
     Column {
-       spacing: units.gu(1)
-       id: pageLayout
-       anchors {
-           margins: units.gu(2)
-           fill: parent
-       }
+        id: pageLayout
+        spacing: units.gu(1)
+        anchors.fill: parent
 
         ListView {
             id: subGenresListView
