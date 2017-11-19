@@ -16,6 +16,7 @@ Page {
     property bool canGoNext: currentItem < (top500Model.count-1)
     property bool canGoPrevious: currentItem > 0
     property int navDirection: 0 // 0: none, -x: prev, +x: next
+    property var tuneinBase: {}
 
     header: PageHeader {
         id: pageHeader
@@ -25,6 +26,17 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
+
+        leadingActionBar.actions: [
+            Action {
+                iconName: "back"
+                text: "Back"
+                onTriggered: {
+                    app.loadLastList(top500Model, currentItem, tuneinBase)
+                    pageStack.pop()
+                }
+            }
+        ]
 
         trailingActionBar.actions: [
             Action {

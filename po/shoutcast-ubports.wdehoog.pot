@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-19 11:00+0000\n"
+"POT-Creation-Date: 2017-11-19 14:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,38 +25,38 @@ msgstr ""
 msgid "No Track Info"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:56
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:60
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:59
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:63
 msgid "SHOUTcast"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:70
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:73
 msgid "About"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:75
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:78
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:22
 msgid "Settings"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:92
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:95
 msgid "Genre"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:102
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:105
 msgid "Top 500"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:112
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:28
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:115
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:29
 msgid "Search"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:334
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:383
 msgid "Ok"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:345
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:394
 msgid "Error"
 msgstr ""
 
@@ -68,25 +68,25 @@ msgstr ""
 msgid "Genres"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:38
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:45
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:32
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:50
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:58
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:44
 msgid "Reload"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:73
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:85
 msgid "Search for"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:93
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:105
 msgid "Search In: "
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:315
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:327
 msgid "Now Playing"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:316
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:328
 msgid "Keywords"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Stations for: "
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:36
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:48
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:33
 msgid "Home"
 msgstr ""
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Sub-Genres for: "
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:22
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:23
 msgid "Top 500 Stations"
 msgstr ""
 

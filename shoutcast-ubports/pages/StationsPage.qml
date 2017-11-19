@@ -14,13 +14,13 @@ Page {
     property bool canGoNext: currentItem < (stationsModel.model.count-1)
     property bool canGoPrevious: currentItem > 0
     property int navDirection: 0 // 0: none, -x: prev, +x: next
+    property var tuneinBase: {}
 
     property string genreName: ""
     property string genreId: ""
     property int currentItem: -1
 
     property bool showBusy: false
-    property var tuneinBase: ({})
 
     header: PageHeader {
         id: pageHeader
@@ -30,11 +30,24 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
+
+        leadingActionBar.actions: [
+            Action {
+                iconName: "back"
+                text: "Back"
+                onTriggered: {
+                    app.loadLastList(stationsModel.model, currentItem, tuneinBase)
+                    pageStack.pop()
+                }
+            }
+        ]
+
         trailingActionBar.actions: [
             Action {
                 iconName: "home"
                 text: i18n.tr("Home")
                 onTriggered: {
+                    app.loadLastList(stationsModel.model, currentItem, tuneinBase)
                     pageStack.pop()
                     pageStack.pop()
                     pageStack.pop()

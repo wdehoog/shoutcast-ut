@@ -32,6 +32,9 @@ MainView {
 
     property int currentItem: -1
     property var tuneinBase: {}
+    property bool canGoNext: currentItem < (lastListCopy.count-1)
+    property bool canGoPrevious: currentItem > 0
+    property int navDirection: 0 // 0: none, -x: prev, +x: next
 
     property alias settings: settings
 
@@ -140,7 +143,7 @@ MainView {
 
     Audio {
         id: audio
-        audioRole: Audio.MusicRole
+        //audioRole: Audio.MusicRole
         autoLoad: true
         autoPlay: false
 
@@ -160,6 +163,45 @@ MainView {
         }
     }
 
+    // When leaving a page it's ListModel is deleted. To still be able to next/previous
+    // there is a copy of the data here.
+    ListModel {
+        id: lastListCopy
+    }
+
+    function loadLastList(model, item, tunein) {
+        lastListCopy.clear()
+        for(var i=0;i<model.count;i++)
+            lastListCopy.append(model.get(i))
+        currentItem = item
+        tuneinBase = tunein
+    }
+
+    onPrevious: {
+        console.log("onPrevious canGoPrevious=" + canGoPrevious + ", navDirection=" + navDirection)
+        if(canGoPrevious) {
+            navDirection = - 1
+            var item = lastListCopy.get(currentItem + navDirection)
+            if(item)
+                app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+        }
+    }
+
+    onNext: {
+        console.log("onNext canGoNext=" + canGoNext + ", navDirection=" + navDirection)
+        if(canGoNext) {
+            navDirection = 1
+            var item = lastListCopy.get(currentItem + navDirection)
+            if(item)
+                 app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+        }
+    }
+
+    onStationChangeFailed: {
+        if(navDirection !== 0)
+            navDirection = app.navToPrevNext(currentItem, navDirection, lastListCopy, tuneinBase)
+    }
+
     function play() {
         console.log("play() audio.source:" + audio.source)
         audio.play()
@@ -176,6 +218,13 @@ MainView {
     property var currentStationInfo
 
     onStationChanged: {
+
+        // navigation done on MainPage
+        if(navDirection != 0) {
+            currentItem += navDirection
+            navDirection = 0
+        }
+
         currentStationInfo = stationInfo
         console.log("set stream:" + stationInfo.stream)
         //app.stationId = stationInfo.id
