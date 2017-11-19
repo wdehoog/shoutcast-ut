@@ -19,6 +19,10 @@ Page {
     property string searchString: ""
     property int searchInType: 0
 
+    property bool canGoNext: currentItem < (searchModel.count-1)
+    property bool canGoPrevious: currentItem > 0
+    property int navDirection: 0 // 0: none, -x: prev, +x: next
+
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Search")
@@ -27,6 +31,15 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
+
+        trailingActionBar.actions: [
+            Action {
+                iconName: "reload"
+                text: i18n.tr("Reload")
+                onTriggered: refresh()
+            }
+        ]
+
         flickable: stationsListView
     }
 
@@ -269,13 +282,32 @@ Page {
     Connections {
         target: app
         onStationChanged: {
-            //navDirection = 0
+            navDirection = 0
             // station has changed look for the new current one
             currentItem = app.findStation(stationInfo.id, searchModel)
         }
+
         onStationChangeFailed: {
-            //if(navDirection !== 0)
-            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+            if(navDirection !== 0)
+                navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
+
+        onPrevious: {
+            if(canGoPrevious) {
+                navDirection = - 1
+                var item = searchModel.get(currentItem + navDirection)
+                if(item)
+                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
+        }
+
+        onNext: {
+            if(canGoNext) {
+                navDirection = 1
+                var item = searchModel.get(currentItem + navDirection)
+                if(item)
+                     app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
         }
     }
 

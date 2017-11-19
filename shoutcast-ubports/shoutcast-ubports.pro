@@ -13,6 +13,8 @@ QML_COMPONENT_FILES = \
     components/jsonpath.js \
     components/shoutcast.js \
     components/JSONListModel.qml \
+    components/PlayerArea.qml \
+    components/SwipeArea.qml \
     components/Util.js
 
 QML_PAGE_FILES = \
@@ -23,6 +25,11 @@ QML_PAGE_FILES = \
     pages/SettingsPage.qml \
     pages/SearchPage.qml \
     pages/StationsPage.qml
+
+RESOURCE_FILES = \
+    resources/chevrons-up.svg \
+    resources/folder.svg \
+    resources/search.svg
 
 CONF_FILES +=  shoutcast-ubports.apparmor \
                shoutcast-ubports.png
@@ -47,6 +54,10 @@ qml_component_files.files += $${QML_COMPONENT_FILES}
 qml_page_files.path += /shoutcast-ubports/pages
 qml_page_files.files += $${QML_PAGE_FILES}
 
+#specify where the resource files are installed to
+resource_files.path += /shoutcast-ubports/resources
+resource_files.files += $${RESOURCE_FILES}
+
 #specify where the config files are installed to
 config_files.path = /shoutcast-ubports
 config_files.files += $${CONF_FILES}
@@ -57,7 +68,7 @@ desktop_file.path = /shoutcast-ubports
 desktop_file.files = $$OUT_PWD/shoutcast-ubports.desktop
 desktop_file.CONFIG += no_check_exist
 
-INSTALLS+=config_files qml_files qml_component_files qml_page_files desktop_file
+INSTALLS+=config_files qml_files qml_component_files qml_page_files resource_files desktop_file
 
 DISTFILES += \
     components/JSONListModel.qml \
@@ -72,4 +83,9 @@ DISTFILES += \
     pages/AboutPage.qml \
     pages/SettingsPage.qml \
     pages/SearchPage.qml \
-    components/StationListItemViewWithImage.qml
+    components/StationListItemViewWithImage.qml \
+    resources/chevrons-up.svg \
+    resources/folder.svg \
+    resources/search.svg \
+    components/SwipeArea.qml \
+    components/PlayerArea.qml

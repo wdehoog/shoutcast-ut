@@ -70,9 +70,15 @@ Page {
                     horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     font.pixelSize:FontUtils.sizeToPixels("large")
-                    //: I doubt this needs to be translated
                     text: "Copyright (C) 2017 Willem-Jan de Hoog"
-                     width: parent.width
+                    width: parent.width
+                }
+                Label {
+                    horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    font.pixelSize:FontUtils.sizeToPixels("medium")
+                    text: "sources: https://github.com/wdehoog/shoutcast-ubports"
+                    width: parent.width
                 }
                 Label {
                     horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter

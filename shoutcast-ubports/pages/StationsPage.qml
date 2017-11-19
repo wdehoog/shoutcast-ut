@@ -11,6 +11,10 @@ Page {
     id: stationsPage
     objectName: "StationsPage"
 
+    property bool canGoNext: currentItem < (stationsModel.model.count-1)
+    property bool canGoPrevious: currentItem > 0
+    property int navDirection: 0 // 0: none, -x: prev, +x: next
+
     property string genreName: ""
     property string genreId: ""
     property int currentItem: -1
@@ -35,6 +39,11 @@ Page {
                     pageStack.pop()
                     pageStack.pop()
                 }
+            },
+            Action {
+                iconName: "reload"
+                text: i18n.tr("Reload")
+                onTriggered: reload()
             }
         ]
 
@@ -147,14 +156,34 @@ Page {
 
     Connections {
         target: app
+
         onStationChanged: {
-            //navDirection = 0
+            navDirection = 0
             // station has changed look for the new current one
             currentItem = app.findStation(stationInfo.id, stationsModel.model)
         }
+
         onStationChangeFailed: {
-            //if(navDirection !== 0)
-            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+            if(navDirection !== 0)
+                navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
+
+        onPrevious: {
+            if(canGoPrevious) {
+                navDirection = - 1
+                var item = stationsModel.model.get(currentItem + navDirection)
+                if(item)
+                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
+        }
+
+        onNext: {
+            if(canGoNext) {
+                navDirection = 1
+                var item = stationsModel.model.get(currentItem + navDirection)
+                if(item)
+                     app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
         }
     }
 

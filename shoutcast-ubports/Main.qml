@@ -37,6 +37,14 @@ MainView {
 
     PageStack {
         id: pageStack
+        anchors {
+            bottom: playerArea.top
+            fill: undefined
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+        clip: true
 
         Component.onCompleted: {
             pageStack.push(mainPage)
@@ -109,73 +117,23 @@ MainView {
                 }
             }
 
-            // player area
-            Row {
-                id: playerUI
-                anchors {
-                    bottom: parent.bottom
-                    bottomMargin: units.gu(1)
-                }
-
-                //height: Math.max(imageItem.height, meta.height, playerButtons.height)
-                width: parent.width - 2*units.gu(1)
-                x: units.gu(1)
-
-                Icon {
-                    id: imageItem
-                    source: logoURL.length > 0 ? logoURL : defaultImageSource
-                    width: units.gu(10)
-                    height: width
-                    anchors.verticalCenter: parent.verticalCenter
-                    //fillMode: Image.PreserveAspectFit
-                }
-
-                Column {
-                    id: meta
-                    width: parent.width - imageItem.width - playerButton.width
-                    anchors.verticalCenter: parent.verticalCenter
-
-                    Text {
-                        id: m1
-                        x: units.gu(1)
-                        width: parent.width - units.gu(1)
-                        color: UbuntuColors.orange
-                        textFormat: Text.StyledText
-                        //font.pixelSize: Theme.fontSizeSmall
-                        wrapMode: Text.Wrap
-                        text: streamMetaText1
-                    }
-                    Text {
-                        id: m2
-                        x: units.gu(1)
-                        width: parent.width - units.gu(1)
-                        anchors.right: parent.right
-                        color: UbuntuColors.darkGrey
-                        //font.pixelSize: Theme.fontSizeSmall
-                        wrapMode: Text.Wrap
-                        text: streamMetaText2
-                    }
-
-                }
-
-                Button {
-                    id: playerButton
-                    width: units.gu(4)
-                    anchors.verticalCenter: parent.verticalCenter
-                    color: UbuntuColors.porcelain
-
-                    action: Action {
-                          iconName: audio.playbackState == Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
-                          //text: i18n.tr("Pause")
-                          onTriggered: pause()
-                    }
-                }
-
-            }
-
         }
 
     }
+
+    PlayerArea {
+        id: playerArea
+    }
+
+    Connections {
+        target: playerArea
+        onPause: pause()
+        onPrevious: previous()
+        onNext: next()
+    }
+
+    signal previous()
+    signal next()
 
     signal audioBufferFull()
     onAudioBufferFull: play()
@@ -186,7 +144,8 @@ MainView {
         autoLoad: true
         autoPlay: false
 
-        //onPlaybackStateChanged: app.playbackStateChanged()
+        onPlaybackStateChanged: playerArea.audioPlaybackState = playbackState
+
         //onSourceChanged: refreshTransportState()
 
         //onBufferProgressChanged: {
@@ -388,9 +347,19 @@ MainView {
 
     Settings {
         id: settings
+
+        // number of results to as shoutcast server per request
         property int max_number_of_results : 500
-        property int server_timeout : 5
+
+        // time to wait for shoutcast server to respond
+        property int server_timeout : 10
+
+        // 0: no filter, 1: only audio/mpeg, 2: only audio/aacp
         property int mime_type_filter: 0
+
+        // show station logos in the station lists (or not)
+        // it looks nice but on my Moto G 2nd it makes the app crash
+        // on large lists like the Top500
         property bool show_station_logo_in_lists: false
     }
 }

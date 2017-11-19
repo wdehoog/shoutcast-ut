@@ -16,7 +16,7 @@ Row {
         fillMode: Image.PreserveAspectFit
         height: units.gu(7)
         width: height
-        source: logo
+        source: logo ? logo : ""
     }
 
     // spacer

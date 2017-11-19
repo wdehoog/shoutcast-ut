@@ -13,6 +13,10 @@ Page {
     property int currentItem: -1
     property bool showBusy: false
 
+    property bool canGoNext: currentItem < (top500Model.count-1)
+    property bool canGoPrevious: currentItem > 0
+    property int navDirection: 0 // 0: none, -x: prev, +x: next
+
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Top 500 Stations")
@@ -21,6 +25,15 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
+
+        trailingActionBar.actions: [
+            Action {
+                iconName: "reload"
+                text: i18n.tr("Reload")
+                onTriggered: reload()
+            }
+        ]
+
         flickable: stationsListView
     }
 
@@ -36,6 +49,7 @@ Page {
     Column {
         spacing: units.gu(1)
         id: pageLayout
+
         anchors {
             top: top500Page.header.bottom
             leftMargin: units.gu(1)
@@ -155,14 +169,34 @@ Page {
 
     Connections {
         target: app
+
         onStationChanged: {
-            //navDirection = 0
+            navDirection = 0
             // station has changed look for the new current one
             currentItem = app.findStation(stationInfo.id, top500Model)
         }
+
         onStationChangeFailed: {
-            //if(navDirection !== 0)
-            //    navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+            if(navDirection !== 0)
+                navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+        }
+
+        onPrevious: {
+            if(canGoPrevious) {
+                navDirection = - 1
+                var item = top500Model.get(currentItem + navDirection)
+                if(item)
+                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
+        }
+
+        onNext: {
+            if(canGoNext) {
+                navDirection = 1
+                var item = top500Model.get(currentItem + navDirection)
+                if(item)
+                     app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+            }
         }
     }
 
