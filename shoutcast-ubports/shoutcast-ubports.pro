@@ -20,6 +20,7 @@ QML_COMPONENT_FILES = \
 QML_PAGE_FILES = \
     pages/AboutPage.qml \
     pages/GenrePage.qml \
+    pages/HelpPage.qml \
     pages/SubGenrePage.qml \
     pages/Top500Page.qml \
     pages/SettingsPage.qml \
@@ -88,4 +89,5 @@ DISTFILES += \
     resources/folder.svg \
     resources/search.svg \
     components/SwipeArea.qml \
-    components/PlayerArea.qml
+    components/PlayerArea.qml \
+    pages/HelpPage.qml

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-19 14:26+0000\n"
+"POT-Creation-Date: 2017-11-19 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,28 +35,32 @@ msgid "About"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:78
+msgid "Help"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:83
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:22
 msgid "Settings"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:95
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:100
 msgid "Genre"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:105
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:110
 msgid "Top 500"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:115
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:120
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:29
 msgid "Search"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:383
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:391
 msgid "Ok"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:394
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:402
 msgid "Error"
 msgstr ""
 
@@ -66,6 +70,20 @@ msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:21
 msgid "Genres"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:12
+msgid "SHOUTcast Help"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:63
+msgid "<p>The sources can be found on GitHub:"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:35
+msgid ""
+"<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
+"internet radio stations.</p>"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:50

@@ -74,6 +74,11 @@ MainView {
                         onTriggered: pageStack.push(Qt.resolvedUrl("pages/AboutPage.qml") )
                     },
                     Action {
+                        iconName: "help"
+                        text: i18n.tr("Help")
+                        onTriggered: pageStack.push(Qt.resolvedUrl("pages/HelpPage.qml") )
+                    },
+                    Action {
                         iconName: "settings"
                         text: i18n.tr("Settings")
                         onTriggered: pageStack.push(Qt.resolvedUrl("pages/SettingsPage.qml") )
@@ -126,6 +131,9 @@ MainView {
 
     PlayerArea {
         id: playerArea
+        height: visible ? childrenRect.height : 0
+        visible: pageStack.currentPage.objectName !== "AboutPage"
+                 && pageStack.currentPage.objectName !== "HelpPage"
     }
 
     Connections {

@@ -19,104 +19,110 @@ Page {
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
+        flickable: flick.flickableItem
     }
 
-    Column {
-        id: column
-        width: parent.width - 2*units.gu(1)
-        x: units.gu(1)
-        spacing: units.gu(10)
-        anchors.verticalCenter: parent.verticalCenter
+    ScrollView  {
+        id: flick
+        anchors.fill: parent
 
-        Item {
-            width: parent.width
-            height: childrenRect.height
+        Column {
+            id: column
+            width: flick.width - 2*units.gu(1)
+            x: units.gu(1)
+            y: x
+            spacing: units.gu(10)
 
-            Icon {
-                id: icon
-                width: units.gu(10)
-                height: width
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: Qt.resolvedUrl("../shoutcast-ubports.png")
+            Item {
+                width: parent.width
+                height: childrenRect.height
+
+                Icon {
+                    id: icon
+                    width: units.gu(10)
+                    height: width
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    source: Qt.resolvedUrl("../shoutcast-ubports.png")
+                }
+
+                Column {
+                    id: appTitleColumn
+
+                    anchors {
+                        left: parent.left
+                        leftMargin: Theme.horizontalPageMargin
+                        right: parent.right
+                        rightMargin: Theme.horizontalPageMargin
+                        top: icon.bottom
+                        topMargin: Theme.paddingMedium
+                    }
+
+                    Label {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize:FontUtils.sizeToPixels("large")
+                        text: "shoutcast-ubports 0.1"
+                    }
+
+                    Label {
+                        horizontalAlignment: Text.AlignHCenter
+                        font.pixelSize:FontUtils.sizeToPixels("large")
+                        text: "SHOUTcast player for UBPorts"
+                        width: parent.width
+                        wrapMode: Text.WordWrap
+                    }
+
+                    Label {
+                        horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize:FontUtils.sizeToPixels("large")
+                        text: "Copyright (C) 2017 Willem-Jan de Hoog"
+                        width: parent.width
+                    }
+                    Label {
+                        horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize:FontUtils.sizeToPixels("medium")
+                        text: "sources: https://github.com/wdehoog/shoutcast-ubports"
+                        width: parent.width
+                    }
+                    Label {
+                        horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize:FontUtils.sizeToPixels("medium")
+                        text: "License: MIT"
+                        width: parent.width
+                    }
+                }
+
             }
 
             Column {
-                id: appTitleColumn
+                width: parent.width
 
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.horizontalPageMargin
-                    right: parent.right
-                    rightMargin: Theme.horizontalPageMargin
-                    top: icon.bottom
-                    topMargin: Theme.paddingMedium
+                Label {
+                    text: "Thanks to"
                 }
 
                 Label {
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors {
+                        left: parent.left
+                        leftMargin: units.gu(2)
+                        right: parent.right
+                        rightMargin: units.gu(2)
+                    }
                     font.pixelSize:FontUtils.sizeToPixels("large")
-                    text: "shoutcast-ubports 0.1"
-                }
-
-                Label {
-                    horizontalAlignment: Text.AlignHCenter
-                    font.pixelSize:FontUtils.sizeToPixels("large")
-                    text: "SHOUTcast player for UBPorts"
-                    width: parent.width
                     wrapMode: Text.WordWrap
-                }
-
-                Label {
-                    horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    font.pixelSize:FontUtils.sizeToPixels("large")
-                    text: "Copyright (C) 2017 Willem-Jan de Hoog"
-                    width: parent.width
-                }
-                Label {
-                    horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    font.pixelSize:FontUtils.sizeToPixels("medium")
-                    text: "sources: https://github.com/wdehoog/shoutcast-ubports"
-                    width: parent.width
-                }
-                Label {
-                    horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    font.pixelSize:FontUtils.sizeToPixels("medium")
-                    text: "License: MIT"
-                    width: parent.width
-                }
-            }
-
-        }
-
-        Column {
-            width: parent.width
-
-            Label {
-                text: "Thanks to"
-            }
-
-            Label {
-                anchors {
-                    left: parent.left
-                    leftMargin: units.gu(2)
-                    right: parent.right
-                    rightMargin: units.gu(2)
-                }
-                font.pixelSize:FontUtils.sizeToPixels("large")
-                wrapMode: Text.WordWrap
-                text:
+                    text:
 "SHOUTcast: www.shoutcast.com
 UBPorts Team: UBPorts
 walidham: UBPorts port for titan
 Romain Pokrzywka: JSONListModel
 Stefan Goessner: JSONPath
 igh0zt: app icon
-https://feathericons.com/: some icons"
+https://feathericons.com/: some icons
+Canonical: ubuntu-touch. Why did you stop?"
+                }
             }
         }
     }
-
 }
