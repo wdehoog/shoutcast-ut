@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-20 18:23+0000\n"
+"POT-Creation-Date: 2017-11-20 19:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,11 +76,11 @@ msgstr ""
 msgid "SHOUTcast Help"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:63
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:66
 msgid "<p>The sources can be found on GitHub:"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:35
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:36
 msgid ""
 "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
 "internet radio stations.</p>"

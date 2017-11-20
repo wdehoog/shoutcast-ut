@@ -21,6 +21,7 @@ Page {
     ScrollView  {
         id: flick
         anchors.fill: parent
+        anchors.margins: units.gu(1)
 
         Column {
             width: flick.width

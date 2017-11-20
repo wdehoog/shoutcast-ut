@@ -34,9 +34,9 @@ Page {
 
         Column {
             id: column
-            width: parent.width - 2 * units.gu(4)
-            y: units.gu(2)
-            x: units.gu(2)
+            width: parent.width - units.gu(2)
+            y: units.gu(1)
+            x: units.gu(1)
             spacing: units.gu(2)
 
             Row {
