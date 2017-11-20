@@ -50,7 +50,7 @@ to navigate the stations list (next/previous).</p>
   <li>If there is no network then you are toast</li>
   <li>The stations lists can show the logos (see the Settings page) but it makes the app crash a lot.</li>
   <li>The app checks if the Audio object has meta data available like current track info but appearently
-      this is not implemented in UBPorts</i>
+      this is not implemented in UBPorts. See https://bugs.launchpad.net/bugs/1586230.</i>
 </ul>
 ")
             }
