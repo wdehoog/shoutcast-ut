@@ -171,6 +171,21 @@ MainView {
         }
     }
 
+    Timer {
+        interval: 5000
+        running: audio.playbackState == Audio.PlayingState
+        repeat: true
+        onTriggered: {
+            //console.log(JSON.stringify(audio.metaData))
+            var text = audio.metaData.title
+            if(text !== undefined)
+                streamMetaText1 = title
+            text = audio.metaData.publisher
+            if(text !== undefined)
+                streamMetaText2 = text
+        }
+    }
+
     // When leaving a page it's ListModel is deleted. To still be able to next/previous
     // there is a copy of the data here.
     ListModel {

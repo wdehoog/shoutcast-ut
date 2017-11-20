@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-19 21:46+0000\n"
+"POT-Creation-Date: 2017-11-20 18:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,11 +56,11 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:412
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:427
 msgid "Ok"
 msgstr ""
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:423
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:438
 msgid "Error"
 msgstr ""
 
