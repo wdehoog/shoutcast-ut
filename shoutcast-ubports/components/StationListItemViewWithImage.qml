@@ -6,18 +6,6 @@ import "shoutcast.js" as Shoutcast
 Row {
     height: units.gu(7)
 
-    /*Image {
-        id: image
-        anchors {
-            verticalCenter: parent.verticalCenter
-            rightMargin: units.gu(1)
-        }
-        asynchronous: true
-        fillMode: Image.PreserveAspectFit
-        height: units.gu(7)
-        width: height
-        source: logo ? logo : ""
-    }*/
     Icon {
         id: image
         anchors {
@@ -25,7 +13,6 @@ Row {
             rightMargin: units.gu(1)
         }
         asynchronous: true
-        //fillMode: Image.PreserveAspectFit
         height: units.gu(7)
         width: height
         source: logo ? logo : ""
