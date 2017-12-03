@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-20 20:54+0000\n"
+"POT-Creation-Date: 2017-12-03 19:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,26 @@ msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:16
 msgid "About SHOUTcast"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:69
+msgid "SHOUTcast player for UBPorts"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:85
+msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:92
+msgid "License: MIT"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:103
+msgid "Translations"
+msgstr ""
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:124
+msgid "Thanks to"
 msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:21

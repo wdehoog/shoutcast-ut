@@ -455,4 +455,9 @@ MainView {
         // on large lists like the Top500
         property bool show_station_logo_in_lists: false
     }
+
+    Component.onCompleted: {
+        i18n.bindtextdomain("shoutcast-ubports", "locale");
+        i18n.domain = "shoutcast-ubports";
+    }
 }

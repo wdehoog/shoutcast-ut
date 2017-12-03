@@ -31,7 +31,7 @@ Page {
             width: flick.width - 2*units.gu(1)
             x: units.gu(1)
             y: x
-            spacing: units.gu(10)
+            spacing: units.gu(5)
 
             Item {
                 width: parent.width
@@ -60,13 +60,13 @@ Page {
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "shoutcast-ubports 0.1"
+                        text: "shoutcast-ubports 0.2"
                     }
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "SHOUTcast player for UBPorts"
+                        text: i18n.tr("SHOUTcast player for UBPorts")
                         width: parent.width
                         wrapMode: Text.WordWrap
                     }
@@ -82,14 +82,14 @@ Page {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("medium")
-                        text: "sources: https://github.com/wdehoog/shoutcast-ubports"
+                        text: i18n.tr("sources: https://github.com/wdehoog/shoutcast-ubports")
                         width: parent.width
                     }
                     Label {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("medium")
-                        text: "License: MIT"
+                        text: i18n.tr("License: MIT")
                         width: parent.width
                     }
                 }
@@ -100,7 +100,28 @@ Page {
                 width: parent.width
 
                 Label {
-                    text: "Thanks to"
+                    text: i18n.tr("Translations")
+                }
+
+                Label {
+                    anchors {
+                        left: parent.left
+                        leftMargin: units.gu(2)
+                        right: parent.right
+                        rightMargin: units.gu(2)
+                    }
+                    font.pixelSize:FontUtils.sizeToPixels("large")
+                    wrapMode: Text.WordWrap
+                    text:
+"Anne017: fr"
+                    }
+            }
+
+            Column {
+                width: parent.width
+
+                Label {
+                    text: i18n.tr("Thanks to")
                 }
 
                 Label {

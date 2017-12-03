@@ -90,4 +90,5 @@ DISTFILES += \
     resources/search.svg \
     components/SwipeArea.qml \
     components/PlayerArea.qml \
-    pages/HelpPage.qml
+    pages/HelpPage.qml \
+    ../po/fr.po
