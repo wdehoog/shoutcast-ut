@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-14 21:55+0100\n"
+"PO-Revision-Date: 2017-12-14 22:42+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ca\n"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:27
+msgid "No station Info"
+msgstr "Sense informació de l'estació"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:28
+msgid "No Track Info"
+msgstr "Sense informació de la pista"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:59
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:63
+msgid "SHOUTcast"
+msgstr "SHOUTcast"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:73
+msgid "About"
+msgstr "Quant a"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:78
+msgid "Help"
+msgstr "Ajuda"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:83
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:22
+msgid "Settings"
+msgstr "Preferències"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:100
+msgid "Genre"
+msgstr "Gènere"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:110
+msgid "Top 500"
+msgstr "Les 500 més reconegudes"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:120
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:29
+msgid "Search"
+msgstr "Cerca"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:427
+msgid "Ok"
+msgstr "D'acord"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:438
+msgid "Error"
+msgstr "Error"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:16
+msgid "About SHOUTcast"
+msgstr "Quant al SHOUTcast"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:69
+msgid "SHOUTcast player for UBPorts"
+msgstr "Reproductor SHOUTcast per l'UBPorts"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:85
+msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
+msgstr "codi font: https://github.com/wdehoog/shoutcast-ubports"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:92
+msgid "License: MIT"
+msgstr "Llicència: MIT"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:103
+msgid "Translations"
+msgstr "Traduccions"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:124
+msgid "Thanks to"
+msgstr "Gràcies a"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr "Gèneres"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:12
+msgid "SHOUTcast Help"
+msgstr "Ajuda del SHOUTcast"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:66
+msgid "<p>The sources can be found on GitHub:"
+msgstr "<p>El codi font es pot trobar a GitHub:"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:36
+msgid ""
+"<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
+"internet radio stations.</p>"
+msgstr ""
+"<p>Aquesta aplicació permet explorar la base de dades del <b>SHOUTcast</b> i "
+"sintonitzar les estacions de ràdio a internet.</p>"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:50
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:58
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:44
+msgid "Reload"
+msgstr "Recarrega"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:81
+msgid "Search for"
+msgstr "Cerca per"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:101
+msgid "Search In: "
+msgstr "Cerca a:"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:323
+msgid "Now Playing"
+msgstr "Ara sona"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:324
+msgid "Keywords"
+msgstr "Paraules clau"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:46
+msgid "Show Station Logos in lists (crashes with large lists)"
+msgstr ""
+"Mostra els logotips de les estacions (fa que l'aplicació es tanqui amb "
+"llistes llargues)"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:59
+msgid "Maximum number of results to ask the server (per query)"
+msgstr "Número màxim de resultats que es demanaran al servidor (per petició)"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:72
+msgid "Time to wait for response from server (seconds)"
+msgstr "Temps d'espera de la resposta del servidor (en segons)"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:85
+msgid "Mime Type Filter"
+msgstr "Filtre per tipus de contingut"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:100
+msgid "No filter. Accept all mime types."
+msgstr "Sense filtre. Accepta tots els tipus de contingut"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:101
+msgid "Accept only MP3 (audio/mpeg)"
+msgstr "Accepta només MP3 (audio/mpeg)"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:102
+msgid "Accept only AAC (audio/aacp)"
+msgstr "Accepta només AAC (audio/aacp)"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:27
+msgid "Stations for: "
+msgstr "Estacions per:"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:48
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:33
+msgid "Home"
+msgstr "Inici"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
+msgstr "Subgèneres per:"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:23
+msgid "Top 500 Stations"
+msgstr "Les 500 estacions millor reconegudes"
+
+#: /home/ubucon/build-shoutcast-ubports-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/shoutcast-ubports/shoutcast-ubports.desktop.h:1
+msgid "shoutcast-ubports"
+msgstr "shoutcast-ubports"
