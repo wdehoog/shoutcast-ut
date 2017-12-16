@@ -91,4 +91,5 @@ DISTFILES += \
     components/SwipeArea.qml \
     components/PlayerArea.qml \
     pages/HelpPage.qml \
-    ../po/fr.po
+    ../po/fr.po \
+    ../po/ca.po

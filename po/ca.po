@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-16 10:22+0000\n"
+"POT-Creation-Date: 2017-12-16 14:45+0000\n"
 "PO-Revision-Date: 2017-12-14 22:42+0100\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: \n"
@@ -69,23 +69,23 @@ msgstr "Error"
 msgid "About SHOUTcast"
 msgstr "Quant al SHOUTcast"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:69
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:72
 msgid "SHOUTcast player for UBPorts"
 msgstr "Reproductor SHOUTcast per l'UBPorts"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:85
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:88
 msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
 msgstr "codi font: https://github.com/wdehoog/shoutcast-ubports"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:92
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:95
 msgid "License: MIT"
 msgstr "Llicència: MIT"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:103
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:106
 msgid "Translations"
 msgstr "Traduccions"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:125
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:128
 msgid "Thanks to"
 msgstr "Gràcies a"
 
@@ -97,17 +97,30 @@ msgstr "Gèneres"
 msgid "SHOUTcast Help"
 msgstr "Ajuda del SHOUTcast"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:66
-msgid "<p>The sources can be found on GitHub:"
-msgstr "<p>El codi font es pot trobar a GitHub:"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:36
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:37
 msgid ""
 "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
-"internet radio stations.</p>"
+"internet radio stations.</p> <p>The different pages allow to:</p> <ul>   "
+"<li>Browse by Genre</li>   <li>List the Top 500 stations</li>   <li>Search "
+"by 'Now Playing' or Keywords</li>   <li>Configure the app</li> </ul> <p>The "
+"player area at the bottom allows to pause/play a stream en by horizontal "
+"swiping to navigate the stations list (next/previous).</p> <p>Main Issues:</"
+"p> <ul>   <li>If there is no network then you are toast</li>   <li>The "
+"stations lists can show the logos (see the Settings page) but it makes the "
+"app crash a lot.</li>   <li>The app checks if the Audio object has meta data "
+"available like current track info but appearently       this is not "
+"implemented in UBPorts. See https://bugs.launchpad.net/bugs/1586230.</i> </"
+"ul> "
 msgstr ""
-"<p>Aquesta aplicació permet explorar la base de dades del <b>SHOUTcast</b> i "
-"sintonitzar les estacions de ràdio a internet.</p>"
+
+#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:64
+msgid ""
+"<p>The sources can be found on GitHub: <a href=\"https://github.com/wdehoog/"
+"shoutcast-ubports\">https://github.com/wdehoog/shoutcast-ubports</a>.</p> "
+"<p>Please report any issues on the GitHub Issue page: <a href=\"https://"
+"github.com/wdehoog/shoutcast-ubports/issues\">https://github.com/wdehoog/"
+"shoutcast-ubports/issues</a>.</p>"
+msgstr ""
 
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:50
 #: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:58
@@ -181,3 +194,14 @@ msgstr "Les 500 estacions millor reconegudes"
 #: /home/ubucon/build-shoutcast-ubports-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/shoutcast-ubports/shoutcast-ubports.desktop.h:1
 msgid "shoutcast-ubports"
 msgstr "shoutcast-ubports"
+
+#~ msgid "<p>The sources can be found on GitHub:"
+#~ msgstr "<p>El codi font es pot trobar a GitHub:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
+#~ "internet radio stations.</p>"
+#~ msgstr ""
+#~ "<p>Aquesta aplicació permet explorar la base de dades del <b>SHOUTcast</"
+#~ "b> i sintonitzar les estacions de ràdio a internet.</p>"
