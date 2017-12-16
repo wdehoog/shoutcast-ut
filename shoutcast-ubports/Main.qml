@@ -23,7 +23,7 @@ MainView {
     applicationName: "shoutcast-ubports.wdehoog"
 
     property string defaultImageSource: "image://theme/icon-m-music"
-    property string logoURL: Qt.resolvedUrl("shoutcast-ubports.png")
+    property string logoURL: Qt.resolvedUrl("shoutcast-ubports.svg")
     property string streamMetaText1: i18n.tr("No station Info")
     property string streamMetaText2: i18n.tr("No Track Info")
 

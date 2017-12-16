@@ -33,7 +33,7 @@ RESOURCE_FILES = \
     resources/search.svg
 
 CONF_FILES +=  shoutcast-ubports.apparmor \
-               shoutcast-ubports.png
+               shoutcast-ubports.svg
 
 AP_TEST_FILES += tests/autopilot/run \
                  $$files(tests/*.py,true)               

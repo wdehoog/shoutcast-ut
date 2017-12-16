@@ -37,12 +37,15 @@ Page {
                 width: parent.width
                 height: childrenRect.height
 
-                Icon {
+                UbuntuShape {
                     id: icon
                     width: units.gu(10)
                     height: width
                     anchors.horizontalCenter: parent.horizontalCenter
-                    source: Qt.resolvedUrl("../shoutcast-ubports.png")
+                    radius: "medium"
+                    source: Image {
+                        source: Qt.resolvedUrl("../shoutcast-ubports.svg")
+                    }
                 }
 
                 Column {
