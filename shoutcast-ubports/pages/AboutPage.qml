@@ -113,7 +113,8 @@ Page {
                     font.pixelSize:FontUtils.sizeToPixels("large")
                     wrapMode: Text.WordWrap
                     text:
-"Anne017: fr"
+"Anne017: fr
+Joan CiberSheep: ca"
                     }
             }
 

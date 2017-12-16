@@ -9,7 +9,7 @@
             "desktop": "shoutcast-ubports/shoutcast-ubports.desktop"
         }
     },
-    "version": "0.1",
+    "version": "0.2",
     "maintainer": "Willem-Jan de Hoog <wdehoog@exalondelft.nl>",
     "framework": "ubuntu-sdk-15.04.6-qml"
 }
