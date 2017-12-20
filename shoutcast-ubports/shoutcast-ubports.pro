@@ -92,4 +92,5 @@ DISTFILES += \
     components/PlayerArea.qml \
     pages/HelpPage.qml \
     ../po/fr.po \
-    ../po/ca.po
+    ../po/ca.po \
+    ../po/shoutcast-ubports.wdehoog.pot

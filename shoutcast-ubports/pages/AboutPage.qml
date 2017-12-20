@@ -143,7 +143,7 @@ UBPorts Team: UBPorts
 walidham: UBPorts port for titan
 Romain Pokrzywka: JSONListModel
 Stefan Goessner: JSONPath
-igh0zt: app icon
+Joan CiberSheep: app icon
 https://feathericons.com/: some icons
 Canonical: ubuntu-touch. Why did you stop?"
                 }
