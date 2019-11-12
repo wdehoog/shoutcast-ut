@@ -1,13 +1,10 @@
-import QtQuick 2.4
+import QtQuick 2.7
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import QtQuick.XmlListModel 2.0
-import QtMultimedia 5.6
+//import QtQuick.Controls 2.2
+import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
-
-/*!
-    \brief MainView with a Label and Button elements.
-*/
+import QtMultimedia 5.9
 
 import "components/shoutcast.js" as Shoutcast
 import "components/Util.js" as Util
@@ -16,18 +13,16 @@ import "components"
 
 MainView {
     id: app
-    // objectName for functional testing purposes (autopilot-qt5)
-    objectName: "mainView"
-
-    // Note! applicationName needs to match the "name" field of the click manifest
-    applicationName: "shoutcast-ubports.wdehoog"
+    objectName: 'mainView'
+    applicationName: 'shoutcast-ubports.wdehoog'
+    automaticOrientation: true
 
     property string defaultImageSource: "image://theme/icon-m-music"
     property string logoURL: Qt.resolvedUrl("shoutcast-ubports.svg")
     property string streamMetaText1: i18n.tr("No station Info")
     property string streamMetaText2: i18n.tr("No Track Info")
 
-    width: units.gu(100)
+    width: units.gu(45)
     height: units.gu(75)
 
     property int currentItem: -1
@@ -61,11 +56,11 @@ MainView {
             header: PageHeader {
                 id: pageHeader
                 title: i18n.tr("SHOUTcast")
-                StyleHints {
+                /*StyleHints {
                     foregroundColor: UbuntuColors.orange
                     backgroundColor: UbuntuColors.porcelain
                     dividerColor: UbuntuColors.slate
-                }
+                }*/
 
                 trailingActionBar.actions: [
                     Action {
@@ -99,7 +94,7 @@ MainView {
                     //height:
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
-                    color: "white"
+                    //color: "white"
                     iconSource: Qt.resolvedUrl("resources/folder.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
                 }
@@ -108,7 +103,7 @@ MainView {
                     width: parent.width
                     height: mainPage.height / 10
                     text: i18n.tr("Top 500")
-                    color: "white"
+                    //color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/chevrons-up.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
@@ -119,7 +114,7 @@ MainView {
                     height: mainPage.height / 10
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
-                    color: "white"
+                    //color: "white"
                     iconSource: Qt.resolvedUrl("resources/search.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/SearchPage.qml"))
                 }
@@ -453,7 +448,8 @@ MainView {
         // show station logos in the station lists (or not)
         // it looks nice but on my Moto G 2nd it makes the app crash
         // on large lists like the Top500
-        property bool show_station_logo_in_lists: false
+        property bool show_station_logo_in_lists: true
     }
 
 }
+

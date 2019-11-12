@@ -5,11 +5,11 @@
     "title": "shoutcast-ubports",
     "hooks": {
         "shoutcast-ubports": {
-            "apparmor": "shoutcast-ubports/shoutcast-ubports.apparmor",
-            "desktop": "shoutcast-ubports/shoutcast-ubports.desktop"
+            "apparmor": "shoutcast-ubports.apparmor",
+            "desktop":  "shoutcast-ubports.desktop"
         }
     },
-    "version": "0.2",
-    "maintainer": "Willem-Jan de Hoog <wdehoog@exalondelft.nl>",
-    "framework": "ubuntu-sdk-15.04.6-qml"
+    "version": "0.3",
+    "maintainer": "Willem-Jan de Hoog <.@.>",
+    "framework" : "ubuntu-sdk-16.04"
 }

@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 207 Willem-Jan de Hoog
+  Copyright (C) 2019 Willem-Jan de Hoog
 */
 import QtQuick 2.4
 import Ubuntu.Components 1.3
@@ -11,25 +11,42 @@ import "../components/shoutcast.js" as Shoutcast
 import "../components/Util.js" as Util
 
 Page {
-    id: genrePage
-    objectName: "GenrePage"
+    id: subGenrePage
+    objectName: "SubGenrePage"
+
+    property string genreName: ""
+    property string genreId: ""
 
     property bool showBusy: false
 
     header: PageHeader {
         id: pageHeader
-        title: i18n.tr("Genres")
+        title: i18n.tr("Sub-Genres for: ") + genreName
         StyleHints {
             foregroundColor: UbuntuColors.orange
             backgroundColor: UbuntuColors.porcelain
             dividerColor: UbuntuColors.slate
         }
-        flickable: genresListView
+        trailingActionBar.actions: [
+            Action {
+                iconName: "home"
+                text: i18n.tr("Home")
+                onTriggered: {
+                    pageStack.pop()
+                    pageStack.pop()
+                }
+            }
+        ]
+
+        flickable: subGenresListView
     }
 
     JSONListModel {
         id: genresModel
-        source: Shoutcast.PrimaryGenreBase + "?" + Shoutcast.DevKeyPart + "&" + Shoutcast.QueryFormat
+        source: Shoutcast.SecondaryGenreBase
+                + "?" + Shoutcast.getParentGenrePart(genreId)
+                + "&" + Shoutcast.DevKeyPart
+                + "&" + Shoutcast.QueryFormat
         query: "$..genre.*"
     }
 
@@ -70,7 +87,7 @@ Page {
         anchors.fill: parent
 
         ListView {
-            id: genresListView
+            id: subGenresListView
             width: parent.width - scrollBar.width
             height: parent.height
 
@@ -78,7 +95,6 @@ Page {
                 horizontalCenter: parent.horizontalCenter
                 topMargin: units.gu(2)
             }
-
             delegate: ListItem {
                 id: delegate
                 width: parent.width //- 2*Theme.paddingMedium
@@ -88,6 +104,7 @@ Page {
 
                 Column {
                     width: parent.width
+                    anchors.verticalCenter: parent.verticalCenter
 
                     Item {
                         width: parent.width
@@ -97,6 +114,7 @@ Page {
                             id: nameLabel
                             color: UbuntuColors.orange
                             textFormat: Text.StyledText
+                            font.weight: Font.Bold
                             //truncationMode: TruncationMode.Fade
                             width: parent.width - countLabel.width
                             text: name ? name : qsTr("No Genre Name")
@@ -107,23 +125,14 @@ Page {
                             color: UbuntuColors.coolGrey
                             //font.pixelSize: Theme.fontSizeExtraSmall
                             text: count ? count : qsTr("?")
-
                         }
                     }
 
                 }
 
                 onClicked: {
-                    var page
-                    if(model.haschildren) {
-                        // has sub genres
-                        pageStack.push(Qt.resolvedUrl("SubGenrePage.qml"),
-                                       {genreId: model.id, genreName: model.name})
-                    } else {
-                        // no sub genres
-                        pageStack.push(Qt.resolvedUrl("StationsPage.qml"),
-                                       {genreId: model.id, genreName: model.name})
-                    }
+                    pageStack.push(Qt.resolvedUrl("StationsPage.qml"),
+                                   {genreId: model.id, genreName: model.name})
                 }
             }
 
@@ -133,8 +142,7 @@ Page {
 
         Scrollbar {
             id: scrollBar
-            flickableItem: genresListView
-            //align: Qt.AlignTrailing
+            flickableItem: subGenresListView
             anchors.right: parent.right
         }
 

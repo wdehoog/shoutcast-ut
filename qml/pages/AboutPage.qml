@@ -1,6 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-
+import Ubuntu.Components.Themes 1.3
 
 import "../components"
 import "../components/shoutcast.js" as Shoutcast
@@ -15,8 +15,8 @@ Page {
         id: pageHeader
         title: i18n.tr("About SHOUTcast")
         StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
+            foregroundColor: theme.palette.nromal.foreGroundText
+            backgroundColor: theme.palette.nromal.backGround
             dividerColor: UbuntuColors.slate
         }
         flickable: flick.flickableItem
@@ -44,7 +44,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     radius: "medium"
                     source: Image {
-                        source: Qt.resolvedUrl("../shoutcast-ubports.svg")
+                        source: Qt.resolvedUrl("../resources/shoutcast-ubports.svg")
                     }
                 }
 
@@ -63,7 +63,7 @@ Page {
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "shoutcast-ubports 0.2"
+                        text: "shoutcast-ubports 0.3"
                     }
 
                     Label {
@@ -78,7 +78,7 @@ Page {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "Copyright (C) 2017 Willem-Jan de Hoog"
+                        text: "Copyright (C) 2019 Willem-Jan de Hoog"
                         width: parent.width
                     }
                     Label {
