@@ -20,11 +20,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Settings")
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
         flickable: flick
     }
 
@@ -87,7 +82,6 @@ Page {
                 Button {
                     id: popoverButton
                     width: parent.width
-                    color: "white"
                     text: mimeTypeFilterLabels[mimeTypeFilter]
                     onClicked: PopupUtils.open(pocMimeTypeFilter, popoverButton)
                 }

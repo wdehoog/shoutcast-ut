@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ubports.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-12 19:25+0000\n"
+"POT-Creation-Date: 2019-11-12 21:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,35 +29,35 @@ msgstr ""
 msgid "SHOUTcast"
 msgstr ""
 
-#: ../qml/Main.qml:68
+#: ../qml/Main.qml:63
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:73
+#: ../qml/Main.qml:68
 msgid "Help"
 msgstr ""
 
-#: ../qml/Main.qml:78 ../qml/pages/SettingsPage.qml:22
+#: ../qml/Main.qml:73 ../qml/pages/SettingsPage.qml:22
 msgid "Settings"
 msgstr ""
 
-#: ../qml/Main.qml:95
+#: ../qml/Main.qml:89
 msgid "Genre"
 msgstr ""
 
-#: ../qml/Main.qml:105
+#: ../qml/Main.qml:98
 msgid "Top 500"
 msgstr ""
 
-#: ../qml/Main.qml:115 ../qml/pages/SearchPage.qml:29
+#: ../qml/Main.qml:107 ../qml/pages/SearchPage.qml:29
 msgid "Search"
 msgstr ""
 
-#: ../qml/Main.qml:422
+#: ../qml/Main.qml:413
 msgid "Ok"
 msgstr ""
 
-#: ../qml/Main.qml:433
+#: ../qml/Main.qml:424
 msgid "Error"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "SHOUTcast Help"
 msgstr ""
 
-#: ../qml/pages/HelpPage.qml:37
+#: ../qml/pages/HelpPage.qml:32
 msgid ""
 "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
 "internet radio stations.</p>\n"
@@ -92,7 +92,7 @@ msgid ""
 " "
 msgstr ""
 
-#: ../qml/pages/HelpPage.qml:66
+#: ../qml/pages/HelpPage.qml:61
 msgid ""
 "<p>The sources can be found on GitHub:\n"
 " <a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github.com/"
@@ -106,12 +106,12 @@ msgstr ""
 msgid "Stations for: "
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:48 ../qml/pages/SubGenrePage.qml:33
+#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
 msgid "Home"
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:58 ../qml/pages/SearchPage.qml:50
-#: ../qml/pages/Top500Page.qml:44
+#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:45
+#: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr ""
 
@@ -127,67 +127,67 @@ msgstr ""
 msgid "About SHOUTcast"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:72
+#: ../qml/pages/AboutPage.qml:67
 msgid "SHOUTcast player for UBPorts"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:88
+#: ../qml/pages/AboutPage.qml:83
 msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:95
+#: ../qml/pages/AboutPage.qml:90
 msgid "License: MIT"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:106
+#: ../qml/pages/AboutPage.qml:101
 msgid "Translations"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:128
+#: ../qml/pages/AboutPage.qml:123
 msgid "Thanks to"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:46
+#: ../qml/pages/SettingsPage.qml:41
 msgid "Show Station Logos in lists (crashes with large lists)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:59
+#: ../qml/pages/SettingsPage.qml:54
 msgid "Maximum number of results to ask the server (per query)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:72
+#: ../qml/pages/SettingsPage.qml:67
 msgid "Time to wait for response from server (seconds)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:85
+#: ../qml/pages/SettingsPage.qml:80
 msgid "Mime Type Filter"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:100
+#: ../qml/pages/SettingsPage.qml:94
 msgid "No filter. Accept all mime types."
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:101
+#: ../qml/pages/SettingsPage.qml:95
 msgid "Accept only MP3 (audio/mpeg)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:102
+#: ../qml/pages/SettingsPage.qml:96
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:81
+#: ../qml/pages/SearchPage.qml:76
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:101
+#: ../qml/pages/SearchPage.qml:96
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:323
+#: ../qml/pages/SearchPage.qml:317
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:324
+#: ../qml/pages/SearchPage.qml:318
 msgid "Keywords"
 msgstr ""
 

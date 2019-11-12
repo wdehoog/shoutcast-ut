@@ -56,11 +56,6 @@ MainView {
             header: PageHeader {
                 id: pageHeader
                 title: i18n.tr("SHOUTcast")
-                /*StyleHints {
-                    foregroundColor: UbuntuColors.orange
-                    backgroundColor: UbuntuColors.porcelain
-                    dividerColor: UbuntuColors.slate
-                }*/
 
                 trailingActionBar.actions: [
                     Action {
@@ -91,10 +86,8 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     height: mainPage.height / 10
-                    //height:
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
-                    //color: "white"
                     iconSource: Qt.resolvedUrl("resources/folder.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/GenrePage.qml"))
                 }
@@ -103,7 +96,6 @@ MainView {
                     width: parent.width
                     height: mainPage.height / 10
                     text: i18n.tr("Top 500")
-                    //color: "white"
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/chevrons-up.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/Top500Page.qml"))
@@ -114,7 +106,6 @@ MainView {
                     height: mainPage.height / 10
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
-                    //color: "white"
                     iconSource: Qt.resolvedUrl("resources/search.svg")
                     onClicked: pageStack.push(Qt.resolvedUrl("pages/SearchPage.qml"))
                 }
@@ -174,7 +165,7 @@ MainView {
             //console.log(JSON.stringify(audio.metaData))
             var text = audio.metaData.title
             if(text !== undefined)
-                streamMetaText1 = title
+                streamMetaText1 = text
             text = audio.metaData.publisher
             if(text !== undefined)
                 streamMetaText2 = text

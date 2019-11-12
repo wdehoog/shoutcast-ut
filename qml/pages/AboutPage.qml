@@ -14,11 +14,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("About SHOUTcast")
-        StyleHints {
-            foregroundColor: theme.palette.nromal.foreGroundText
-            backgroundColor: theme.palette.nromal.backGround
-            dividerColor: UbuntuColors.slate
-        }
         flickable: flick.flickableItem
     }
 

@@ -27,11 +27,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Search")
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
 
         leadingActionBar.actions: [
             Action {
@@ -104,7 +99,6 @@ Page {
                         id: popoverButton
                         width: parent.width - silabel.width
                         anchors.verticalCenter: parent.verticalCenter
-                        color: "white"
                         text: searchInTypeLabels[searchInType]
                         onClicked: PopupUtils.open(pocSearchType, popoverButton)
                     }

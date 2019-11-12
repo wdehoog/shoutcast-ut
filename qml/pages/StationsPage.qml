@@ -25,11 +25,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Stations for: ") + genreName
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
 
         leadingActionBar.actions: [
             Action {

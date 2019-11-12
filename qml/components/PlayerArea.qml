@@ -48,9 +48,8 @@ Row {
                     id: m1
                     x: units.gu(1)
                     width: parent.width - units.gu(1)
-                    color: UbuntuColors.orange
+                    font.bold: true
                     textFormat: Text.StyledText
-                    //font.pixelSize: Theme.fontSizeSmall
                     wrapMode: Text.Wrap
                     text: streamMetaText1
                 }
@@ -59,8 +58,6 @@ Row {
                     x: units.gu(1)
                     width: parent.width - units.gu(1)
                     anchors.right: parent.right
-                    color: UbuntuColors.darkGrey
-                    //font.pixelSize: Theme.fontSizeSmall
                     wrapMode: Text.Wrap
                     text: streamMetaText2
                 }
@@ -82,10 +79,14 @@ Row {
         width: units.gu(4)
         height: width
         anchors.verticalCenter: parent.verticalCenter
-        color: UbuntuColors.porcelain
+        //color: UbuntuColors.porcelain
+
 
         action: Action {
-              iconName: audioPlaybackState == Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+              //iconName: audioPlaybackState == Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+              iconSource: audioPlaybackState == Audio.PlayingState
+                            ? Qt.resolvedUrl("../resources/pause.svg")
+                            : Qt.resolvedUrl("../resources/play.svg")
               //text: i18n.tr("Pause")
               onTriggered: pause()
         }

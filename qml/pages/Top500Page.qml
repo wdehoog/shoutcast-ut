@@ -21,11 +21,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Top 500 Stations")
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
 
         leadingActionBar.actions: [
             Action {

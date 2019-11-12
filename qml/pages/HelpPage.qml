@@ -10,11 +10,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("SHOUTcast Help")
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
         flickable: flick.flickableItem
     }
 

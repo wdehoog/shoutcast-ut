@@ -22,11 +22,6 @@ Page {
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Sub-Genres for: ") + genreName
-        StyleHints {
-            foregroundColor: UbuntuColors.orange
-            backgroundColor: UbuntuColors.porcelain
-            dividerColor: UbuntuColors.slate
-        }
         trailingActionBar.actions: [
             Action {
                 iconName: "home"
@@ -112,7 +107,6 @@ Page {
 
                         Label {
                             id: nameLabel
-                            color: UbuntuColors.orange
                             textFormat: Text.StyledText
                             font.weight: Font.Bold
                             //truncationMode: TruncationMode.Fade
@@ -122,7 +116,6 @@ Page {
                         Label {
                             id: countLabel
                             anchors.right: parent.right
-                            color: UbuntuColors.coolGrey
                             //font.pixelSize: Theme.fontSizeExtraSmall
                             text: count ? count : qsTr("?")
                         }
