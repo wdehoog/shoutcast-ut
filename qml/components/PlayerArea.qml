@@ -5,7 +5,6 @@ import QtMultimedia 5.6
 import "./" // to use local SwipeArea
 
 Row {
-
     property int audioPlaybackState
 
     signal pause()
@@ -49,7 +48,7 @@ Row {
                     x: units.gu(1)
                     width: parent.width - units.gu(1)
                     font.bold: true
-                    textFormat: Text.StyledText
+                    color: UbuntuColors.orange
                     wrapMode: Text.Wrap
                     text: streamMetaText1
                 }
@@ -59,6 +58,8 @@ Row {
                     width: parent.width - units.gu(1)
                     anchors.right: parent.right
                     wrapMode: Text.Wrap
+                    font.bold: true
+                    color: UbuntuColors.darkGrey
                     text: streamMetaText2
                 }
 
@@ -93,4 +94,3 @@ Row {
     }
 
 }
-
