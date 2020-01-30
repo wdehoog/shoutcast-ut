@@ -67,47 +67,40 @@ Page {
         z: 1
     }
 
-    Column {
-        id: pageLayout
-        spacing: units.gu(1)
-        anchors.fill: parent
+    ListView {
+        id: stationsListView
+        width: parent.width - scrollBar.width
+        height: parent.height
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            topMargin: units.gu(2)
+        }
+        delegate: ListItem {
+            id: delegate
+            width: parent.width
 
-        ListView {
-            id: stationsListView
-            width: parent.width - scrollBar.width
-            height: parent.height
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                topMargin: units.gu(2)
-            }
-            delegate: ListItem {
-                id: delegate
-                width: parent.width
-
-                StationListItemView {
-                    id: withoutImage
-                    visible: !app.settings.show_station_logo_in_lists
-                }
-
-                StationListItemViewWithImage {
-                    id: withImage
-                    visible: app.settings.show_station_logo_in_lists
-                }
-
-                onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
+            StationListItemView {
+                id: withoutImage
+                visible: !app.settings.show_station_logo_in_lists
             }
 
-            model: stationsModel.model
+            StationListItemViewWithImage {
+                id: withImage
+                visible: app.settings.show_station_logo_in_lists
+            }
 
+            onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
         }
 
-        Scrollbar {
-            id: scrollBar
-            flickableItem: stationsListView
-            //align: Qt.AlignTrailing
-            anchors.right: parent.right
-        }
+        model: stationsModel.model
 
+    }
+
+    Scrollbar {
+        id: scrollBar
+        flickableItem: stationsListView
+        //align: Qt.AlignTrailing
+        anchors.right: parent.right
     }
 
     JSONListModel {

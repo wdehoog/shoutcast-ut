@@ -58,7 +58,7 @@ Page {
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "shoutcast-ubports 0.3"
+                        text: "shoutcast-ubports 0.4"
                     }
 
                     Label {
@@ -73,7 +73,7 @@ Page {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "Copyright (C) 2019 Willem-Jan de Hoog"
+                        text: "Copyright (C) 2020 Willem-Jan de Hoog"
                         width: parent.width
                     }
                     Label {

@@ -59,82 +59,75 @@ Page {
         z: 1
     }
 
-    Column {
-        id: pageLayout
-        spacing: units.gu(1)
-        anchors.fill: parent
+    ListView {
+        id: genresListView
+        width: parent.width - scrollBar.width
+        height: parent.height
 
-        ListView {
-            id: genresListView
-            width: parent.width - scrollBar.width
-            height: parent.height
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            topMargin: units.gu(2)
+        }
 
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                topMargin: units.gu(2)
-            }
+        delegate: ListItem {
+            id: delegate
+            width: parent.width //- 2*Theme.paddingMedium
+            //height: stationListItemView.height
+            //x: Theme.paddingMedium
+            //contentHeight: childrenRect.height
 
-            delegate: ListItem {
-                id: delegate
-                width: parent.width //- 2*Theme.paddingMedium
-                //height: stationListItemView.height
-                //x: Theme.paddingMedium
-                //contentHeight: childrenRect.height
+            Column {
+                width: parent.width
+                anchors.verticalCenter: parent.verticalCenter
 
-                Column {
+                Item {
                     width: parent.width
-                    anchors.verticalCenter: parent.verticalCenter
+                    //height: nameLabel.height
 
-                    Item {
-                        width: parent.width
-                        //height: nameLabel.height
-
-                        Label {
-                            id: nameLabel
-                            textFormat: Text.StyledText
-                            font.weight: Font.Bold
-                            //truncationMode: TruncationMode.Fade
-                            width: parent.width - countLabel.width
-                            text: name ? name : qsTr("No Genre Name")
-                        }
-                        Label {
-                            id: countLabel
-                            anchors.right: parent.right
-                            //font.pixelSize: Theme.fontSizeExtraSmall
-                            text: count ? count : qsTr("?")
-
-                        }
+                    Label {
+                        id: nameLabel
+                        textFormat: Text.StyledText
+                        font.weight: Font.Bold
+                        //truncationMode: TruncationMode.Fade
+                        width: parent.width - countLabel.width
+                        text: name ? name : qsTr("No Genre Name")
                     }
+                    Label {
+                        id: countLabel
+                        anchors.right: parent.right
+                        //font.pixelSize: Theme.fontSizeExtraSmall
+                        text: count ? count : qsTr("?")
 
-                }
-
-                onClicked: {
-                    var page
-                    if(model.haschildren) {
-                        // has sub genres
-                        pageStack.push(Qt.resolvedUrl("SubGenrePage.qml"),
-                                       {genreId: model.id, genreName: model.name})
-                    } else {
-                        // no sub genres
-                        pageStack.push(Qt.resolvedUrl("StationsPage.qml"),
-                                       {genreId: model.id, genreName: model.name})
                     }
                 }
+
             }
 
-            model: genresModel.model
-
+            onClicked: {
+                var page
+                if(model.haschildren) {
+                    // has sub genres
+                    pageStack.push(Qt.resolvedUrl("SubGenrePage.qml"),
+                                   {genreId: model.id, genreName: model.name})
+                } else {
+                    // no sub genres
+                    pageStack.push(Qt.resolvedUrl("StationsPage.qml"),
+                                   {genreId: model.id, genreName: model.name})
+                }
+            }
         }
 
-        Scrollbar {
-            id: scrollBar
-            flickableItem: genresListView
-            //align: Qt.AlignTrailing
-            anchors.right: parent.right
-        }
-
+        model: genresModel.model
 
     }
+
+    Scrollbar {
+        id: scrollBar
+        flickableItem: genresListView
+        //align: Qt.AlignTrailing
+        anchors.right: parent.right
+    }
+
 
 }
 

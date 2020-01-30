@@ -59,82 +59,81 @@ Page {
         z: 1
     }
 
-    Item {
-        id: pageLayout
-        anchors.fill: parent
-        ListView {
-            id: stationsListView
-            width: parent.width - scrollBar.width
-            height: childrenRect.height
+    ListView {
+        id: stationsListView
+        width: parent.width - scrollBar.width
+        height: parent.height
 
-            header: Column {
-                spacing: units.gu(1)
+        header: Column {
+            spacing: units.gu(1)
+            width: parent.width
+            Rectangle { height: units.gu(0.5); width: parent.width; opacity: 1.0 }
+            TextField {
+                id: searchField
                 width: parent.width
-                TextField {
-                    id: searchField
-                    width: parent.width
-                    placeholderText: i18n.tr("Search for")
-                    inputMethodHints: Qt.ImhNoPredictiveText
-                    primaryItem: Icon {
-                        height: parent.height
-                        width: height
-                        name: "find"
-                    }
-                    Binding {
-                        target: searchPage
-                        property: "searchString"
-                        value: searchField.text.toLowerCase().trim()
-                    }
-                    Keys.onReturnPressed: refresh()
+                placeholderText: i18n.tr("Search for")
+                inputMethodHints: Qt.ImhNoPredictiveText
+                primaryItem: Icon {
+                    height: parent.height
+                    width: height
+                    name: "find"
                 }
-                Row {
-                    id: typeRow
-                    width: parent.width
-                    Label {
-                        id: silabel
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: i18n.tr("Search In: ")
-                    }
-                    Button {
-                        id: popoverButton
-                        width: parent.width - silabel.width
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: searchInTypeLabels[searchInType]
-                        onClicked: PopupUtils.open(pocSearchType, popoverButton)
-                    }
+                Binding {
+                    target: searchPage
+                    property: "searchString"
+                    value: searchField.text.toLowerCase().trim()
                 }
+                Keys.onReturnPressed: refresh()
             }
-
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                topMargin: units.gu(2)
-            }
-            delegate: ListItem {
-                id: delegate
+            Row {
+                id: typeRow
                 width: parent.width
-
-                StationListItemView {
-                    id: withoutImage
-                    visible: !app.settings.show_station_logo_in_lists
+                Label {
+                    id: silabel
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: i18n.tr("Search In: ")
                 }
-
-                StationListItemViewWithImage {
-                    id: withImage
-                    visible: app.settings.show_station_logo_in_lists
+                Button {
+                    id: popoverButton
+                    width: parent.width - silabel.width
+                    anchors.verticalCenter: parent.verticalCenter
+                    color: "white"
+                    text: searchInTypeLabels[searchInType]
+                    onClicked: PopupUtils.open(pocSearchType, popoverButton)
                 }
-
-                onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
             }
-
-            model: searchModel
-
+            Rectangle { height: units.gu(0.5); width: parent.width; opacity: 1.0 }
         }
 
-        Scrollbar {
-            id: scrollBar
-            flickableItem: stationsListView
-            anchors.right: parent.right
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            topMargin: units.gu(2)
         }
+        delegate: ListItem {
+            id: delegate
+            width: parent.width
+
+            StationListItemView {
+                id: withoutImage
+                visible: !app.settings.show_station_logo_in_lists
+            }
+
+            StationListItemViewWithImage {
+                id: withImage
+                visible: app.settings.show_station_logo_in_lists
+            }
+
+            onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
+        }
+
+        model: searchModel
+
+    }
+
+    Scrollbar {
+        id: scrollBar
+        flickableItem: stationsListView
+        anchors.right: parent.right
     }
 
     onSearchInTypeChanged: refresh()

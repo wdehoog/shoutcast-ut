@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ubports.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-12 22:03+0000\n"
+"POT-Creation-Date: 2020-01-30 08:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,19 +175,19 @@ msgstr ""
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:76
+#: ../qml/pages/SearchPage.qml:74
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:96
+#: ../qml/pages/SearchPage.qml:94
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:317
+#: ../qml/pages/SearchPage.qml:316
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:318
+#: ../qml/pages/SearchPage.qml:317
 msgid "Keywords"
 msgstr ""
 
