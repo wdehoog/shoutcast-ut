@@ -61,7 +61,9 @@ to navigate the stations list (next/previous).</p>\n \
 i18n.tr("<p>The sources can be found on GitHub:\n \
 <a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github.com/wdehoog/shoutcast-ubports</a>.</p>\n \
 <p>Please report any issues on the GitHub Issue page:\n \
-<a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://github.com/wdehoog/shoutcast-ubports/issues</a>.</p>")
+<a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://github.com/wdehoog/shoutcast-ubports/issues</a>.</p> \
+<p>Documentation of the SHOUTcast API can be found here: \
+<a href=\"http://wiki.shoutcast.com/wiki/SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>")
             }
         }
 
