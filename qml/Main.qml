@@ -85,7 +85,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
-                    height: mainPage.height / 10
+                    height: 3 * font.pixelSize
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/folder.svg")
@@ -94,7 +94,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
-                    height: mainPage.height / 10
+                    height: 3 * font.pixelSize
                     text: i18n.tr("Top 500")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/chevrons-up.svg")
@@ -103,7 +103,7 @@ MainView {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
-                    height: mainPage.height / 10
+                    height: 3 * font.pixelSize
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/search.svg")
