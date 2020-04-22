@@ -155,14 +155,14 @@ MainView {
             console.log("source: " + source)
             showErrorDialog(qsTr("Audio Player:") + "\n\n" + errorString)
         }
+
     }
 
-    Timer {
-        interval: 5000
-        running: audio.playbackState == Audio.PlayingState
-        repeat: true
-        onTriggered: {
-            //console.log(JSON.stringify(audio.metaData))
+    Connections {
+        target: audio.metaData
+        onMetaDataChanged: {
+            console.log("onMetaDataChanged:" + JSON.stringify(audio.metaData))
+            // seen: title, publisher, genre, audioBitRate, audioCodec
             var text = audio.metaData.title
             if(text !== undefined)
                 streamMetaText1 = text
