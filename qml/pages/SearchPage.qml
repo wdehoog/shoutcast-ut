@@ -24,6 +24,8 @@ Page {
     property int navDirection: 0 // 0: none, -x: prev, +x: next
     property var tuneinBase: {}
 
+    property string historyItem: ""
+
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Search")
@@ -44,6 +46,19 @@ Page {
                 iconName: "reload"
                 text: i18n.tr("Reload")
                 onTriggered: refresh()
+            },
+            Action {
+                iconName: "history"
+                text: i18n.tr("History")
+                onTriggered: {
+                    var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
+                    ms.accepted.connect(function() {
+                        //console.log("accepted: " + ms.selectedItem)
+                        if(ms.selectedItem) {
+                            historyItem = ms.selectedItem
+                        }
+                    })
+                }
             }
         ]
 
@@ -84,6 +99,13 @@ Page {
                     value: searchField.text.toLowerCase().trim()
                 }
                 Keys.onReturnPressed: refresh()
+                Connections {
+                    target: searchPage
+                    onHistoryItemChanged: {
+                        searchField.text = historyItem
+                        refresh()
+                    }
+                }
             }
             Row {
                 id: typeRow
@@ -144,6 +166,11 @@ Page {
                 performNowPlayingSearch(searchString)
             else
                 performKeywordSearch(searchString)
+
+            app.settings.searchHistory =
+                Util.updateSearchHistory(searchString,
+                    app.settings.searchHistory,
+                    app.settings.searchHistoryMaxSize)
         }
     }
 

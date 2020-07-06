@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ubports.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 18:04+0000\n"
+"POT-Creation-Date: 2020-07-06 20:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/components/SearchHistory.qml:22
+msgid "Search History"
+msgstr ""
 
 #: ../qml/Main.qml:22
 msgid "No station Info"
@@ -49,15 +53,15 @@ msgstr ""
 msgid "Top 500"
 msgstr ""
 
-#: ../qml/Main.qml:107 ../qml/pages/SearchPage.qml:29
+#: ../qml/Main.qml:107 ../qml/pages/SearchPage.qml:31
 msgid "Search"
 msgstr ""
 
-#: ../qml/Main.qml:413
+#: ../qml/Main.qml:414
 msgid "Ok"
 msgstr ""
 
-#: ../qml/Main.qml:424
+#: ../qml/Main.qml:425
 msgid "Error"
 msgstr ""
 
@@ -112,7 +116,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:45
+#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:47
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr ""
@@ -177,19 +181,23 @@ msgstr ""
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:74
+#: ../qml/pages/SearchPage.qml:52
+msgid "History"
+msgstr ""
+
+#: ../qml/pages/SearchPage.qml:89
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:94
+#: ../qml/pages/SearchPage.qml:116
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:316
+#: ../qml/pages/SearchPage.qml:343
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:317
+#: ../qml/pages/SearchPage.qml:344
 msgid "Keywords"
 msgstr ""
 

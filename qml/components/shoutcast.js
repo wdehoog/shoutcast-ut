@@ -124,6 +124,46 @@ function createInfo(item) {
     return info
 }
 
+function getMetaString(model) {
+    var mstr = ""
+    if(model.lc)
+        mstr += model.lc;
+    var gstr = genreString(model)
+    if(gstr.length > 0) {
+        if(mstr.length > 0)
+            mstr += ", "
+        mstr += gstr
+    }
+    if(model.mt) {
+        if(mstr.length > 0)
+            mstr += ", "
+        mstr += getAudioType(model.mt)
+    }
+    if(model.br) {
+        if(mstr.length > 0)
+            mstr += "/"
+        mstr += model.br
+    }
+    return mstr
+}
+
+
+function genreString(item) {
+    //console.log(model.id + ": l=" + model.ct.length + ", text=" + model.ct)
+    var str = ""
+    if(item.genre)
+        str += item.genre
+    if(item.genre2)
+        str += ", " + item.genre2
+    if(item.genre3)
+        str += ", " + item.genre3
+    if(item.genre4)
+        str += ", " + item.genre4
+    if(item.genre5)
+        str += ", " + item.genre5
+    return str
+}
+
 var primaryGenres = []
 
 // reverse engineerd www.shoutcast.com html/js

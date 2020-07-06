@@ -162,3 +162,25 @@ function printQMLErrors(text, error) {
         console.log("message: " + error.qmlErrors[i].message)
     }
 }
+
+function updateSearchHistory(searchString, search_history, maxSize) {
+    if(!searchString || searchString.length === 0)
+        return
+
+    //var sh = JSON.parse(search_history)
+    var sh = search_history
+    var pos = sh.indexOf(searchString)
+    if(pos > -1) {
+        // already in the list so reorder
+        for(var i=pos;i>0;i--)
+            sh[i] = sh[i-1]
+        sh[0] = searchString
+    } else
+        // a new item
+        sh.unshift(searchString)
+
+    while(sh.length > maxSize)
+        sh.pop()
+
+    return sh //JSON.stringify(sh)
+}
