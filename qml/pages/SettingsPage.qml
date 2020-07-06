@@ -34,10 +34,12 @@ Page {
             x: units.gu(1)
             spacing: units.gu(2)
 
-            Row {
+            Item {
                 width: parent.width
                 height: childrenRect.height
                 Label {
+                    width: parent.width - showStationLogos.width
+                    wrapMode: Text.Wrap
                     text: i18n.tr("Show Station Logos in lists (crashes with large lists)")
                 }
                 Switch {
@@ -51,10 +53,13 @@ Page {
             Column {
                 width: parent.width
                 Label {
+                    width: parent.width
+                    wrapMode: Label.Wrap
                     text: i18n.tr("Maximum number of results to ask the server (per query)")
                 }
                 TextField {
                     id: maxNumberOfResults
+                    width: parent.width
                     validator: IntValidator{bottom: 1; top: 65534;}
                     text: settings.max_number_of_results
                     onAccepted: settings.max_number_of_results = parseInt(text)
@@ -64,10 +69,13 @@ Page {
             Column {
                 width: parent.width
                 Label {
+                    width: parent.width
+                    wrapMode: Text.Wrap
                     text: i18n.tr("Time to wait for response from server (seconds)")
                 }
                 TextField {
                     id: serverTimeout
+                    width: parent.width
                     validator: IntValidator{bottom: 1; top: 60;}
                     text: settings.server_timeout
                     onAccepted: settings.server_timeout = parseInt(text)
@@ -78,6 +86,8 @@ Page {
                 width: parent.width
                 Label {
                     text: i18n.tr("Mime Type Filter")
+                    wrapMode: Text.Wrap
+                    width: parent.width
                 }
                 Button {
                     id: popoverButton
