@@ -46,19 +46,6 @@ Page {
                 iconName: "reload"
                 text: i18n.tr("Reload")
                 onTriggered: refresh()
-            },
-            Action {
-                iconName: "history"
-                text: i18n.tr("History")
-                onTriggered: {
-                    var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
-                    ms.accepted.connect(function() {
-                        //console.log("accepted: " + ms.selectedItem)
-                        if(ms.selectedItem) {
-                            historyItem = ms.selectedItem
-                        }
-                    })
-                }
             }
         ]
 
@@ -83,27 +70,50 @@ Page {
             spacing: units.gu(1)
             width: parent.width
             Rectangle { height: units.gu(0.5); width: parent.width; opacity: 1.0 }
-            TextField {
-                id: searchField
+            Item {
                 width: parent.width
-                placeholderText: i18n.tr("Search for")
-                inputMethodHints: Qt.ImhNoPredictiveText
-                primaryItem: Icon {
-                    height: parent.height
+                height: childrenRect.height
+                TextField {
+                    id: searchField
+                    width: parent.width - historyButton.width
+                    placeholderText: i18n.tr("Search for")
+                    inputMethodHints: Qt.ImhNoPredictiveText
+                    primaryItem: Icon {
+                        height: parent.height
+                        width: height
+                        name: "find"
+                    }
+                    Binding {
+                        target: searchPage
+                        property: "searchString"
+                        value: searchField.text.toLowerCase().trim()
+                    }
+                    Keys.onReturnPressed: refresh()
+                    Connections {
+                        target: searchPage
+                        onHistoryItemChanged: {
+                            searchField.text = historyItem
+                            refresh()
+                        }
+                    }
+                }
+                Button {
+                    id: historyButton
+                    height: searchField.height
                     width: height
-                    name: "find"
-                }
-                Binding {
-                    target: searchPage
-                    property: "searchString"
-                    value: searchField.text.toLowerCase().trim()
-                }
-                Keys.onReturnPressed: refresh()
-                Connections {
-                    target: searchPage
-                    onHistoryItemChanged: {
-                        searchField.text = historyItem
-                        refresh()
+                    anchors.right: parent.right
+                    action: Action {
+                        iconName: "history"
+                        text: i18n.tr("History")
+                        onTriggered: {
+                            var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
+                            ms.accepted.connect(function() {
+                                //console.log("accepted: " + ms.selectedItem)
+                                if(ms.selectedItem) {
+                                    historyItem = ms.selectedItem
+                                }
+                            })
+                        }
                     }
                 }
             }
@@ -201,8 +211,11 @@ Page {
             console.log("new results: "+nowPlayingModel.model.count)
             var i
             currentItem = -1
-            for(i=0;i<nowPlayingModel.model.count;i++)
-                searchModel.append(nowPlayingModel.model.get(i))
+            for(i=0;i<nowPlayingModel.model.count;i++) {
+                var o = nowPlayingModel.model.get(i)
+                o = Shoutcast.createInfo(o)
+                searchModel.append(o)
+            }
             tuneinBase = {}
             if(nowPlayingModel.keepObject.length > 0) {
                 var b = nowPlayingModel.keepObject[0]["base"]
@@ -271,8 +284,11 @@ Page {
                 return
             var i
             currentItem = -1
-            for(i=0;i<count;i++)
-                searchModel.append(get(i))
+            for(i=0;i<count;i++) {
+                var o = get(i)
+                o = Shoutcast.createInfo(o)
+                searchModel.append(o)
+            }
             showBusy = false
             if(searchModel.count > 0)
                 currentItem = app.findStation(app.stationId, searchModel)
