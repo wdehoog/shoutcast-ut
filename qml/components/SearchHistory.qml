@@ -54,6 +54,21 @@ Page {
                 wrapMode: Label.Wrap
                 text: model.text
             }
+            leadingActions: ListItemActions {
+                actions: [
+                    Action {
+                        id: swipeDeleteAction
+                        objectName: "swipeDeleteAction"
+                        text: i18n.tr("Delete")
+                        iconName: "delete"
+                        onTriggered: {
+                            var i = index
+                            items.remove(i)
+                            app.removeSearchHistory(i)
+                        }
+                    }
+                ]
+            }
             onClicked: {
                 selectedItem = model.text
                 pageStack.pop()

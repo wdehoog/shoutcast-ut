@@ -85,6 +85,23 @@ Page {
                     }
                 }
             }
+
+            leadingActions: ListItemActions {
+                actions: [
+                    Action {
+                        id: swipeDeleteAction
+                        objectName: "swipeDeleteAction"
+                        text: i18n.tr("Delete")
+                        iconName: "delete"
+                        onTriggered: {
+                            var i = index
+                            items.remove(i)
+                            app.removeHistory(i)
+                        }
+                    }
+                ]
+            }
+
             onClicked: {
                 selectedIndex = index
                 selectedName = model.name

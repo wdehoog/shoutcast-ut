@@ -477,9 +477,20 @@ MainView {
         //console.log(JSON.stringify(settings.history, null, 2))
     }
 
+    function removeHistory(index) {
+        history.splice(index, 1)
+        settings.history = history
+    }
+
     function clearHistory() {
         history = []
         settings.history = history
+    }
+
+    function removeSearchHistory(index) {
+        var sh = settings.searchHistory
+        sh.splice(index, 1)
+        settings.searchHistory = sh
     }
 
     Component.onCompleted: {
