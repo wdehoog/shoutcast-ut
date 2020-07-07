@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ubports.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-07 18:12+0000\n"
+"POT-Creation-Date: 2020-07-07 20:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/components/PlayHistory.qml:23
+msgid "Play History"
+msgstr ""
 
 #: ../qml/components/SearchHistory.qml:22
 msgid "Search History"
@@ -116,7 +120,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:47
+#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr ""
@@ -181,23 +185,23 @@ msgstr ""
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:79
+#: ../qml/pages/SearchPage.qml:93
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:107
+#: ../qml/pages/SearchPage.qml:105
 msgid "History"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:126
+#: ../qml/pages/SearchPage.qml:138
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:359
+#: ../qml/pages/SearchPage.qml:371
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:360
+#: ../qml/pages/SearchPage.qml:372
 msgid "Keywords"
 msgstr ""
 

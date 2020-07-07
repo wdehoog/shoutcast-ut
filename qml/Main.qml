@@ -431,7 +431,6 @@ MainView {
      * History
      */
 
-    readonly property int historySize: 50
     property var history: []
 
     function createHistoryObject(name, logo, meta) {
@@ -471,7 +470,7 @@ MainView {
                     break
                 }
         }
-        if(history.length > historySize) { // make configurable
+        if(history.length > settings.historyMaxSize) { // make configurable
             history.pop()
         }
         settings.history = history
@@ -506,6 +505,7 @@ MainView {
 
         // played stations
         property var history: []
+        property int historyMaxSize: 50
 
         // search history
         property var searchHistory: []

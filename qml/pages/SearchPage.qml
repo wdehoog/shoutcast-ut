@@ -39,6 +39,7 @@ Page {
                     pageStack.pop()
                 }
             }
+
         ]
 
         trailingActionBar.actions: [
@@ -46,6 +47,19 @@ Page {
                 iconName: "reload"
                 text: i18n.tr("Reload")
                 onTriggered: refresh()
+            },
+            Action {
+                iconName: "history" // "view-list-symbolic"
+                text: "PlayHistory"
+                onTriggered: {
+                    var ms = pageStack.push(Qt.resolvedUrl("../components/PlayHistory.qml"))
+                    ms.accepted.connect(function() {
+                        console.log("accepted: " + ms.selectedIndex)
+                        if(ms.selectedIndex >= 0) {
+                            historyItem = ms.selectedName
+                        }
+                    })
+                }
             }
         ]
 
@@ -75,13 +89,30 @@ Page {
                 height: childrenRect.height
                 TextField {
                     id: searchField
-                    width: parent.width - historyButton.width
+                    width: parent.width //- historyButton.width
                     placeholderText: i18n.tr("Search for")
                     inputMethodHints: Qt.ImhNoPredictiveText
                     primaryItem: Icon {
                         height: parent.height
                         width: height
                         name: "find"
+                    }
+                    secondaryItem: Button {
+                        height: parent.height
+                        width: height*1.2
+                        action: Action {
+                            iconName: "history"
+                            text: i18n.tr("History")
+                            onTriggered: {
+                                var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
+                                ms.accepted.connect(function() {
+                                    //console.log("accepted: " + ms.selectedItem)
+                                    if(ms.selectedItem) {
+                                        historyItem = ms.selectedItem
+                                    }
+                                })
+                            }
+                        }
                     }
                     Binding {
                         target: searchPage
@@ -94,25 +125,6 @@ Page {
                         onHistoryItemChanged: {
                             searchField.text = historyItem
                             refresh()
-                        }
-                    }
-                }
-                Button {
-                    id: historyButton
-                    height: searchField.height
-                    width: height
-                    anchors.right: parent.right
-                    action: Action {
-                        iconName: "history"
-                        text: i18n.tr("History")
-                        onTriggered: {
-                            var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
-                            ms.accepted.connect(function() {
-                                //console.log("accepted: " + ms.selectedItem)
-                                if(ms.selectedItem) {
-                                    historyItem = ms.selectedItem
-                                }
-                            })
                         }
                     }
                 }
