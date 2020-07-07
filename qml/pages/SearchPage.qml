@@ -155,7 +155,7 @@ Page {
                 visible: app.settings.show_station_logo_in_lists
             }
 
-            onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
+            onClicked: loadStation(model.id, model, tuneinBase)
         }
 
         model: searchModel
@@ -341,7 +341,7 @@ Page {
                 navDirection = - 1
                 var item = searchModel.get(currentItem + navDirection)
                 if(item)
-                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+                    app.loadStation(item.id, item, tuneinBase)
             }
         }
 
@@ -350,7 +350,7 @@ Page {
                 navDirection = 1
                 var item = searchModel.get(currentItem + navDirection)
                 if(item)
-                     app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+                     app.loadStation(item.id, item, tuneinBase)
             }
         }
     }
