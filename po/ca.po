@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-21 00:49+0100\n"
-"PO-Revision-Date: 2017-12-21 01:10+0100\n"
+"POT-Creation-Date: 2020-07-08 23:10+0200\n"
+"PO-Revision-Date: 2020-07-08 23:22+0200\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -18,86 +18,91 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:27
+#: ../qml/components/PlayHistory.qml:23
+msgid "Play History"
+msgstr "Historial de reproduccions"
+
+#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
+msgid "Clear"
+msgstr "Neteja"
+
+#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
+msgid "Confirm"
+msgstr "Confirma"
+
+#: ../qml/components/PlayHistory.qml:32
+msgid "Do you really want to clear the Play History?"
+msgstr "Segur que voleu netejar l'historial de reproduccions?"
+
+#: ../qml/components/PlayHistory.qml:110 ../qml/components/SearchHistory.qml:78
+msgid "Delete"
+msgstr "Elimina"
+
+#: ../qml/components/SearchHistory.qml:22
+msgid "Search History"
+msgstr "Historial de cerques"
+
+#: ../qml/components/SearchHistory.qml:31
+msgid "Do you really want to clear the Search History?"
+msgstr "Segur que voleu netejar l'historial de cerques?"
+
+#: ../qml/Main.qml:22
 msgid "No station Info"
 msgstr "Sense informació de l'estació"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:28
+#: ../qml/Main.qml:23
 msgid "No Track Info"
 msgstr "Sense informació de la pista"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:59
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:63
+#: ../qml/Main.qml:56 ../qml/Main.qml:60
 msgid "SHOUTcast"
 msgstr "SHOUTcast"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:73
+#: ../qml/Main.qml:65
 msgid "About"
 msgstr "Quant a"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:78
+#: ../qml/Main.qml:70
 msgid "Help"
 msgstr "Ajuda"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:83
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:22
+#: ../qml/Main.qml:75 ../qml/pages/SettingsPage.qml:23
 msgid "Settings"
 msgstr "Preferències"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:100
+#: ../qml/Main.qml:91
 msgid "Genre"
 msgstr "Gènere"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:110
+#: ../qml/Main.qml:100
 msgid "Top 500"
 msgstr "Les 500 més reconegudes"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:120
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:29
+#: ../qml/Main.qml:109 ../qml/pages/SearchPage.qml:31
 msgid "Search"
 msgstr "Cerca"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:427
+#: ../qml/Main.qml:416
 msgid "Ok"
 msgstr "D'acord"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/Main.qml:438
+#: ../qml/Main.qml:427
 msgid "Error"
 msgstr "Error"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:16
-msgid "About SHOUTcast"
-msgstr "Quant al SHOUTcast"
+#: ../qml/Main.qml:437
+msgid "No"
+msgstr "No"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:72
-msgid "SHOUTcast player for Ubuntu Touch"
-msgstr "Reproductor SHOUTcast per l'Ubuntu Touch"
+#: ../qml/Main.qml:441
+msgid "Yes"
+msgstr "Sí"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:88
-msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
-msgstr "codi font: https://github.com/wdehoog/shoutcast-ubports"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:95
-msgid "License: MIT"
-msgstr "Llicència: MIT"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:106
-msgid "Translations"
-msgstr "Traduccions"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/AboutPage.qml:128
-msgid "Thanks to"
-msgstr "Gràcies a"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/GenrePage.qml:21
-msgid "Genres"
-msgstr "Gèneres"
-
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:12
+#: ../qml/pages/HelpPage.qml:12
 msgid "SHOUTcast Help"
 msgstr "Ajuda del SHOUTcast"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:37
+#: ../qml/pages/HelpPage.qml:32
 msgid ""
 "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
 "internet radio stations.</p>\n"
@@ -118,7 +123,7 @@ msgid ""
 "makes the app crash a lot.</li>\n"
 "   <li>The app checks if the Audio object has meta data available like "
 "current track info but appearently\n"
-"       this is not implemented in Ubuntu Touch. See https://bugs.launchpad.net/"
+"       this is not implemented in UT. See https://bugs.launchpad.net/"
 "bugs/1586230.</i>\n"
 " </ul><br>\n"
 " "
@@ -138,8 +143,8 @@ msgstr ""
 " <p>Problemes principals:</p>\n"
 " <ul>\n"
 "   <li>No hi ha res a fer si no teniu connexió</li>\n"
-"   <li>Es poden mostrar els logotips a la llista d'estacions (vegeu la "
-"pàgina de preferències) però fa que la aplicació es tanqui sovint.</li>\n"
+"   <li>La llista d'estacions pot mostrar els logotips (vegeu la pàgina de "
+"preferències) però fa que la aplicació es tanqui sovint.</li>\n"
 "   <li>L'aplicació comprova si l'àudio té metadades com la informació de la "
 "cançó actual però aparentment\n"
 "       no està implementat a l'UBPorts. Vegeu https://bugs.launchpad.net/"
@@ -147,94 +152,203 @@ msgstr ""
 " </ul><br>\n"
 " "
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/HelpPage.qml:66
+#: ../qml/pages/HelpPage.qml:61
 msgid ""
 "<p>The sources can be found on GitHub:\n"
 " <a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/"
 "wdehoog/shoutcast-ut</a>.</p>\n"
 " <p>Please report any issues on the GitHub Issue page:\n"
-" <a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://"
-"github.com/wdehoog/shoutcast-ut/issues</a>.</p>"
+" <a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://github."
+"com/wdehoog/shoutcast-ut/issues</a>.</p> <p>Documentation of the SHOUTcast "
+"API can be found here: <a href=\"http://wiki.shoutcast.com/wiki/"
+"SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
 msgstr ""
 "<p>El codi font es pot trobar al GitHub:\n"
-" <a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github.com/"
+" <a href=\\https://github.com/wdehoog/shoutcast-ubports\\>https://github.com/"
 "wdehoog/shoutcast-ubports</a>.</p>\n"
 " <p>Informeu de qualsevol error que trobeu a la pàgina del GitHub:\n"
-" <a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://"
-"github.com/wdehoog/shoutcast-ubports/issues</a>.</p>"
+" <a href=\\https://github.com/wdehoog/shoutcast-ubports/issues\\>https://"
+"github.com/wdehoog/shoutcast-ubports/issues</a>.</p> <p>La documentació de "
+"l'API del SHOUTcast es pot trobar aquí: <a href=\"http://wiki.shoutcast.com/"
+"wiki/SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:50
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:58
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:44
+#: ../qml/pages/StationsPage.qml:27
+msgid "Stations for: "
+msgstr "Estacions per:"
+
+#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
+msgid "Home"
+msgstr "Inici"
+
+#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
+#: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr "Recarrega"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:81
-msgid "Search for"
-msgstr "Cerca per"
+#: ../qml/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
+msgstr "Subgèneres per:"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:101
-msgid "Search In: "
-msgstr "Cerca a:"
+#: ../qml/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr "Gèneres"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:323
-msgid "Now Playing"
-msgstr "Ara sona"
+#: ../qml/pages/AboutPage.qml:16
+msgid "About SHOUTcast"
+msgstr "Quant al SHOUTcast"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SearchPage.qml:324
-msgid "Keywords"
-msgstr "Paraules clau"
+#: ../qml/pages/AboutPage.qml:67
+msgid "SHOUTcast player for Ubuntu Touch"
+msgstr "Reproductor SHOUTcast per l'Ubuntu Touch"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:46
+#: ../qml/pages/AboutPage.qml:83
+msgid "sources: https://github.com/wdehoog/shoutcast-ut"
+msgstr "codi font: https://github.com/wdehoog/shoutcast-ut"
+
+#: ../qml/pages/AboutPage.qml:90
+msgid "License: MIT"
+msgstr "Llicència: MIT"
+
+#: ../qml/pages/AboutPage.qml:101
+msgid "Translations"
+msgstr "Traduccions"
+
+#: ../qml/pages/AboutPage.qml:124
+msgid "Thanks to"
+msgstr "Gràcies a"
+
+#: ../qml/pages/SettingsPage.qml:44
 msgid "Show Station Logos in lists (crashes with large lists)"
 msgstr ""
 "Mostra els logotips de les estacions (fa que l'aplicació es tanqui amb "
 "llistes llargues)"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:59
+#: ../qml/pages/SettingsPage.qml:59
 msgid "Maximum number of results to ask the server (per query)"
 msgstr "Número màxim de resultats que es demanaran al servidor (per petició)"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:72
+#: ../qml/pages/SettingsPage.qml:76
+msgid "Maximum size of Search History"
+msgstr "Mida màxima de l'historial de cerques"
+
+#: ../qml/pages/SettingsPage.qml:94
+msgid "Maximum size of Play History"
+msgstr "Mida màxima de l'historial de cerques reproduccions"
+
+#: ../qml/pages/SettingsPage.qml:111
 msgid "Time to wait for response from server (seconds)"
 msgstr "Temps d'espera de la resposta del servidor (en segons)"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:85
+#: ../qml/pages/SettingsPage.qml:125
 msgid "Mime Type Filter"
 msgstr "Filtre per tipus de contingut"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:100
+#: ../qml/pages/SettingsPage.qml:141
 msgid "No filter. Accept all mime types."
 msgstr "Sense filtre. Accepta tots els tipus de contingut"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:101
+#: ../qml/pages/SettingsPage.qml:142
 msgid "Accept only MP3 (audio/mpeg)"
 msgstr "Accepta només MP3 (audio/mpeg)"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SettingsPage.qml:102
+#: ../qml/pages/SettingsPage.qml:143
 msgid "Accept only AAC (audio/aacp)"
 msgstr "Accepta només AAC (audio/aacp)"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:27
-msgid "Stations for: "
-msgstr "Estacions per:"
+#: ../qml/pages/SearchPage.qml:93
+msgid "Search for"
+msgstr "Cerca per"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/StationsPage.qml:48
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:33
-msgid "Home"
-msgstr "Inici"
+#: ../qml/pages/SearchPage.qml:105
+msgid "History"
+msgstr "Historial"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/SubGenrePage.qml:24
-msgid "Sub-Genres for: "
-msgstr "Subgèneres per:"
+#: ../qml/pages/SearchPage.qml:138
+msgid "Search In: "
+msgstr "Cerca a:"
 
-#: /home/ubucon/shoutcast-ubports/shoutcast-ubports/pages/Top500Page.qml:23
+#: ../qml/pages/SearchPage.qml:371
+msgid "Now Playing"
+msgstr "Ara sona"
+
+#: ../qml/pages/SearchPage.qml:372
+msgid "Keywords"
+msgstr "Paraules clau"
+
+#: ../qml/pages/Top500Page.qml:23
 msgid "Top 500 Stations"
 msgstr "Les 500 estacions millor reconegudes"
 
-#: /home/ubucon/build-shoutcast-ubports-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/shoutcast-ubports/shoutcast-ubports.desktop.h:1
+#: shoutcast-ut.desktop.in.h:1
 msgid "shoutcast-ut"
 msgstr "shoutcast-ut"
+
+#~ msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
+#~ msgstr "codi font: https://github.com/wdehoog/shoutcast-ubports"
+
+#~ msgid ""
+#~ "<p>This app allows to browse the <b>SHOUTcast</b> database and tune in on "
+#~ "internet radio stations.</p>\n"
+#~ " <p>The different pages allow to:</p>\n"
+#~ " <ul>\n"
+#~ "   <li>Browse by Genre</li>\n"
+#~ "   <li>List the Top 500 stations</li>\n"
+#~ "   <li>Search by 'Now Playing' or Keywords</li>\n"
+#~ "   <li>Configure the app</li>\n"
+#~ " </ul>\n"
+#~ " <p>The player area at the bottom allows to pause/play a stream en by "
+#~ "horizontal swiping\n"
+#~ " to navigate the stations list (next/previous).</p>\n"
+#~ " <p>Main Issues:</p>\n"
+#~ " <ul>\n"
+#~ "   <li>If there is no network then you are toast</li>\n"
+#~ "   <li>The stations lists can show the logos (see the Settings page) but "
+#~ "it makes the app crash a lot.</li>\n"
+#~ "   <li>The app checks if the Audio object has meta data available like "
+#~ "current track info but appearently\n"
+#~ "       this is not implemented in Ubuntu Touch. See https://bugs."
+#~ "launchpad.net/bugs/1586230.</i>\n"
+#~ " </ul><br>\n"
+#~ " "
+#~ msgstr ""
+#~ "<p>Aquesta aplicació permet explorar la base de dades del <b>SHOUTcast</"
+#~ "b> i sintonitzar ràdios per Internet.</p>\n"
+#~ " <p>Les diferents pàgines us permeten:</p>\n"
+#~ " <ul>\n"
+#~ "   <li>Explorar per gènere</li>\n"
+#~ "   <li>Llistar les 500 estacions més reconegudes</li>\n"
+#~ "   <li>Cercar per 'Ara sona' o paraules clau</li>\n"
+#~ "   <li>Configurar l'aplicació</li>\n"
+#~ " </ul>\n"
+#~ " <p>L'àrea del reproductor de sota, us permet aturar/reproduir el fluxe i "
+#~ "amb un lliscada horitzontal\n"
+#~ " navigate entre estacions (següent/anterior).</p>\n"
+#~ " <p>Problemes principals:</p>\n"
+#~ " <ul>\n"
+#~ "   <li>No hi ha res a fer si no teniu connexió</li>\n"
+#~ "   <li>Es poden mostrar els logotips a la llista d'estacions (vegeu la "
+#~ "pàgina de preferències) però fa que la aplicació es tanqui sovint.</li>\n"
+#~ "   <li>L'aplicació comprova si l'àudio té metadades com la informació de "
+#~ "la cançó actual però aparentment\n"
+#~ "       no està implementat a l'UBPorts. Vegeu https://bugs.launchpad.net/"
+#~ "bugs/1586230.</i>\n"
+#~ " </ul><br>\n"
+#~ " "
+
+#~ msgid ""
+#~ "<p>The sources can be found on GitHub:\n"
+#~ " <a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/"
+#~ "wdehoog/shoutcast-ut</a>.</p>\n"
+#~ " <p>Please report any issues on the GitHub Issue page:\n"
+#~ " <a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://"
+#~ "github.com/wdehoog/shoutcast-ut/issues</a>.</p>"
+#~ msgstr ""
+#~ "<p>El codi font es pot trobar al GitHub:\n"
+#~ " <a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github."
+#~ "com/wdehoog/shoutcast-ubports</a>.</p>\n"
+#~ " <p>Informeu de qualsevol error que trobeu a la pàgina del GitHub:\n"
+#~ " <a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://"
+#~ "github.com/wdehoog/shoutcast-ubports/issues</a>.</p>"
 
 #~ msgid "<p>The sources can be found on GitHub:"
 #~ msgstr "<p>El codi font es pot trobar a GitHub:"
