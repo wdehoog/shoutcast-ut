@@ -21,6 +21,22 @@ Page {
         id: pageHeader
         title: i18n.tr("Search History")
         flickable: listView
+        trailingActionBar.actions: [
+            Action {
+                iconName: "delete"
+                text: i18n.tr("Clear")
+                onTriggered: {
+                    app.showConfirmDialog(
+                        i18n.tr("Confirm"), 
+                        i18n.tr("Do you really want to clear the Search History?"),
+                        function() {
+                            app.clearSearchHistory()
+                            loadListModel()
+                        }
+                    )
+                }
+            }
+        ]
     }
 
     ListModel {

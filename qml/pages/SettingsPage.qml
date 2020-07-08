@@ -2,6 +2,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.ListItems 1.3 as Old_ListItem
+import QtQuick.Controls.Suru 2.2
 
 import "../components"
 import "../components/shoutcast.js" as Shoutcast
@@ -63,6 +64,42 @@ Page {
                     validator: IntValidator{bottom: 1; top: 65534;}
                     text: settings.max_number_of_results
                     onAccepted: settings.max_number_of_results = parseInt(text)
+                }
+            }
+
+            Row {
+                width: parent.width
+                Label {
+                    width: parent.width * 0.8
+                    anchors.verticalCenter: parent.verticalCenter
+                    wrapMode: Label.Wrap
+                    text: i18n.tr("Maximum size of Search History")
+                }
+                TextField {
+                    id: maxSearchHistorySize
+                    width: parent.width * 0.2
+                    anchors.verticalCenter: parent.verticalCenter
+                    validator: IntValidator{bottom: 1; top: 100;}
+                    text: settings.searchHistoryMaxSize
+                    onAccepted: settings.searchHistoryMaxSize = parseInt(text)
+                }
+            }
+
+            Row {
+                width: parent.width
+                Label {
+                    width: parent.width * 0.8
+                    anchors.verticalCenter: parent.verticalCenter
+                    wrapMode: Label.Wrap
+                    text: i18n.tr("Maximum size of Play History")
+                }
+                TextField {
+                    id: maxPlayHistorySize
+                    width: parent.width * 0.2
+                    anchors.verticalCenter: parent.verticalCenter
+                    validator: IntValidator{bottom: 1; top: 100;}
+                    text: settings.historyMaxSize
+                    onAccepted: settings.historyMaxSize = parseInt(text)
                 }
             }
 
@@ -133,4 +170,5 @@ Page {
             }
         }
     }
+
 }

@@ -33,6 +33,8 @@ MainView {
 
     property alias settings: settings
 
+    property color fgColor: theme.palette.normal.backgroundText
+
     PageStack {
         id: pageStack
         anchors {
@@ -426,6 +428,30 @@ MainView {
     }
 
 
+    Component {
+      id: confirmDialog
+      Dialog {
+          id: dialogue
+          property var yesCallback: null
+          Button {
+            text: i18n.tr("No")
+            onClicked: PopupUtils.close(dialogue)
+          }
+          Button {
+            text: i18n.tr("Yes")
+            color: UbuntuColors.orange
+            onClicked: {
+              if(yesCallback)
+                  yesCallback()
+              PopupUtils.close(dialogue)
+            }
+          }
+      }
+    }
+
+    function showConfirmDialog(title, text, callback) {
+        PopupUtils.open(confirmDialog, app, {title: title, text: text, yesCallback: callback})
+    }
 
     /**
      * History
@@ -491,6 +517,10 @@ MainView {
         var sh = settings.searchHistory
         sh.splice(index, 1)
         settings.searchHistory = sh
+    }
+
+    function clearSearchHistory() {
+        settings.searchHistory = []
     }
 
     Component.onCompleted: {

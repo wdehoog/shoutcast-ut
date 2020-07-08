@@ -22,6 +22,22 @@ Page {
         id: pageHeader
         title: i18n.tr("Play History")
         flickable: listView
+        trailingActionBar.actions: [
+            Action {
+                iconName: "delete"
+                text: i18n.tr("Clear")
+                onTriggered: {
+                    app.showConfirmDialog(
+                        i18n.tr("Confirm"), 
+                        i18n.tr("Do you really want to clear the Play History?"),
+                        function() {
+                            app.clearHistory()
+                            loadListModel()
+                        }
+                    )
+                }
+            }
+        ]
     }
 
     ListModel {
