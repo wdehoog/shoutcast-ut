@@ -24,6 +24,8 @@ Page {
     property int navDirection: 0 // 0: none, -x: prev, +x: next
     property var tuneinBase: {}
 
+    property string historyItem: ""
+
     header: PageHeader {
         id: pageHeader
         title: i18n.tr("Search")
@@ -37,6 +39,7 @@ Page {
                     pageStack.pop()
                 }
             }
+
         ]
 
         trailingActionBar.actions: [
@@ -44,6 +47,19 @@ Page {
                 iconName: "reload"
                 text: i18n.tr("Reload")
                 onTriggered: refresh()
+            },
+            Action {
+                iconName: "history" // "view-list-symbolic"
+                text: "PlayHistory"
+                onTriggered: {
+                    var ms = pageStack.push(Qt.resolvedUrl("../components/PlayHistory.qml"))
+                    ms.accepted.connect(function() {
+                        console.log("accepted: " + ms.selectedIndex)
+                        if(ms.selectedIndex >= 0) {
+                            historyItem = ms.selectedName
+                        }
+                    })
+                }
             }
         ]
 
@@ -68,22 +84,50 @@ Page {
             spacing: units.gu(1)
             width: parent.width
             Rectangle { height: units.gu(0.5); width: parent.width; opacity: 1.0 }
-            TextField {
-                id: searchField
+            Item {
                 width: parent.width
-                placeholderText: i18n.tr("Search for")
-                inputMethodHints: Qt.ImhNoPredictiveText
-                primaryItem: Icon {
-                    height: parent.height
-                    width: height
-                    name: "find"
+                height: childrenRect.height
+                TextField {
+                    id: searchField
+                    width: parent.width //- historyButton.width
+                    placeholderText: i18n.tr("Search for")
+                    inputMethodHints: Qt.ImhNoPredictiveText
+                    primaryItem: Icon {
+                        height: parent.height
+                        width: height
+                        name: "find"
+                    }
+                    secondaryItem: Button {
+                        height: parent.height
+                        width: height*1.2
+                        action: Action {
+                            iconName: "history"
+                            text: i18n.tr("History")
+                            onTriggered: {
+                                var ms = pageStack.push(Qt.resolvedUrl("../components/SearchHistory.qml"))
+                                ms.accepted.connect(function() {
+                                    //console.log("accepted: " + ms.selectedItem)
+                                    if(ms.selectedItem) {
+                                        historyItem = ms.selectedItem
+                                    }
+                                })
+                            }
+                        }
+                    }
+                    Binding {
+                        target: searchPage
+                        property: "searchString"
+                        value: searchField.text.toLowerCase().trim()
+                    }
+                    Keys.onReturnPressed: refresh()
+                    Connections {
+                        target: searchPage
+                        onHistoryItemChanged: {
+                            searchField.text = historyItem
+                            refresh()
+                        }
+                    }
                 }
-                Binding {
-                    target: searchPage
-                    property: "searchString"
-                    value: searchField.text.toLowerCase().trim()
-                }
-                Keys.onReturnPressed: refresh()
             }
             Row {
                 id: typeRow
@@ -123,7 +167,7 @@ Page {
                 visible: app.settings.show_station_logo_in_lists
             }
 
-            onClicked: loadStation(model.id, Shoutcast.createInfo(model), tuneinBase)
+            onClicked: loadStation(model.id, model, tuneinBase)
         }
 
         model: searchModel
@@ -144,6 +188,11 @@ Page {
                 performNowPlayingSearch(searchString)
             else
                 performKeywordSearch(searchString)
+
+            app.settings.searchHistory =
+                Util.updateSearchHistory(searchString,
+                    app.settings.searchHistory,
+                    app.settings.searchHistoryMaxSize)
         }
     }
 
@@ -174,8 +223,11 @@ Page {
             console.log("new results: "+nowPlayingModel.model.count)
             var i
             currentItem = -1
-            for(i=0;i<nowPlayingModel.model.count;i++)
-                searchModel.append(nowPlayingModel.model.get(i))
+            for(i=0;i<nowPlayingModel.model.count;i++) {
+                var o = nowPlayingModel.model.get(i)
+                o = Shoutcast.createInfo(o)
+                searchModel.append(o)
+            }
             tuneinBase = {}
             if(nowPlayingModel.keepObject.length > 0) {
                 var b = nowPlayingModel.keepObject[0]["base"]
@@ -244,8 +296,11 @@ Page {
                 return
             var i
             currentItem = -1
-            for(i=0;i<count;i++)
-                searchModel.append(get(i))
+            for(i=0;i<count;i++) {
+                var o = get(i)
+                o = Shoutcast.createInfo(o)
+                searchModel.append(o)
+            }
             showBusy = false
             if(searchModel.count > 0)
                 currentItem = app.findStation(app.stationId, searchModel)
@@ -298,7 +353,7 @@ Page {
                 navDirection = - 1
                 var item = searchModel.get(currentItem + navDirection)
                 if(item)
-                    app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+                    app.loadStation(item.id, item, tuneinBase)
             }
         }
 
@@ -307,7 +362,7 @@ Page {
                 navDirection = 1
                 var item = searchModel.get(currentItem + navDirection)
                 if(item)
-                     app.loadStation(item.id, Shoutcast.createInfo(item), tuneinBase)
+                     app.loadStation(item.id, item, tuneinBase)
             }
         }
     }

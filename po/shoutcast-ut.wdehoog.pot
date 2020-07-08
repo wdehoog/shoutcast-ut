@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the shoutcast-ubports.wdehoog package.
+# This file is distributed under the same license as the shoutcast-ut.wdehoog package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: shoutcast-ubports.wdehoog\n"
+"Project-Id-Version: shoutcast-ut.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-22 20:12+0000\n"
+"POT-Creation-Date: 2020-07-08 19:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,34 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/components/PlayHistory.qml:23
+msgid "Play History"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
+msgid "Clear"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
+msgid "Confirm"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:32
+msgid "Do you really want to clear the Play History?"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:110 ../qml/components/SearchHistory.qml:78
+msgid "Delete"
+msgstr ""
+
+#: ../qml/components/SearchHistory.qml:22
+msgid "Search History"
+msgstr ""
+
+#: ../qml/components/SearchHistory.qml:31
+msgid "Do you really want to clear the Search History?"
+msgstr ""
 
 #: ../qml/Main.qml:22
 msgid "No station Info"
@@ -25,40 +53,48 @@ msgstr ""
 msgid "No Track Info"
 msgstr ""
 
-#: ../qml/Main.qml:54 ../qml/Main.qml:58
+#: ../qml/Main.qml:56 ../qml/Main.qml:60
 msgid "SHOUTcast"
 msgstr ""
 
-#: ../qml/Main.qml:63
+#: ../qml/Main.qml:65
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:68
+#: ../qml/Main.qml:70
 msgid "Help"
 msgstr ""
 
-#: ../qml/Main.qml:73 ../qml/pages/SettingsPage.qml:22
+#: ../qml/Main.qml:75 ../qml/pages/SettingsPage.qml:23
 msgid "Settings"
 msgstr ""
 
-#: ../qml/Main.qml:89
+#: ../qml/Main.qml:91
 msgid "Genre"
 msgstr ""
 
-#: ../qml/Main.qml:98
+#: ../qml/Main.qml:100
 msgid "Top 500"
 msgstr ""
 
-#: ../qml/Main.qml:107 ../qml/pages/SearchPage.qml:29
+#: ../qml/Main.qml:109 ../qml/pages/SearchPage.qml:31
 msgid "Search"
 msgstr ""
 
-#: ../qml/Main.qml:413
+#: ../qml/Main.qml:416
 msgid "Ok"
 msgstr ""
 
-#: ../qml/Main.qml:424
+#: ../qml/Main.qml:427
 msgid "Error"
+msgstr ""
+
+#: ../qml/Main.qml:437
+msgid "No"
+msgstr ""
+
+#: ../qml/Main.qml:441
+msgid "Yes"
 msgstr ""
 
 #: ../qml/pages/HelpPage.qml:12
@@ -86,7 +122,7 @@ msgid ""
 "makes the app crash a lot.</li>\n"
 "   <li>The app checks if the Audio object has meta data available like "
 "current track info but appearently\n"
-"       this is not implemented in UBPorts. See https://bugs.launchpad.net/"
+"       this is not implemented in UT. See https://bugs.launchpad.net/"
 "bugs/1586230.</i>\n"
 " </ul><br>\n"
 " "
@@ -95,12 +131,12 @@ msgstr ""
 #: ../qml/pages/HelpPage.qml:61
 msgid ""
 "<p>The sources can be found on GitHub:\n"
-" <a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github.com/"
-"wdehoog/shoutcast-ubports</a>.</p>\n"
+" <a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/"
+"wdehoog/shoutcast-ut</a>.</p>\n"
 " <p>Please report any issues on the GitHub Issue page:\n"
-" <a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://"
-"github.com/wdehoog/shoutcast-ubports/issues</a>.</p> <p>Documentation of the "
-"SHOUTcast API can be found here: <a href=\"http://wiki.shoutcast.com/wiki/"
+" <a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://github."
+"com/wdehoog/shoutcast-ut/issues</a>.</p> <p>Documentation of the SHOUTcast "
+"API can be found here: <a href=\"http://wiki.shoutcast.com/wiki/"
 "SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
 msgstr ""
 
@@ -112,7 +148,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:45
+#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr ""
@@ -130,11 +166,11 @@ msgid "About SHOUTcast"
 msgstr ""
 
 #: ../qml/pages/AboutPage.qml:67
-msgid "SHOUTcast player for UBPorts"
+msgid "SHOUTcast player for Ubuntu Touch"
 msgstr ""
 
 #: ../qml/pages/AboutPage.qml:83
-msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
+msgid "sources: https://github.com/wdehoog/shoutcast-ut"
 msgstr ""
 
 #: ../qml/pages/AboutPage.qml:90
@@ -145,51 +181,63 @@ msgstr ""
 msgid "Translations"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:123
+#: ../qml/pages/AboutPage.qml:124
 msgid "Thanks to"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:41
+#: ../qml/pages/SettingsPage.qml:44
 msgid "Show Station Logos in lists (crashes with large lists)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:54
+#: ../qml/pages/SettingsPage.qml:59
 msgid "Maximum number of results to ask the server (per query)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:67
-msgid "Time to wait for response from server (seconds)"
-msgstr ""
-
-#: ../qml/pages/SettingsPage.qml:80
-msgid "Mime Type Filter"
+#: ../qml/pages/SettingsPage.qml:76
+msgid "Maximum size of Search History"
 msgstr ""
 
 #: ../qml/pages/SettingsPage.qml:94
+msgid "Maximum size of Play History"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:111
+msgid "Time to wait for response from server (seconds)"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:125
+msgid "Mime Type Filter"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:141
 msgid "No filter. Accept all mime types."
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:95
+#: ../qml/pages/SettingsPage.qml:142
 msgid "Accept only MP3 (audio/mpeg)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:96
+#: ../qml/pages/SettingsPage.qml:143
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:74
+#: ../qml/pages/SearchPage.qml:93
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:94
+#: ../qml/pages/SearchPage.qml:105
+msgid "History"
+msgstr ""
+
+#: ../qml/pages/SearchPage.qml:138
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:316
+#: ../qml/pages/SearchPage.qml:371
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:317
+#: ../qml/pages/SearchPage.qml:372
 msgid "Keywords"
 msgstr ""
 
@@ -197,6 +245,6 @@ msgstr ""
 msgid "Top 500 Stations"
 msgstr ""
 
-#: shoutcast-ubports.desktop.in.h:1
-msgid "shoutcast-ubports"
+#: shoutcast-ut.desktop.in.h:1
+msgid "shoutcast-ut"
 msgstr ""

@@ -163,7 +163,7 @@ Page {
 
         onStationChangeFailed: {
             if(navDirection !== 0)
-                navDirection = app.navToPrevNext(currentItem, navDirection, top500Model, tuneinBase)
+                navDirection = app.navToPrevNext(currentItem, navDirection, stationsModel, tuneinBase)
         }
 
         onPrevious: {

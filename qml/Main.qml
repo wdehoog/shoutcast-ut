@@ -14,11 +14,11 @@ import "components"
 MainView {
     id: app
     objectName: 'mainView'
-    applicationName: 'shoutcast-ubports.wdehoog'
+    applicationName: 'shoutcast-ut.wdehoog'
     automaticOrientation: true
 
     property string defaultImageSource: "image://theme/icon-m-music"
-    property string logoURL: Qt.resolvedUrl("resources/shoutcast-ubports.svg")
+    property string logoURL: Qt.resolvedUrl("resources/shoutcast-ut.svg")
     property string streamMetaText1: i18n.tr("No station Info")
     property string streamMetaText2: i18n.tr("No Track Info")
 
@@ -32,6 +32,8 @@ MainView {
     property int navDirection: 0 // 0: none, -x: prev, +x: next
 
     property alias settings: settings
+
+    property color fgColor: theme.palette.normal.backgroundText
 
     PageStack {
         id: pageStack
@@ -143,8 +145,6 @@ MainView {
 
         onPlaybackStateChanged: playerArea.audioPlaybackState = playbackState
 
-        //onSourceChanged: refreshTransportState()
-
         //onBufferProgressChanged: {
         //    if(bufferProgress == 1.0)
         //        audioBufferFull()
@@ -244,6 +244,9 @@ MainView {
 
         audio.source = stationInfo.stream
         play()
+
+        var histObj = createHistoryObject(stationInfo.name, stationInfo.logo, Shoutcast.getHistoryMetaString(stationInfo))
+        notifyHistory(histObj)
     }
 
     signal stationChanged(var stationInfo)
@@ -424,6 +427,124 @@ MainView {
         PopupUtils.open(dialog, app, {messageTitle: i18n.tr("Error"), messageText: text})
     }
 
+
+    Component {
+      id: confirmDialog
+      Dialog {
+          id: dialogue
+          property var yesCallback: null
+          Button {
+            text: i18n.tr("No")
+            onClicked: PopupUtils.close(dialogue)
+          }
+          Button {
+            text: i18n.tr("Yes")
+            color: UbuntuColors.orange
+            onClicked: {
+              if(yesCallback)
+                  yesCallback()
+              PopupUtils.close(dialogue)
+            }
+          }
+      }
+    }
+
+    function showConfirmDialog(title, text, callback) {
+        PopupUtils.open(confirmDialog, app, {title: title, text: text, yesCallback: callback})
+    }
+
+    /**
+     * History
+     */
+
+    property var history: []
+
+    function createHistoryObject(name, logo, meta) {
+        var histObj = {
+            name: name,
+            logo: logo,
+            meta: meta}
+        return histObj
+    }
+
+    function compareHistoryObjects(obj0, obj1) {
+        var res = obj0.name.localeCompare(obj1.name)
+        if(res != 0)
+            return res
+        res = obj0.logo.localeCompare(obj1.logo)
+        if(res != 0)
+            return res
+        return obj0.meta.localeCompare(obj1.meta)
+    }
+
+    function notifyHistory(histObj) {
+        //console.log(JSON.stringify(histObj, null, 2))
+        var removedIndex = -1
+        if(history.length === 0) {
+            history.unshift(histObj)
+        } else if(compareHistoryObjects(history[0], histObj) == 0) {
+            // already at the top
+            return
+        } else {
+            // add to the top
+            history.unshift(histObj)
+            // remove if already present
+            for(var i=1;i<history.length;i++)
+                if(compareHistoryObjects(history[i], histObj) == 0) {
+                    history.splice(i, 1)
+                    removedIndex = i - 1 // -1 since the model does not have the new one yet
+                    break
+                }
+        }
+        if(history.length > settings.historyMaxSize) { // make configurable
+            history.pop()
+        }
+        settings.history = history
+        //console.log(JSON.stringify(settings.history, null, 2))
+    }
+
+    function removeHistory(index) {
+        history.splice(index, 1)
+        settings.history = history
+    }
+
+    function clearHistory() {
+        history = []
+        settings.history = history
+    }
+
+    function setPlayHistoryMaxSize(maxSize) {
+        settings.historyMaxSize = maxSize
+        var sh = settings.history
+        if(sh.length > maxSize) {
+            sh = sh.slice(0, maxSize)
+            settings.history = sh
+        }
+    }
+
+    function removeSearchHistory(index) {
+        var sh = settings.searchHistory
+        sh.splice(index, 1)
+        settings.searchHistory = sh
+    }
+
+    function clearSearchHistory() {
+        settings.searchHistory = []
+    }
+
+    function setSearchHistoryMaxSize(maxSize) {
+        settings.searchHistoryMaxSize = maxSize
+        var sh = settings.searchHistory
+        if(sh.length > maxSize) {
+            sh = sh.slice(0, maxSize)
+            settings.searchHistory = sh
+        }
+    }
+
+    Component.onCompleted: {
+        history = settings.history
+    }
+
     Settings {
         id: settings
 
@@ -440,6 +561,14 @@ MainView {
         // it looks nice but on my Moto G 2nd it makes the app crash
         // on large lists like the Top500
         property bool show_station_logo_in_lists: true
+
+        // played stations
+        property var history: []
+        property int historyMaxSize: 50
+
+        // search history
+        property var searchHistory: []
+        property int searchHistoryMaxSize: 50
     }
 
 }

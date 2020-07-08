@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(shoutcast-ubports C CXX)
+project(shoutcast-ut C CXX)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -19,8 +19,8 @@ execute_process(
 
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
-set(PROJECT_NAME "shoutcast-ubports")
-set(FULL_PROJECT_NAME "shoutcast-ubports.wdehoog")
+set(PROJECT_NAME "shoutcast-ut")
+set(FULL_PROJECT_NAME "shoutcast-ut.wdehoog")
 set(CMAKE_INSTALL_PREFIX /)
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
