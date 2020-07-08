@@ -1,7 +1,7 @@
 [Desktop Entry]
-_Name=shoutcast-ubports
+_Name=shoutcast-ut
 Exec=qmlscene %U qml/Main.qml
-Icon=assets/shoutcast-ubports.svg
+Icon=assets/shoutcast-ut.svg
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true

@@ -1,12 +1,12 @@
 {
-    "name": "shoutcast-ubports.wdehoog",
+    "name": "shoutcast-ut.wdehoog",
     "description": "A SHOUTcast browser and player",
     "architecture": "@CLICK_ARCH@",
-    "title": "shoutcast-ubports",
+    "title": "shoutcast-ut",
     "hooks": {
-        "shoutcast-ubports": {
-            "apparmor": "shoutcast-ubports.apparmor",
-            "desktop":  "shoutcast-ubports.desktop"
+        "shoutcast-ut": {
+            "apparmor": "shoutcast-ut.apparmor",
+            "desktop":  "shoutcast-ut.desktop"
         }
     },
     "version": "0.5",

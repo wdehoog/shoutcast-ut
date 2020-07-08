@@ -1,6 +1,6 @@
-## shoutcast-ubports
+## shoutcast-ut
 
-A SHOUTcast player for UBPorts. This project is for me to see how 'portable' QML is and how hard/easy it is to create an app for UBPorts. 
+A SHOUTcast player for Ubuntu Touch. This project is for me to see how 'portable' QML is and how hard/easy it is to create an app for Ubuntu Touch. 
 
 The code is based on my shoutcast-sailfish app. 
 
@@ -13,14 +13,12 @@ The code is based on my shoutcast-sailfish app.
 ### Issues
   * If there is no network then you are toast
   * The app checks if the Audio object has meta data available like current track info but appearently
-    this is not implemented in UBPorts. See https://bugs.launchpad.net/bugs/1586230.
+    this is not implemented in UT. See https://bugs.launchpad.net/bugs/1586230.
 
 ### Thanks
   * SHOUTcast for www.shoutcast.com
-  * the UBPorts Team for UBPorts
-  * mimecar for his VirtualBox VM with the Ubuntu SDK
+  * the UT Team for Ubuntu Touch
   * Romain Pokrzywka: JSONListModel
   * Stefan Goessner: JSONPath
   * igh0zt: app icon
-  * https://feathericons.com/: some icons
   * the translators
