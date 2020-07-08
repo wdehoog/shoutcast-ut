@@ -51,16 +51,16 @@ Page {
                 }
             }
 
-            Column {
+            Row {
                 width: parent.width
                 Label {
-                    width: parent.width
+                    width: parent.width * 0.8
                     wrapMode: Label.Wrap
                     text: i18n.tr("Maximum number of results to ask the server (per query)")
                 }
                 TextField {
                     id: maxNumberOfResults
-                    width: parent.width
+                    width: parent.width * 0.2
                     validator: IntValidator{bottom: 1; top: 65534;}
                     text: settings.max_number_of_results
                     onAccepted: settings.max_number_of_results = parseInt(text)
@@ -81,7 +81,7 @@ Page {
                     anchors.verticalCenter: parent.verticalCenter
                     validator: IntValidator{bottom: 1; top: 100;}
                     text: settings.searchHistoryMaxSize
-                    onAccepted: settings.searchHistoryMaxSize = parseInt(text)
+                    onAccepted: app.setSearchHistoryMaxSize(parseInt(text))
                 }
             }
 
@@ -99,20 +99,20 @@ Page {
                     anchors.verticalCenter: parent.verticalCenter
                     validator: IntValidator{bottom: 1; top: 100;}
                     text: settings.historyMaxSize
-                    onAccepted: settings.historyMaxSize = parseInt(text)
+                    onAccepted: app.setPlayHistoryMaxSize(parseInt(text))
                 }
             }
 
-            Column {
+            Row {
                 width: parent.width
                 Label {
-                    width: parent.width
+                    width: parent.width * 0.8
                     wrapMode: Text.Wrap
                     text: i18n.tr("Time to wait for response from server (seconds)")
                 }
                 TextField {
                     id: serverTimeout
-                    width: parent.width
+                    width: parent.width * 0.2
                     validator: IntValidator{bottom: 1; top: 60;}
                     text: settings.server_timeout
                     onAccepted: settings.server_timeout = parseInt(text)

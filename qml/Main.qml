@@ -513,6 +513,15 @@ MainView {
         settings.history = history
     }
 
+    function setPlayHistoryMaxSize(maxSize) {
+        settings.historyMaxSize = maxSize
+        var sh = settings.history
+        if(sh.length > maxSize) {
+            sh = sh.slice(0, maxSize)
+            settings.history = sh
+        }
+    }
+
     function removeSearchHistory(index) {
         var sh = settings.searchHistory
         sh.splice(index, 1)
@@ -521,6 +530,15 @@ MainView {
 
     function clearSearchHistory() {
         settings.searchHistory = []
+    }
+
+    function setSearchHistoryMaxSize(maxSize) {
+        settings.searchHistoryMaxSize = maxSize
+        var sh = settings.searchHistory
+        if(sh.length > maxSize) {
+            sh = sh.slice(0, maxSize)
+            settings.searchHistory = sh
+        }
     }
 
     Component.onCompleted: {
