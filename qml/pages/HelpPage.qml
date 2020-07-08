@@ -44,7 +44,7 @@ to navigate the stations list (next/previous).</p>\n \
   <li>If there is no network then you are toast</li>\n \
   <li>The stations lists can show the logos (see the Settings page) but it makes the app crash a lot.</li>\n \
   <li>The app checks if the Audio object has meta data available like current track info but appearently\n \
-      this is not implemented in UBPorts. See https://bugs.launchpad.net/bugs/1586230.</i>\n \
+      this is not implemented in UT. See https://bugs.launchpad.net/bugs/1586230.</i>\n \
 </ul><br>\n \
 ")
             }
@@ -59,9 +59,9 @@ to navigate the stations list (next/previous).</p>\n \
 
 // weird formatting with "\n \" to keep it readable here and in the po(t) files
 i18n.tr("<p>The sources can be found on GitHub:\n \
-<a href=\"https://github.com/wdehoog/shoutcast-ubports\">https://github.com/wdehoog/shoutcast-ubports</a>.</p>\n \
+<a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/wdehoog/shoutcast-ut</a>.</p>\n \
 <p>Please report any issues on the GitHub Issue page:\n \
-<a href=\"https://github.com/wdehoog/shoutcast-ubports/issues\">https://github.com/wdehoog/shoutcast-ubports/issues</a>.</p> \
+<a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://github.com/wdehoog/shoutcast-ut/issues</a>.</p> \
 <p>Documentation of the SHOUTcast API can be found here: \
 <a href=\"http://wiki.shoutcast.com/wiki/SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>")
             }

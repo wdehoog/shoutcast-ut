@@ -39,7 +39,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     radius: "medium"
                     source: Image {
-                        source: Qt.resolvedUrl("../resources/shoutcast-ubports.svg")
+                        source: Qt.resolvedUrl("../resources/shoutcast-ut.svg")
                     }
                 }
 
@@ -58,13 +58,13 @@ Page {
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "shoutcast-ubports 0.4"
+                        text: "shoutcast-ut 0.5"
                     }
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: i18n.tr("SHOUTcast player for UBPorts")
+                        text: i18n.tr("SHOUTcast player for Ubuntu Touch")
                         width: parent.width
                         wrapMode: Text.WordWrap
                     }
@@ -80,7 +80,7 @@ Page {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("medium")
-                        text: i18n.tr("sources: https://github.com/wdehoog/shoutcast-ubports")
+                        text: i18n.tr("sources: https://github.com/wdehoog/shoutcast-ut")
                         width: parent.width
                     }
                     Label {
@@ -111,7 +111,8 @@ Page {
                     font.pixelSize:FontUtils.sizeToPixels("large")
                     wrapMode: Text.WordWrap
                     text:
-"Anne017: fr
+"Advocatux: es
+Anne017: fr
 Joan CiberSheep: ca"
                     }
             }
@@ -134,8 +135,7 @@ Joan CiberSheep: ca"
                     wrapMode: Text.WordWrap
                     text:
 "SHOUTcast: www.shoutcast.com
-UBPorts Team: UBPorts
-walidham: UBPorts port for titan
+UT Team: Ubuntu Touch
 Romain Pokrzywka: JSONListModel
 Stefan Goessner: JSONPath
 Joan CiberSheep: app icon

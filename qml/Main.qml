@@ -14,11 +14,11 @@ import "components"
 MainView {
     id: app
     objectName: 'mainView'
-    applicationName: 'shoutcast-ubports.wdehoog'
+    applicationName: 'shoutcast-ut.wdehoog'
     automaticOrientation: true
 
     property string defaultImageSource: "image://theme/icon-m-music"
-    property string logoURL: Qt.resolvedUrl("resources/shoutcast-ubports.svg")
+    property string logoURL: Qt.resolvedUrl("resources/shoutcast-ut.svg")
     property string streamMetaText1: i18n.tr("No station Info")
     property string streamMetaText2: i18n.tr("No Track Info")
 
