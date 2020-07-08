@@ -147,6 +147,27 @@ function getMetaString(model) {
     return mstr
 }
 
+function getHistoryMetaString(model) {
+    var mstr = ""
+    var gstr = genreString(model)
+    if(gstr.length > 0) {
+        if(mstr.length > 0)
+            mstr += ", "
+        mstr += gstr
+    }
+    if(model.mt) {
+        if(mstr.length > 0)
+            mstr += ", "
+        mstr += getAudioType(model.mt)
+    }
+    if(model.br) {
+        if(mstr.length > 0)
+            mstr += "/"
+        mstr += model.br
+    }
+    return mstr
+}
+
 
 function genreString(item) {
     //console.log(model.id + ": l=" + model.ct.length + ", text=" + model.ct)

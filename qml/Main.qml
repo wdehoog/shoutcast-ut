@@ -245,7 +245,7 @@ MainView {
         audio.source = stationInfo.stream
         play()
 
-        var histObj = createHistoryObject(stationInfo.name, stationInfo.logo, Shoutcast.getMetaString(stationInfo))
+        var histObj = createHistoryObject(stationInfo.name, stationInfo.logo, Shoutcast.getHistoryMetaString(stationInfo))
         notifyHistory(histObj)
     }
 
