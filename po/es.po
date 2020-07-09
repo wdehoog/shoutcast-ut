@@ -232,5 +232,5 @@ msgid "Top 500 Stations"
 msgstr "Las 500 mejores estaciones"
 
 #: /home/ubucon/build-shoutcast-ubports-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/shoutcast-ubports/shoutcast-ubports.desktop.h:1
-msgid "shoutcast-ubports"
-msgstr "shoutcast-ubports"
+msgid "shoutcast-ut"
+msgstr "shoutcast-ut"

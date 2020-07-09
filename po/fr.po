@@ -166,8 +166,8 @@ msgid "SHOUTcast player for Ubuntu Touch"
 msgstr "Lecteur SHOUTcast pour Ubuntu Touch"
 
 #: ../qml/pages/AboutPage.qml:83
-msgid "sources: https://github.com/wdehoog/shoutcast-ubports"
-msgstr "Code source : https://github.com/wdehoog/shoutcast-ubports"
+msgid "sources: https://github.com/wdehoog/shoutcast-ut"
+msgstr "Code source : https://github.com/wdehoog/shoutcast-ut"
 
 #: ../qml/pages/AboutPage.qml:90
 msgid "License: MIT"
