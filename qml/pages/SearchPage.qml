@@ -100,6 +100,7 @@ Page {
                     secondaryItem: Button {
                         height: parent.height
                         width: height*1.2
+                        color: app.buttonColor
                         action: Action {
                             iconName: "history"
                             text: i18n.tr("History")
@@ -141,7 +142,7 @@ Page {
                     id: popoverButton
                     width: parent.width - silabel.width
                     anchors.verticalCenter: parent.verticalCenter
-                    color: "white"
+                    color: app.buttonColor
                     text: searchInTypeLabels[searchInType]
                     onClicked: PopupUtils.open(pocSearchType, popoverButton)
                 }

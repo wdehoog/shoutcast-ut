@@ -91,11 +91,13 @@ Page {
 
                     Label { 
                         width: parent.width
+                        color: app.primaryColor
                         wrapMode: Label.Wrap
                         text: name
                     }
                     Label { 
                         width: parent.width
+                        color: app.secondaryColor
                         wrapMode: Label.Wrap
                         text: meta
                     }

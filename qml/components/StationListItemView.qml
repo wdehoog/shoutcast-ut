@@ -15,20 +15,17 @@ Column {
     Label {
         id: nameLabel
         width: parent.width
-        color:  UbuntuColors.orange
+        color: app.primaryColor
         textFormat: Text.StyledText
         font.weight: currentItem === index ? Font.Bold : Font.Normal
-        //truncationMode: TruncationMode.Fade
         text: name
     }
 
     Label {
         id: metaLabel
         width: parent.width
-        color: UbuntuColors.coolGrey
+        color: app.secondaryColor
         font.weight: currentItem === index ? Font.Bold : Font.Normal
-        //font.pixelSize: Theme.fontSizeExtraSmall
-        //truncationMode: TruncationMode.Fade
         text: Shoutcast.getMetaString(model)
 
     }
@@ -36,11 +33,9 @@ Column {
     Label {
         id: trackLabel
         width: parent.width
-        color: UbuntuColors.darkGrey
+        color: app.tertiaryColor
         font.weight: currentItem === index ? Font.Bold : Font.Normal
-        //font.pixelSize: Theme.fontSizeExtraSmall
         textFormat: Text.StyledText
-        //truncationMode: TruncationMode.Fade
         text: ct ? ct : qsTr("no track info")
     }
 

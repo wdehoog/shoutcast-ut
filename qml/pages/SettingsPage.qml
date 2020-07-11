@@ -129,6 +129,7 @@ Page {
                 Button {
                     id: popoverButton
                     width: parent.width
+                    color: app.buttonColor
                     text: mimeTypeFilterLabels[mimeTypeFilter]
                     onClicked: PopupUtils.open(pocMimeTypeFilter, popoverButton)
                 }

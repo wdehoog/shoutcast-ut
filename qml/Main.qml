@@ -5,6 +5,7 @@ import Ubuntu.Components.Popups 1.3
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 import QtMultimedia 5.9
+import QtQuick.Controls.Suru 2.2
 
 import "components/shoutcast.js" as Shoutcast
 import "components/Util.js" as Util
@@ -33,9 +34,28 @@ MainView {
 
     property alias settings: settings
 
-    property color fgColor: theme.palette.normal.backgroundText
+    property color primaryColor: Suru.foregroundColor
+    property color secondaryColor: Suru.secondaryForegroundColor
+    property color tertiaryColor: Suru.tertiaryForegroundColor
 
-    PageStack {
+
+    property color primaryHighlightColor: Suru.highlightColor
+    property color secondaryHighlightColor: getColorAlpha(primaryHighlightColor, 0.8571)
+    property color tertiaryHighlightColor: getColorAlpha(primaryHighlightColor, 0.6429)
+
+    property color logoColor: "#feb22e"
+
+    //property color buttonColor: theme.palette.normal.activity
+    //property color buttonColor: secondaryHighlightColor
+    property color buttonColor: tertiaryHighlightColor
+    //property color buttonColor: theme.palette.normal.base
+
+    function getColorAlpha(color, alpha) {
+       return Qt.hsla(color.hslHue, color.hslSaturation, color.hslLightness, alpha)
+    }
+
+   PageStack {
+
         id: pageStack
         anchors {
             bottom: playerArea.top
@@ -58,7 +78,6 @@ MainView {
             header: PageHeader {
                 id: pageHeader
                 title: i18n.tr("SHOUTcast")
-
                 trailingActionBar.actions: [
                     Action {
                         iconName: "info"
@@ -88,6 +107,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     height: 3 * font.pixelSize
+                    color: app.buttonColor
                     text: i18n.tr("Genre")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/folder.svg")
@@ -97,6 +117,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     height: 3 * font.pixelSize
+                    color: app.buttonColor
                     text: i18n.tr("Top 500")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/chevrons-up.svg")
@@ -106,6 +127,7 @@ MainView {
                     anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
                     height: 3 * font.pixelSize
+                    color: app.buttonColor
                     text: i18n.tr("Search")
                     font.pixelSize: FontUtils.sizeToPixels("large")
                     iconSource: Qt.resolvedUrl("resources/search.svg")
@@ -439,7 +461,7 @@ MainView {
           }
           Button {
             text: i18n.tr("Yes")
-            color: UbuntuColors.orange
+            color: theme.palette.normal.negative
             onClicked: {
               if(yesCallback)
                   yesCallback()

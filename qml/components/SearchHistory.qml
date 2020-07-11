@@ -67,6 +67,7 @@ Page {
             Label {
                 width: parent.width
                 anchors.verticalCenter: parent.verticalCenter
+                color: app.primaryColor
                 wrapMode: Label.Wrap
                 text: model.text
             }

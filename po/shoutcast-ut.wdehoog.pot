@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ut.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-09 09:35+0000\n"
+"POT-Creation-Date: 2020-07-11 11:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Do you really want to clear the Play History?"
 msgstr ""
 
-#: ../qml/components/PlayHistory.qml:110 ../qml/components/SearchHistory.qml:78
+#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
 msgid "Delete"
 msgstr ""
 
@@ -45,55 +45,55 @@ msgstr ""
 msgid "Do you really want to clear the Search History?"
 msgstr ""
 
-#: ../qml/Main.qml:22
+#: ../qml/Main.qml:23
 msgid "No station Info"
 msgstr ""
 
-#: ../qml/Main.qml:23
+#: ../qml/Main.qml:24
 msgid "No Track Info"
 msgstr ""
 
-#: ../qml/Main.qml:56 ../qml/Main.qml:60
+#: ../qml/Main.qml:76 ../qml/Main.qml:80
 msgid "SHOUTcast"
 msgstr ""
 
-#: ../qml/Main.qml:65
+#: ../qml/Main.qml:84
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:70
+#: ../qml/Main.qml:89
 msgid "Help"
 msgstr ""
 
-#: ../qml/Main.qml:75 ../qml/pages/SettingsPage.qml:23
+#: ../qml/Main.qml:94 ../qml/pages/SettingsPage.qml:23
 msgid "Settings"
 msgstr ""
 
-#: ../qml/Main.qml:91
+#: ../qml/Main.qml:111
 msgid "Genre"
 msgstr ""
 
-#: ../qml/Main.qml:100
+#: ../qml/Main.qml:121
 msgid "Top 500"
 msgstr ""
 
-#: ../qml/Main.qml:109 ../qml/pages/SearchPage.qml:31
+#: ../qml/Main.qml:131 ../qml/pages/SearchPage.qml:31
 msgid "Search"
 msgstr ""
 
-#: ../qml/Main.qml:416
+#: ../qml/Main.qml:438
 msgid "Ok"
 msgstr ""
 
-#: ../qml/Main.qml:427
+#: ../qml/Main.qml:449
 msgid "Error"
 msgstr ""
 
-#: ../qml/Main.qml:437
+#: ../qml/Main.qml:459
 msgid "No"
 msgstr ""
 
-#: ../qml/Main.qml:441
+#: ../qml/Main.qml:463
 msgid "Yes"
 msgstr ""
 
@@ -209,15 +209,15 @@ msgstr ""
 msgid "Mime Type Filter"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:141
+#: ../qml/pages/SettingsPage.qml:142
 msgid "No filter. Accept all mime types."
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:142
+#: ../qml/pages/SettingsPage.qml:143
 msgid "Accept only MP3 (audio/mpeg)"
 msgstr ""
 
-#: ../qml/pages/SettingsPage.qml:143
+#: ../qml/pages/SettingsPage.qml:144
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
@@ -225,19 +225,19 @@ msgstr ""
 msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:105
+#: ../qml/pages/SearchPage.qml:106
 msgid "History"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:138
+#: ../qml/pages/SearchPage.qml:139
 msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:371
+#: ../qml/pages/SearchPage.qml:372
 msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:372
+#: ../qml/pages/SearchPage.qml:373
 msgid "Keywords"
 msgstr ""
 

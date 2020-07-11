@@ -88,14 +88,14 @@ Page {
                         id: nameLabel
                         textFormat: Text.StyledText
                         font.weight: Font.Bold
-                        //truncationMode: TruncationMode.Fade
+                        color: app.primaryColor
                         width: parent.width - countLabel.width
                         text: name ? name : qsTr("No Genre Name")
                     }
                     Label {
                         id: countLabel
                         anchors.right: parent.right
-                        //font.pixelSize: Theme.fontSizeExtraSmall
+                        color: app.secondaryColor
                         text: count ? count : qsTr("?")
 
                     }
