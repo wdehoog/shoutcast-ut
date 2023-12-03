@@ -1,4 +1,4 @@
-import Ubuntu.Components 1.3 as UITK
+import Lomiri.Components 1.3 as UITK
 
 UITK.PageHeader {
    UITK.StyleHints {

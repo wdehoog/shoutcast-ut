@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shoutcast-ut.wdehoog\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-11 11:46+0000\n"
+"POT-Creation-Date: 2023-12-03 15:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,34 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../qml/components/PlayHistory.qml:23
-msgid "Play History"
-msgstr ""
-
-#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
-msgid "Clear"
-msgstr ""
-
-#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
-msgid "Confirm"
-msgstr ""
-
-#: ../qml/components/PlayHistory.qml:32
-msgid "Do you really want to clear the Play History?"
-msgstr ""
-
-#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
-msgid "Delete"
-msgstr ""
-
-#: ../qml/components/SearchHistory.qml:22
-msgid "Search History"
-msgstr ""
-
-#: ../qml/components/SearchHistory.qml:31
-msgid "Do you really want to clear the Search History?"
-msgstr ""
 
 #: ../qml/Main.qml:23
 msgid "No station Info"
@@ -97,6 +69,62 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
+#: ../qml/components/PlayHistory.qml:23
+msgid "Play History"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
+msgid "Clear"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
+msgid "Confirm"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:32
+msgid "Do you really want to clear the Play History?"
+msgstr ""
+
+#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
+msgid "Delete"
+msgstr ""
+
+#: ../qml/components/SearchHistory.qml:22
+msgid "Search History"
+msgstr ""
+
+#: ../qml/components/SearchHistory.qml:31
+msgid "Do you really want to clear the Search History?"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:16
+msgid "About SHOUTcast"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:67
+msgid "SHOUTcast player for Ubuntu Touch"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:83
+msgid "sources:"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:91
+msgid "License: MIT"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:102
+msgid "Translations"
+msgstr ""
+
+#: ../qml/pages/AboutPage.qml:125
+msgid "Thanks to"
+msgstr ""
+
+#: ../qml/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr ""
+
 #: ../qml/pages/HelpPage.qml:12
 msgid "SHOUTcast Help"
 msgstr ""
@@ -140,49 +168,29 @@ msgid ""
 "SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
 msgstr ""
 
-#: ../qml/pages/StationsPage.qml:27
-msgid "Stations for: "
-msgstr ""
-
-#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
-msgid "Home"
-msgstr ""
-
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
+#: ../qml/pages/SearchPage.qml:48 ../qml/pages/StationsPage.qml:53
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr ""
 
-#: ../qml/pages/SubGenrePage.qml:24
-msgid "Sub-Genres for: "
+#: ../qml/pages/SearchPage.qml:93
+msgid "Search for"
 msgstr ""
 
-#: ../qml/pages/GenrePage.qml:21
-msgid "Genres"
+#: ../qml/pages/SearchPage.qml:106
+msgid "History"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:16
-msgid "About SHOUTcast"
+#: ../qml/pages/SearchPage.qml:139
+msgid "Search In: "
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:67
-msgid "SHOUTcast player for Ubuntu Touch"
+#: ../qml/pages/SearchPage.qml:372
+msgid "Now Playing"
 msgstr ""
 
-#: ../qml/pages/AboutPage.qml:83
-msgid "sources: https://github.com/wdehoog/shoutcast-ut"
-msgstr ""
-
-#: ../qml/pages/AboutPage.qml:90
-msgid "License: MIT"
-msgstr ""
-
-#: ../qml/pages/AboutPage.qml:101
-msgid "Translations"
-msgstr ""
-
-#: ../qml/pages/AboutPage.qml:124
-msgid "Thanks to"
+#: ../qml/pages/SearchPage.qml:373
+msgid "Keywords"
 msgstr ""
 
 #: ../qml/pages/SettingsPage.qml:44
@@ -221,24 +229,16 @@ msgstr ""
 msgid "Accept only AAC (audio/aacp)"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:93
-msgid "Search for"
+#: ../qml/pages/StationsPage.qml:27
+msgid "Stations for: "
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:106
-msgid "History"
+#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
+msgid "Home"
 msgstr ""
 
-#: ../qml/pages/SearchPage.qml:139
-msgid "Search In: "
-msgstr ""
-
-#: ../qml/pages/SearchPage.qml:372
-msgid "Now Playing"
-msgstr ""
-
-#: ../qml/pages/SearchPage.qml:373
-msgid "Keywords"
+#: ../qml/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
 msgstr ""
 
 #: ../qml/pages/Top500Page.qml:23
