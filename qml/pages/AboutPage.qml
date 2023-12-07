@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 import "../components"
 import "../components/shoutcast.js" as Shoutcast
@@ -32,7 +32,7 @@ Page {
                 width: parent.width
                 height: childrenRect.height
 
-                UbuntuShape {
+                LomiriShape {
                     id: icon
                     width: units.gu(10)
                     height: width
@@ -58,7 +58,7 @@ Page {
                     Label {
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("large")
-                        text: "shoutcast-ut 0.5"
+                        text: "shoutcast-ut 0.6"
                     }
 
                     Label {
@@ -80,7 +80,8 @@ Page {
                         horizontalAlignment: implicitWidth > width ? Text.AlignLeft : Text.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                         font.pixelSize:FontUtils.sizeToPixels("medium")
-                        text: i18n.tr("sources: https://github.com/wdehoog/shoutcast-ut")
+                        text: i18n.tr("sources:") + "<a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/wdehoog/shoutcast-ut</a>"
+                        onLinkActivated: Qt.openUrlExternally(link)
                         width: parent.width
                     }
                     Label {
@@ -111,9 +112,9 @@ Page {
                     font.pixelSize:FontUtils.sizeToPixels("large")
                     wrapMode: Text.WordWrap
                     text:
-"Advocatux: es
-Anne017: fr
-Joan CiberSheep: ca"
+"Advocatux: es<br>"
++ "Anne017: fr<br>"
++ "Joan CiberSheep: ca<br>"
                     }
             }
 
@@ -134,13 +135,14 @@ Joan CiberSheep: ca"
                     font.pixelSize:FontUtils.sizeToPixels("large")
                     wrapMode: Text.WordWrap
                     text:
-"SHOUTcast: www.shoutcast.com
-UT Team: Ubuntu Touch
-Romain Pokrzywka: JSONListModel
-Stefan Goessner: JSONPath
-Joan CiberSheep: app icon
-https://feathericons.com/: some icons
-Canonical: ubuntu-touch. Why did you stop?"
+"SHOUTcast: <a href=\"https://www.shoutcast.com/\">www.shoutcast.com</a> <br>"
++"UT Team: Ubuntu Touch<br>"
++"Romain Pokrzywka: JSONListModel<br>"
++"Stefan Goessner: JSONPath<br>"
++"Joan CiberSheep: app icon<br>"
++"<a href=\"https://feathericons.com/\">feathericons.com</a>: some icons<br>"
++"Canonical: ubuntu-touch. Why did you stop?<br>"
+                    onLinkActivated: Qt.openUrlExternally(link)
                 }
             }
         }

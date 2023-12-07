@@ -7,42 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-11 11:46+0000\n"
-"PO-Revision-Date: 2020-07-22 20:59+0200\n"
+"POT-Creation-Date: 2023-12-03 15:11+0000\n"
+"PO-Revision-Date: 2023-12-03 16:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../qml/components/PlayHistory.qml:23
-msgid "Play History"
-msgstr "Historique de lecture"
-
-#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
-msgid "Clear"
-msgstr "Supprimer"
-
-#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
-msgid "Confirm"
-msgstr "Confirmer"
-
-#: ../qml/components/PlayHistory.qml:32
-msgid "Do you really want to clear the Play History?"
-msgstr "Voulez-vous vraiment supprimer l'historique de lecture ?"
-
-#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
-msgid "Delete"
-msgstr "Supprimer"
-
-#: ../qml/components/SearchHistory.qml:22
-msgid "Search History"
-msgstr "Historique de recherches"
-
-#: ../qml/components/SearchHistory.qml:31
-msgid "Do you really want to clear the Search History?"
-msgstr "Voulez-vous vraiment supprimer l'historique de recherches ?"
+"X-Generator: Poedit 3.4.1\n"
 
 #: ../qml/Main.qml:23
 msgid "No station Info"
@@ -95,6 +68,62 @@ msgstr "Non"
 #: ../qml/Main.qml:463
 msgid "Yes"
 msgstr "Oui"
+
+#: ../qml/components/PlayHistory.qml:23
+msgid "Play History"
+msgstr "Historique de lecture"
+
+#: ../qml/components/PlayHistory.qml:28 ../qml/components/SearchHistory.qml:27
+msgid "Clear"
+msgstr "Supprimer"
+
+#: ../qml/components/PlayHistory.qml:31 ../qml/components/SearchHistory.qml:30
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: ../qml/components/PlayHistory.qml:32
+msgid "Do you really want to clear the Play History?"
+msgstr "Voulez-vous vraiment supprimer l'historique de lecture ?"
+
+#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ../qml/components/SearchHistory.qml:22
+msgid "Search History"
+msgstr "Historique de recherches"
+
+#: ../qml/components/SearchHistory.qml:31
+msgid "Do you really want to clear the Search History?"
+msgstr "Voulez-vous vraiment supprimer l'historique de recherches ?"
+
+#: ../qml/pages/AboutPage.qml:16
+msgid "About SHOUTcast"
+msgstr "À propos de SHOUTcast"
+
+#: ../qml/pages/AboutPage.qml:67
+msgid "SHOUTcast player for Ubuntu Touch"
+msgstr "Lecteur SHOUTcast pour Ubuntu Touch"
+
+#: ../qml/pages/AboutPage.qml:83
+msgid "sources: https://github.com/wdehoog/shoutcast-ut"
+msgstr "Code source : https://github.com/wdehoog/shoutcast-ut"
+
+#: ../qml/pages/AboutPage.qml:90
+msgid "License: MIT"
+msgstr "Licence : MIT"
+
+#: ../qml/pages/AboutPage.qml:101
+msgid "Translations"
+msgstr "Traductions"
+
+#: ../qml/pages/AboutPage.qml:124
+msgid "Thanks to"
+msgstr "Remerciements à"
+
+#: ../qml/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr "Genres"
 
 #: ../qml/pages/HelpPage.qml:12
 msgid "SHOUTcast Help"
@@ -171,50 +200,30 @@ msgstr ""
 "SHOUTcast peut petre trouvée ici : <a href=\"http://wiki.shoutcast.com/wiki/"
 "SHOUTcast_Radio_Directory_API\">API de l'annuaire radio de SHOUTcast</a>"
 
-#: ../qml/pages/StationsPage.qml:27
-msgid "Stations for: "
-msgstr "Stations pour : "
-
-#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
-msgid "Home"
-msgstr "Accueil"
-
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
+#: ../qml/pages/SearchPage.qml:48 ../qml/pages/StationsPage.qml:53
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr "Actualiser"
 
-#: ../qml/pages/SubGenrePage.qml:24
-msgid "Sub-Genres for: "
-msgstr "Sous-genres pour : "
+#: ../qml/pages/SearchPage.qml:93
+msgid "Search for"
+msgstr "Rechercher"
 
-#: ../qml/pages/GenrePage.qml:21
-msgid "Genres"
-msgstr "Genres"
+#: ../qml/pages/SearchPage.qml:106
+msgid "History"
+msgstr "Historique"
 
-#: ../qml/pages/AboutPage.qml:16
-msgid "About SHOUTcast"
-msgstr "À propos de SHOUTcast"
+#: ../qml/pages/SearchPage.qml:139
+msgid "Search In: "
+msgstr "Chercher dans : "
 
-#: ../qml/pages/AboutPage.qml:67
-msgid "SHOUTcast player for Ubuntu Touch"
-msgstr "Lecteur SHOUTcast pour Ubuntu Touch"
+#: ../qml/pages/SearchPage.qml:372
+msgid "Now Playing"
+msgstr "Lecture en cours"
 
-#: ../qml/pages/AboutPage.qml:83
-msgid "sources: https://github.com/wdehoog/shoutcast-ut"
-msgstr "Code source : https://github.com/wdehoog/shoutcast-ut"
-
-#: ../qml/pages/AboutPage.qml:90
-msgid "License: MIT"
-msgstr "Licence : MIT"
-
-#: ../qml/pages/AboutPage.qml:101
-msgid "Translations"
-msgstr "Traductions"
-
-#: ../qml/pages/AboutPage.qml:124
-msgid "Thanks to"
-msgstr "Remerciements à"
+#: ../qml/pages/SearchPage.qml:373
+msgid "Keywords"
+msgstr "Mots-clés"
 
 #: ../qml/pages/SettingsPage.qml:44
 msgid "Show Station Logos in lists (crashes with large lists)"
@@ -254,25 +263,17 @@ msgstr "Accepter uniquement le MP3 (audio/mpeg)"
 msgid "Accept only AAC (audio/aacp)"
 msgstr "Accepter uniquement le AAC (audio/aacp)"
 
-#: ../qml/pages/SearchPage.qml:93
-msgid "Search for"
-msgstr "Rechercher"
+#: ../qml/pages/StationsPage.qml:27
+msgid "Stations for: "
+msgstr "Stations pour : "
 
-#: ../qml/pages/SearchPage.qml:106
-msgid "History"
-msgstr "Historique"
+#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
+msgid "Home"
+msgstr "Accueil"
 
-#: ../qml/pages/SearchPage.qml:139
-msgid "Search In: "
-msgstr "Chercher dans : "
-
-#: ../qml/pages/SearchPage.qml:372
-msgid "Now Playing"
-msgstr "Lecture en cours"
-
-#: ../qml/pages/SearchPage.qml:373
-msgid "Keywords"
-msgstr "Mots-clés"
+#: ../qml/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
+msgstr "Sous-genres pour : "
 
 #: ../qml/pages/Top500Page.qml:23
 msgid "Top 500 Stations"

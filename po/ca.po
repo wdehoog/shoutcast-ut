@@ -7,16 +7,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-08 23:10+0200\n"
-"PO-Revision-Date: 2020-07-08 23:22+0200\n"
+"POT-Creation-Date: 2023-12-03 15:11+0000\n"
+"PO-Revision-Date: 2023-12-03 16:14+0100\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: \n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#: ../qml/Main.qml:23
+msgid "No station Info"
+msgstr "Sense informació de l'estació"
+
+#: ../qml/Main.qml:24
+msgid "No Track Info"
+msgstr "Sense informació de la pista"
+
+#: ../qml/Main.qml:76 ../qml/Main.qml:80
+msgid "SHOUTcast"
+msgstr "SHOUTcast"
+
+#: ../qml/Main.qml:84
+msgid "About"
+msgstr "Quant a"
+
+#: ../qml/Main.qml:89
+msgid "Help"
+msgstr "Ajuda"
+
+#: ../qml/Main.qml:94 ../qml/pages/SettingsPage.qml:23
+msgid "Settings"
+msgstr "Preferències"
+
+#: ../qml/Main.qml:111
+msgid "Genre"
+msgstr "Gènere"
+
+#: ../qml/Main.qml:121
+msgid "Top 500"
+msgstr "Les 500 més reconegudes"
+
+#: ../qml/Main.qml:131 ../qml/pages/SearchPage.qml:31
+msgid "Search"
+msgstr "Cerca"
+
+#: ../qml/Main.qml:438
+msgid "Ok"
+msgstr "D'acord"
+
+#: ../qml/Main.qml:449
+msgid "Error"
+msgstr "Error"
+
+#: ../qml/Main.qml:459
+msgid "No"
+msgstr "No"
+
+#: ../qml/Main.qml:463
+msgid "Yes"
+msgstr "Sí"
 
 #: ../qml/components/PlayHistory.qml:23
 msgid "Play History"
@@ -34,7 +86,7 @@ msgstr "Confirma"
 msgid "Do you really want to clear the Play History?"
 msgstr "Segur que voleu netejar l'historial de reproduccions?"
 
-#: ../qml/components/PlayHistory.qml:110 ../qml/components/SearchHistory.qml:78
+#: ../qml/components/PlayHistory.qml:112 ../qml/components/SearchHistory.qml:79
 msgid "Delete"
 msgstr "Elimina"
 
@@ -46,57 +98,33 @@ msgstr "Historial de cerques"
 msgid "Do you really want to clear the Search History?"
 msgstr "Segur que voleu netejar l'historial de cerques?"
 
-#: ../qml/Main.qml:22
-msgid "No station Info"
-msgstr "Sense informació de l'estació"
+#: ../qml/pages/AboutPage.qml:16
+msgid "About SHOUTcast"
+msgstr "Quant al SHOUTcast"
 
-#: ../qml/Main.qml:23
-msgid "No Track Info"
-msgstr "Sense informació de la pista"
+#: ../qml/pages/AboutPage.qml:67
+msgid "SHOUTcast player for Ubuntu Touch"
+msgstr "Reproductor SHOUTcast per l'Ubuntu Touch"
 
-#: ../qml/Main.qml:56 ../qml/Main.qml:60
-msgid "SHOUTcast"
-msgstr "SHOUTcast"
+#: ../qml/pages/AboutPage.qml:83
+msgid "sources: https://github.com/wdehoog/shoutcast-ut"
+msgstr "codi font: https://github.com/wdehoog/shoutcast-ut"
 
-#: ../qml/Main.qml:65
-msgid "About"
-msgstr "Quant a"
+#: ../qml/pages/AboutPage.qml:90
+msgid "License: MIT"
+msgstr "Llicència: MIT"
 
-#: ../qml/Main.qml:70
-msgid "Help"
-msgstr "Ajuda"
+#: ../qml/pages/AboutPage.qml:101
+msgid "Translations"
+msgstr "Traduccions"
 
-#: ../qml/Main.qml:75 ../qml/pages/SettingsPage.qml:23
-msgid "Settings"
-msgstr "Preferències"
+#: ../qml/pages/AboutPage.qml:124
+msgid "Thanks to"
+msgstr "Gràcies a"
 
-#: ../qml/Main.qml:91
-msgid "Genre"
-msgstr "Gènere"
-
-#: ../qml/Main.qml:100
-msgid "Top 500"
-msgstr "Les 500 més reconegudes"
-
-#: ../qml/Main.qml:109 ../qml/pages/SearchPage.qml:31
-msgid "Search"
-msgstr "Cerca"
-
-#: ../qml/Main.qml:416
-msgid "Ok"
-msgstr "D'acord"
-
-#: ../qml/Main.qml:427
-msgid "Error"
-msgstr "Error"
-
-#: ../qml/Main.qml:437
-msgid "No"
-msgstr "No"
-
-#: ../qml/Main.qml:441
-msgid "Yes"
-msgstr "Sí"
+#: ../qml/pages/GenrePage.qml:21
+msgid "Genres"
+msgstr "Gèneres"
 
 #: ../qml/pages/HelpPage.qml:12
 msgid "SHOUTcast Help"
@@ -167,55 +195,35 @@ msgstr ""
 " <a href=\\https://github.com/wdehoog/shoutcast-ut\\>https://github.com/"
 "wdehoog/shoutcast-ut</a>.</p>\n"
 " <p>Informeu de qualsevol error que trobeu a la pàgina del GitHub:\n"
-" <a href=\\https://github.com/wdehoog/shoutcast-ut/issues\\>https://"
-"github.com/wdehoog/shoutcast-ut/issues</a>.</p> <p>La documentació de "
-"l'API del SHOUTcast es pot trobar aquí: <a href=\"http://wiki.shoutcast.com/"
-"wiki/SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
+" <a href=\\https://github.com/wdehoog/shoutcast-ut/issues\\>https://github."
+"com/wdehoog/shoutcast-ut/issues</a>.</p> <p>La documentació de l'API del "
+"SHOUTcast es pot trobar aquí: <a href=\"http://wiki.shoutcast.com/wiki/"
+"SHOUTcast_Radio_Directory_API\">SHOUTcast Radio Directory API</a>"
 
-#: ../qml/pages/StationsPage.qml:27
-msgid "Stations for: "
-msgstr "Estacions per:"
-
-#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
-msgid "Home"
-msgstr "Inici"
-
-#: ../qml/pages/StationsPage.qml:53 ../qml/pages/SearchPage.qml:48
+#: ../qml/pages/SearchPage.qml:48 ../qml/pages/StationsPage.qml:53
 #: ../qml/pages/Top500Page.qml:39
 msgid "Reload"
 msgstr "Recarrega"
 
-#: ../qml/pages/SubGenrePage.qml:24
-msgid "Sub-Genres for: "
-msgstr "Subgèneres per:"
+#: ../qml/pages/SearchPage.qml:93
+msgid "Search for"
+msgstr "Cerca per"
 
-#: ../qml/pages/GenrePage.qml:21
-msgid "Genres"
-msgstr "Gèneres"
+#: ../qml/pages/SearchPage.qml:106
+msgid "History"
+msgstr "Historial"
 
-#: ../qml/pages/AboutPage.qml:16
-msgid "About SHOUTcast"
-msgstr "Quant al SHOUTcast"
+#: ../qml/pages/SearchPage.qml:139
+msgid "Search In: "
+msgstr "Cerca a:"
 
-#: ../qml/pages/AboutPage.qml:67
-msgid "SHOUTcast player for Ubuntu Touch"
-msgstr "Reproductor SHOUTcast per l'Ubuntu Touch"
+#: ../qml/pages/SearchPage.qml:372
+msgid "Now Playing"
+msgstr "Ara sona"
 
-#: ../qml/pages/AboutPage.qml:83
-msgid "sources: https://github.com/wdehoog/shoutcast-ut"
-msgstr "codi font: https://github.com/wdehoog/shoutcast-ut"
-
-#: ../qml/pages/AboutPage.qml:90
-msgid "License: MIT"
-msgstr "Llicència: MIT"
-
-#: ../qml/pages/AboutPage.qml:101
-msgid "Translations"
-msgstr "Traduccions"
-
-#: ../qml/pages/AboutPage.qml:124
-msgid "Thanks to"
-msgstr "Gràcies a"
+#: ../qml/pages/SearchPage.qml:373
+msgid "Keywords"
+msgstr "Paraules clau"
 
 #: ../qml/pages/SettingsPage.qml:44
 msgid "Show Station Logos in lists (crashes with large lists)"
@@ -243,37 +251,29 @@ msgstr "Temps d'espera de la resposta del servidor (en segons)"
 msgid "Mime Type Filter"
 msgstr "Filtre per tipus de contingut"
 
-#: ../qml/pages/SettingsPage.qml:141
+#: ../qml/pages/SettingsPage.qml:142
 msgid "No filter. Accept all mime types."
 msgstr "Sense filtre. Accepta tots els tipus de contingut"
 
-#: ../qml/pages/SettingsPage.qml:142
+#: ../qml/pages/SettingsPage.qml:143
 msgid "Accept only MP3 (audio/mpeg)"
 msgstr "Accepta només MP3 (audio/mpeg)"
 
-#: ../qml/pages/SettingsPage.qml:143
+#: ../qml/pages/SettingsPage.qml:144
 msgid "Accept only AAC (audio/aacp)"
 msgstr "Accepta només AAC (audio/aacp)"
 
-#: ../qml/pages/SearchPage.qml:93
-msgid "Search for"
-msgstr "Cerca per"
+#: ../qml/pages/StationsPage.qml:27
+msgid "Stations for: "
+msgstr "Estacions per:"
 
-#: ../qml/pages/SearchPage.qml:105
-msgid "History"
-msgstr "Historial"
+#: ../qml/pages/StationsPage.qml:43 ../qml/pages/SubGenrePage.qml:28
+msgid "Home"
+msgstr "Inici"
 
-#: ../qml/pages/SearchPage.qml:138
-msgid "Search In: "
-msgstr "Cerca a:"
-
-#: ../qml/pages/SearchPage.qml:371
-msgid "Now Playing"
-msgstr "Ara sona"
-
-#: ../qml/pages/SearchPage.qml:372
-msgid "Keywords"
-msgstr "Paraules clau"
+#: ../qml/pages/SubGenrePage.qml:24
+msgid "Sub-Genres for: "
+msgstr "Subgèneres per:"
 
 #: ../qml/pages/Top500Page.qml:23
 msgid "Top 500 Stations"
@@ -341,8 +341,8 @@ msgstr "shoutcast-ut"
 #~ "github.com/wdehoog/shoutcast-ut/issues</a>.</p>"
 #~ msgstr ""
 #~ "<p>El codi font es pot trobar al GitHub:\n"
-#~ " <a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github."
-#~ "com/wdehoog/shoutcast-ut</a>.</p>\n"
+#~ " <a href=\"https://github.com/wdehoog/shoutcast-ut\">https://github.com/"
+#~ "wdehoog/shoutcast-ut</a>.</p>\n"
 #~ " <p>Informeu de qualsevol error que trobeu a la pàgina del GitHub:\n"
 #~ " <a href=\"https://github.com/wdehoog/shoutcast-ut/issues\">https://"
 #~ "github.com/wdehoog/shoutcast-ut/issues</a>.</p>"

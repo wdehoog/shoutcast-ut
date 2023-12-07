@@ -4,4 +4,4 @@ Exec=qmlscene %U qml/Main.qml
 Icon=assets/shoutcast-ut.svg
 Terminal=false
 Type=Application
-X-Ubuntu-Touch=true
+X-Lomiri-Touch=true
